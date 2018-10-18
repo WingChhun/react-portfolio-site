@@ -1,4 +1,19 @@
 
+//TODO: Import abstracts, mixins, utilities, variables
+@import "./abstracts//mixins.scss";
+@import "./abstracts//palette.scss";
+@import "./abstracts//variables.scss";
+@import "./abstracts//utility.scss";
+//TODO: Import pages
+
+//TODO: Import Components
+@import "./components//navbar/navbar.scss";
+@import "./components//footer/footer.scss";
+@import "./components//hero/hero.scss";
+@import "./components//projects/project.scss";
+@import "./components//skills/skills.scss";
+@import "./components//buttons/buttons.scss";
+
 //$ Standardized hard reset spacing
 body,
 html {
@@ -24,18 +39,3 @@ p {
     text-decoration: none;
     font-family: $font-secondary;
 }
-
-//TODO: Import abstracts, mixins, utilities, variables
-@import "./abstracts//mixins.scss";
-@import "./abstracts//palette.scss";
-@import "./abstracts//variables.scss";
-@import "./abstracts//utility.scss";
-//TODO: Import pages
-
-//TODO: Import Components
-@import "./components//navbar/navbar.scss";
-@import "./components//footer/footer.scss";
-@import "./components//hero/hero.scss";
-@import "./components//projects/project.scss";
-@import "./components//skills/skills.scss";
-@import "./components//buttons/buttons.scss";

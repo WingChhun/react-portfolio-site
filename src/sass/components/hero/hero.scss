@@ -37,18 +37,33 @@
 
         //$Header
         h1 {
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.1rem;
+            font-size: 60px;
             font-family: $font-primary;
-        
-        span
+            font-weight: 700;
 
-        {
-            color:red;
-        }
+            span {
+                color: red;
+            }
         }
         //$ Subheader
         h2 {
+            font-size: 52.5px;
             letter-spacing: 0.1rem;
+        }
+
+        //$ button
+        button {
+
+            outline: none;
+            background-color: transparent;
+            border: 3px solid white;
+            padding: 8px 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            width: 30%;
+            font-size: 24px;
+            font-weight: 700;
         }
     }
 
