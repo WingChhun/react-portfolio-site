@@ -9,14 +9,13 @@ import './sass/App.css';
 class App extends Component {
     render() {
         return (
-            <div className="App">
 
-                <Router>
+            <Router basename={process.env.PUBLIC_URL}>
 
-                    <Route exact path="/" component={LandingComponent}/>
+                <Route exact path="/" component={LandingComponent}/>
 
-                </Router>
-            </div>
+            </Router>
+
         );
     }
 }
