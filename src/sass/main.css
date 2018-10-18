@@ -1,5 +1,5 @@
 .hero-video {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -10,18 +10,16 @@
   overflow: hidden;
   background-color: #00BFB2; }
   .hero-video__content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.3;
     z-index: -99; }
 
 .hero__content {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -31,14 +29,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  height: 50vh; }
   .hero__content h1 {
     letter-spacing: 0.1rem;
     font-size: 60px;
     font-family: "Raleway", sans-serif;
     font-weight: 700; }
     .hero__content h1 span {
-      color: red; }
+      color: red;
+      padding-left: 12px; }
   .hero__content h2 {
     font-size: 52.5px;
     letter-spacing: 0.1rem; }

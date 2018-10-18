@@ -5,7 +5,7 @@ import {withStyles} from '@material-ui/core';
 
 import Video from "../../assets/video/video/video-2.mp4";
 import NavbarComponent from "../../components/Navbar/Navbar.js";
-
+import HeroContent from "./HeroContent";
 const styles = () => ({root: {}})
 
 class Hero extends Component
@@ -30,7 +30,8 @@ class Hero extends Component
                     Your browser is not supported!
 
                 </video>
-             
+                
+                <HeroContent/>
             </div>
         )
     }
