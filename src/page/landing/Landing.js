@@ -32,9 +32,8 @@ class Landing extends Component
             <div className={classes.root}>
 
                 <HeroComponent/>
-        
-              <h1> Outside landing</h1>
 
+                <AboutComponent/>
 
             </div>
 
