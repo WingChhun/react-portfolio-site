@@ -5,7 +5,7 @@ import {withStyles} from '@material-ui/core';
 
 const styles = () => ({root: {}})
 
-class Skill extends Component
+class About extends Component
 {
     constructor(props)
     {
@@ -22,14 +22,14 @@ class Skill extends Component
 
             <div>
                 <h1>
-                    Skill Component</h1>
+                    About Component</h1>
             </div>
         )
     }
 };
 
-Skill.propTypes = {
+About.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Skill);
+export default withStyles(styles)(About);
