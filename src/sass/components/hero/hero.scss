@@ -27,7 +27,7 @@
     //$ Hero Content sass
 
     &__content {
-        @include absCenter;
+        @include heroCenter;
         z-index: 100;
 
         width: $grid-width;

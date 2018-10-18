@@ -1,0 +1,25 @@
+.about {
+
+    border: $border-test;
+    background-color: $palette-primary;
+
+    min-height: 400px;
+    padding: 5rem;
+    text-align: center;
+
+    &__container {
+        width: $grid-width-2;
+        color: white;
+        margin: 0 auto; // * Center
+        border: $border-test-2;
+
+        min-height: 350px;
+        //$ The caption
+        h2 {
+
+            font-weight: 700;
+            letter-spacing: -0.05rem;
+            margin-bottom: 15px;
+        }
+    }
+}

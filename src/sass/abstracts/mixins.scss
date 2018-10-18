@@ -7,4 +7,12 @@
     transform: translate(-50%,-50%);
 }
 
+@mixin heroCenter
+{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 //TODO: Mixin(s) for creating media queries and responsive design
