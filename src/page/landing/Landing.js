@@ -6,6 +6,7 @@ import {withStyles} from '@material-ui/core';
 // ! - Import Components
 import NavbarComponent from "../../components/Navbar/Navbar.js";
 import HeroComponent from "../../components/Hero/Hero.js";
+import HeroContent from "../../components/Hero/HeroContent.js";
 import AboutComponent from "../../components/About/About.js";
 import ProjectComponent from "../../components/Project/Project.js";
 import SkillComponent from "../../components/Skill/Skill.js";
@@ -31,7 +32,12 @@ class Landing extends Component
             <div className={classes.root}>
 
                 <HeroComponent/>
+                <HeroContent/>
+                <h1>
+                    Outside of heroContent</h1>
+
             </div>
+
         )
     }
 };

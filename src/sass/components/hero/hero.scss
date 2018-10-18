@@ -10,10 +10,46 @@
         z-index: -100;
         opacity: 1;
         overflow: hidden;
+
+        background-color: $palette-primary;
         &__content {
+            @include absCenter;
             height: 100%;
             width: 100%;
             object-fit: cover;
+            opacity: 0.6;
+            z-index: -99;
         }
     }
+
+    //$ Hero Content sass
+
+    &__content {
+        @include absCenter;
+
+        border: $border-test;
+        width: $grid-width;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        //$Header
+        h1 {
+            letter-spacing: 0.2rem;
+            font-family: $font-primary;
+        
+        span
+
+        {
+            color:red;
+        }
+        }
+        //$ Subheader
+        h2 {
+            letter-spacing: 0.1rem;
+        }
+    }
+
 }
