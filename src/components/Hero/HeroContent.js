@@ -21,8 +21,10 @@ class HeroContent extends Component
         return (
 
             <div className="hero__content">
-                <h1>Hello, I'm
-                    <span>James Chhun</span>
+                <h1>
+                    <strong>Hello, I'm
+                        <span>James Chhun</span>
+                    </strong>
                 </h1>
                 <h2>A Web Developer</h2>
 
