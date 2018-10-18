@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
 
+import Video from "../../assets/video/video/video-2.mp4";
+import NavbarComponent from "../../components/Navbar/Navbar.js";
+
 const styles = () => ({root: {}})
 
 class Hero extends Component
@@ -20,9 +23,12 @@ class Hero extends Component
 
         return (
 
-            <div>
-                <h1>
-                    Hero Component</h1>
+            <div class="hero-video">
+                <video class="hero-video__content" autoPlay muted loop>
+                    <source src={Video} type="video/mp4"/>
+                    Your browser is not supported!
+
+                </video>
             </div>
         )
     }

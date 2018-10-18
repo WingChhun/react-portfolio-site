@@ -24,11 +24,13 @@ class Landing extends Component
 
     render()
     {
+        const {classes} = this.props;
+
         return (
 
-            <div>
-                <h1>
-                    Landing Component</h1>
+            <div className={classes.root}>
+
+                <HeroComponent/>
             </div>
         )
     }
