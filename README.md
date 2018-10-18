@@ -8,7 +8,8 @@
 
 - Recreate my personal website:
   - Current one is hosted on github pages at www.jameschhun.com
-
+- Depending on Time Constraints: Add basic jest enzyme testing for any component involving state logic
+    - Most likely filtering gallery: not a big deal
 
 - Optimize design
 - CSS / SASS
