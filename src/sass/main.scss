@@ -1,0 +1,44 @@
+
+//TODO: Import abstracts, mixins, utilities, variables
+@import "./abstracts//mixins.scss";
+@import "./abstracts//palette.scss";
+@import "./abstracts//variables.scss";
+@import "./abstracts//utility.scss";
+//TODO: Import pages
+
+//TODO: Import Components
+@import "./components//navbar/navbar.scss";
+@import "./components//footer/footer.scss";
+@import "./components//hero/hero.scss";
+@import "./components//projects/project.scss";
+@import "./components//skills/skills.scss";
+@import "./components//buttons/buttons.scss";
+
+//$ Standardized hard reset spacing
+body,
+html {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//$ Standardized typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+}
+
+a,
+button {
+    text-decoration: none;
+    font-family: $font-primary;
+}
+
+p {
+    font-family: $font-secondary;
+}

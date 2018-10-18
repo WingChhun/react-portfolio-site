@@ -1,14 +1,15 @@
 # React - Portfolio Site
 
 - Repository for James Chhun's Portfolio site being rebuilt using React, CSS/SASS and a CSS Framework for once;
-  - Contemplating between *Material UI* and *MdBoostrap*
-    - Most likely **MDBoostrap** since it's new and fresh to learn
-
+  -  CSS Framework -  *Material UI* 
+    -  Mainly being used for the GRID ; component
+- 
 ## Objective
 
 - Recreate my personal website:
   - Current one is hosted on github pages at www.jameschhun.com
-
+- Depending on Time Constraints: Add basic jest enzyme testing for any component involving state logic
+    - Most likely filtering gallery: not a big deal
 
 - Optimize design
 - CSS / SASS
