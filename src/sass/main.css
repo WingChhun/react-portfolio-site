@@ -1,6 +1,6 @@
 .about {
   border: 2px solid black;
-  background-color: #00BFB2;
+  background-color: #834bff;
   min-height: 400px;
   padding: 5rem;
   text-align: center; }
@@ -49,15 +49,15 @@
   height: 40vh; }
   .hero__content h1 {
     letter-spacing: 0.1rem;
-    font-size: 60px;
-    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
     .hero__content h1 span {
       color: red;
       padding-left: 12px; }
   .hero__content h2 {
     margin-top: -30px;
-    font-size: 52.5px;
+    font-size: 42.5px;
     letter-spacing: 0.1rem; }
   .hero__content h1,
   .hero__content h2 {
@@ -71,9 +71,9 @@
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     color: white;
-    width: 35%;
-    font-size: 28px;
-    font-weight: 300;
+    width: 20%;
+    font-size: 24px;
+    font-weight: 500;
     transition: 0.2s all ease-out; }
     .hero__content button:hover {
       transition: 0.2s all ease-in;
@@ -94,12 +94,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 a,
 button {
   text-decoration: none;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 p {
   font-family: "Lusitana", serif; }
