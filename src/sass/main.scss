@@ -34,8 +34,11 @@ h6 {
 }
 
 a,
-button,
-p {
+button {
     text-decoration: none;
+    font-family: $font-primary;
+}
+
+p {
     font-family: $font-secondary;
 }

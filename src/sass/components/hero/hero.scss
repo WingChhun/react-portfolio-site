@@ -7,7 +7,7 @@
         min-height: 100vh;
         height: 100%;
         width: 100%;
-        z-index: -100;
+        z-index: 100;
         opacity: 1;
         overflow: hidden;
 
@@ -28,15 +28,15 @@
 
     &__content {
         @include absCenter;
+        z-index: 100;
 
-        border: $border-test;
         width: $grid-width;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         align-items: center;
         text-align: center;
-        height: 50vh;
+        height: 40vh;
         //$Header
         h1 {
             letter-spacing: 0.1rem;
@@ -51,22 +51,38 @@
         }
         //$ Subheader
         h2 {
+            margin-top: -30px; //note: Move subheader higher 
             font-size: 52.5px;
             letter-spacing: 0.1rem;
         }
 
+        h1,
+        h2 {
+            color: white;
+        }
         //$ button
         button {
 
+            margin-top: -10px; //note: Scoot closer
             outline: none;
             background-color: transparent;
             border: 3px solid white;
-            padding: 8px 12px;
-            text-transform: uppercase;
+            padding: 14px 12px;
+            text-transform: capitalize;
             letter-spacing: 0.1rem;
-            width: 30%;
-            font-size: 24px;
-            font-weight: 700;
+            color: white;
+            width: 35%;
+            font-size: 28px;
+            font-weight: 300;
+
+            transition: 0.2s all ease-out;
+            &:hover {
+                transition: 0.2s all ease-in;
+                background-color: $palette-footer;
+                color: $palette-secondary;
+                border-color: $palette-secondary;
+                font-weight: 700;
+            }
 
         }
     }
