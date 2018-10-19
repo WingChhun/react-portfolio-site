@@ -19,14 +19,15 @@ class AboutCard extends Component
         };
     }
 
-    componentWillMount = () => {
+    /*
+@function:componentWIllMount()
+@purpose: Create array of data in state to map over and display
+    */
+    componentDidMount = () => {
 
-        const assets = {
-            ...this.state.assets,
-            logos
-
-        }
-        this.setState({assets});
+        this.setState({
+            ...logos
+        });
     }
 
     render()
@@ -42,15 +43,87 @@ class AboutCard extends Component
                     <h2>Here are some of the tools and technologies I use to build great web
                         applications.
                     </h2>
-
+                    <br/>
                     <div className="aboutCard__row">
-                        <Grid container spacing={16}>
+                        <Grid container spacing={8}>
 
-                            <div className="aboutCard__row--header">
-                                <h3>Front-End</h3>
-                            </div>
-                            <Grid xs={12} md={3}>
-                                <div className="aboutCard__row--item"></div>
+                            <Grid xs={12} md={4}>
+                                <div className="aboutCard__col">
+
+                                    <h3>
+                                        Front End</h3>
+
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>SASS</li>
+                                        <li>Javascript</li>
+                                    </ul>
+
+                                    <h3>
+                                        Libaries / Frameworks:
+                                    </h3>
+
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Redux</li>
+                                        <li>Material UI</li>
+                                        <li>Bootstrap</li>
+                                        <li>jQuery</li>
+                                    </ul>
+
+                                </div>
+                            </Grid>
+                            <Grid xs={12} md={4}>
+                                <div className="aboutCard__col">
+                                    <h3>
+                                        Back End</h3>
+
+                                    <ul>
+                                        <li>
+                                            NodeJS
+                                        </li>
+                                        <li>
+                                            ExpressJS
+                                        </li>
+
+                                        <li>
+                                            MongoDB
+                                        </li>
+
+                                    </ul>
+                                    <h3>
+                                        Tools I Use:</h3>
+
+                                    <ul>
+
+                                        <li>
+                                            Postman
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </Grid>
+                            <Grid xs={12} md={4}>
+                                <div className="aboutCard__col">
+                                    <h3>
+                                        Other</h3>
+
+                                    <ul>
+                                        <li>Agile</li>
+                                        <li>Git</li>
+                                        <li>Github</li>
+                                        <li>Visual Studio Team Services</li>
+                                        <li>Visual Studio Code</li>
+                                        <li>Webstorm</li>
+                                    </ul>
+
+                                    <h3>Notable:</h3>
+                                    <ul>
+                                        <li>C++</li>
+                                        <li>Heroku</li>
+                                    </ul>
+                                </div>
                             </Grid>
                         </Grid>
 

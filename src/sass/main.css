@@ -51,14 +51,24 @@ MEDIA QUERIES MIXINS
     padding: 1rem;
     border: 3px dashed #1B242F;
     height: 100%; }
-  .aboutCard__row {
+  .aboutCard__col {
     border: 3px dotted pink;
-    padding: 1rem; }
-    .aboutCard__row--header {
-      width: 100%;
-      padding: 0 0.4rem;
-      line-height: 110%;
-      border-bottom: 0.2rem solid #00BFB2; }
+    text-align: center; }
+    .aboutCard__col h3 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid #EE4266;
+      border: 2px solid black; }
+    .aboutCard__col ul {
+      padding-left: 0;
+      line-height: 150%;
+      text-align: center;
+      list-style: none;
+      min-height: 250px;
+      max-height: 250px; }
+      .aboutCard__col ul li {
+        line-height: 170%;
+        font-size: 1.6rem;
+        font-weight: 500; }
 
 .footer {
   -webkit-animation-duration: 0.8s; }

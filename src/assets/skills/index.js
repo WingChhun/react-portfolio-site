@@ -22,21 +22,89 @@ import logoReact from "./react.png";
 import logoRedux from "./Redux.png";
 
 export default {
-    logoJest,
-    logoBootstrap,
-    logoChanging,
-    logoCSS,
-    logoExpress,
-    logoGit,
-    logoGithub,
-    logoHeroku,
-    logoHtml,
-    logojQuery,
-    logoJS,
-    logoNode,
-    logoSass,
-    logoMaterial,
-    logoMongoDB,
-    logoReact,
-    logoRedux
-};
+
+    "Front-End" : {
+        "Html": {
+            name: "Html",
+            value: logoHtml
+        },
+        "CSS": {
+            name: "CSS",
+            value: logoCSS
+        },
+        "Sass": {
+            name: "Sass",
+            value: logoSass
+        }
+    },
+
+    "Back-End" : {
+        "Express": {
+            name: "Express",
+            value: logoExpress
+        },
+
+        "MongoDB": {
+            name: "MongoDB",
+            value: logoMongoDB
+        },
+        "Node": {
+            name: "Node",
+            value: logoNode
+        }
+    },
+
+    Javascript : {
+        "jQuery": {
+            name: "jQuery",
+            value: logojQuery
+        },
+        "JS": {
+            name: "JS",
+            value: logoJS
+        },
+        "Node": {
+            name: "Node",
+            value: logoNode
+        },
+        "React": {
+            name: "React",
+            value: logoReact
+        },
+        "Redux": {
+            name: "Redux",
+            value: logoRedux
+        }
+    },
+    "CSS Frameworks" : {
+        "Material": {
+            name: "Material",
+            value: logoMaterial
+        },
+
+        "Bootstrap": {
+            name: "Bootstrap",
+            value: logoBootstrap
+        }
+    },
+
+    "Source Control / Other" : {
+        "Git": {
+            name: "Git",
+            value: logoGit
+        },
+        "Github": {
+            name: "Github",
+            value: logoGithub
+        },
+        "Jest": {
+            name: "Jest",
+            value: logoJest
+        },
+
+        "Heroku": {
+            name: "Heroku",
+            value: logoHeroku
+        }
+    }
+}
