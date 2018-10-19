@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import {withStyles} from '@material-ui/core';
 
 import Grid from "@material-ui/core/Grid";
@@ -18,44 +18,43 @@ class Footer extends Component
 
     render()
     {
-        const {classes} = this.props;
+        const {classNamees} = this.props;
 
         return (
 
-            <footer class="footer">
-                <a href="#home" class="footer__arrow">
-                    <i class="fa fa-angle-double-up"></i>
+            <footer className="footer">
+                <a href="#home" className="footer__arrow">
+                    <i className="fa fa-angle-double-up"></i>
                 </a>
-                <div class="footer__container">
-             
-                        <a
-                            target="blank"
-                            href="https://www.linkedin.com/in/james-chhun-16b1b5120/"
-                            class="footer__logo-img footer__logo-img--1">
-                            <i class="fa fa-linkedin-square"></i>
-                        </a>
-                        <a
-                            target="blank"
-                            href="https://github.com/WingChhun"
-                            class="footer__logo-img footer__logo-img--2">
-                            <i class="fa fa-github-square"></i>
-                        </a>
-                        <a
-                            target="blank"
-                            href="https://codepen.io/WingChhun/"
-                            class="footer__logo-img footer__logo-img--3">
-                            <i class="fa fa-codepen"></i>
-                        </a>
-                        <a
-                            target="blank"
-                            href="https://www.instagram.com/wingchhun_codes/"
-                            class="footer__logo-img footer__logo-img--4">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+                <div className="footer__container">
 
+                    <a
+                        target="blank"
+                        href="https://www.linkedin.com/in/james-chhun-16b1b5120/"
+                        className="footer__logo-img footer__logo-img--1">
+                        <i className="fa fa-linkedin-square"></i>
+                    </a>
+                    <a
+                        target="blank"
+                        href="https://github.com/WingChhun"
+                        className="footer__logo-img footer__logo-img--2">
+                        <i className="fa fa-github-square"></i>
+                    </a>
+                    <a
+                        target="blank"
+                        href="https://codepen.io/WingChhun/"
+                        className="footer__logo-img footer__logo-img--3">
+                        <i className="fa fa-codepen"></i>
+                    </a>
+                    <a
+                        target="blank"
+                        href="https://www.instagram.com/wingchhun_codes/"
+                        className="footer__logo-img footer__logo-img--4">
+                        <i className="fa fa-instagram"></i>
+                    </a>
 
-                        <p class="footer__copyright">Designed and Developed by James Chhun, me &copy; 2018</p>
-               
+                    <p className="footer__copyright">Designed and Developed by James Chhun, me &copy; 2018</p>
+
                 </div>
 
             </footer>
@@ -64,7 +63,7 @@ class Footer extends Component
 };
 
 Footer.propTypes = {
-    classes: PropTypes.object.isRequired
+    classNamees: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Footer);

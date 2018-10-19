@@ -23,9 +23,9 @@ class Hero extends Component
 
         return (
 
-            <div class="hero-video">
+            <div className="hero-video">
 
-                <video class="hero-video__content" autoPlay muted loop>
+                <video className="hero-video__content" autoPlay muted loop>
                     <source src={Video} type="video/mp4"/>
                     Your browser is not supported!
 

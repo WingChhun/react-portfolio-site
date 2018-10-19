@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-
+import logos from "../../assets/skills";
 const styles = () => ({root: {}})
 
 class AboutCard extends Component
@@ -19,6 +19,16 @@ class AboutCard extends Component
         };
     }
 
+    componentWillMount = () => {
+
+        const assets = {
+            ...this.state.assets,
+            logos
+
+        }
+        this.setState({assets});
+    }
+
     render()
     {
         const {classes} = this.props;
@@ -29,7 +39,9 @@ class AboutCard extends Component
 
                 <div className="aboutCard__container">
 
-<h2>Here are some of the tools and technologies I use to build great web applications. </h2>
+                    <h2>Here are some of the tools and technologies I use to build great web
+                        applications.
+                    </h2>
 
                     <div className="aboutCard__row">
                         <Grid container spacing={16}>
