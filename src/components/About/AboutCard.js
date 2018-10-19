@@ -44,14 +44,18 @@ class AboutCard extends Component
                         applications.
                     </h2>
                     <br/>
+                    <br/>
                     <div className="aboutCard__row">
-                        <Grid container spacing={8}>
+                        <Grid container spacing={0}>
 
-                            <Grid xs={12} md={4}>
+                            <Grid xs={12} sm ={6} md={4}>
                                 <div className="aboutCard__col">
 
-                                    <h3>
-                                        Front End</h3>
+                                    <div className="aboutCard__col--header">
+                                        <i className="fa fa-code fa-2x"></i>
+                                        <h3>
+                                            Front-End</h3>
+                                    </div>
 
                                     <ul>
                                         <li>HTML</li>
@@ -74,11 +78,13 @@ class AboutCard extends Component
 
                                 </div>
                             </Grid>
-                            <Grid xs={12} md={4}>
+                            <Grid xs={12} sm ={6} md={4}>
                                 <div className="aboutCard__col">
-                                    <h3>
-                                        Back End</h3>
-
+                                    <div className="aboutCard__col--header">
+                                        <i className="fa fa-database fa-2x"></i>
+                                        <h3>
+                                            Back End</h3>
+                                    </div>
                                     <ul>
                                         <li>
                                             NodeJS
@@ -104,16 +110,18 @@ class AboutCard extends Component
                                     </ul>
                                 </div>
                             </Grid>
-                            <Grid xs={12} md={4}>
+                            <Grid xs={12} sm ={6} md={4}>
                                 <div className="aboutCard__col">
-                                    <h3>
-                                        Other</h3>
-
+                                    <div className="aboutCard__col--header">
+                                        <i className="fa fa-archive fa-2x"></i>
+                                        <h3>
+                                           Other</h3>
+                                    </div>
                                     <ul>
                                         <li>Agile</li>
                                         <li>Git</li>
                                         <li>Github</li>
-                                        <li>Visual Studio Team Services</li>
+
                                         <li>Visual Studio Code</li>
                                         <li>Webstorm</li>
                                     </ul>
@@ -134,9 +142,8 @@ class AboutCard extends Component
         )
     }
 };
-
 AboutCard.propTypes = {
     classes: PropTypes.object.isRequired
-};
+}
 
 export default withStyles(styles)(AboutCard);

@@ -40,6 +40,7 @@ MEDIA QUERIES MIXINS
   width: 67.5vw;
   margin: 0 auto;
   height: 1000px;
+  padding-bottom: 14rem;
   box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
   margin-top: -8rem;
   z-index: 1500;
@@ -55,6 +56,7 @@ MEDIA QUERIES MIXINS
     border: 3px dotted pink;
     text-align: center; }
     .aboutCard__col h3 {
+      margin-top: 1rem;
       font-size: 1.9rem;
       border-bottom: 3px solid #EE4266;
       border: 2px solid black; }
@@ -63,12 +65,15 @@ MEDIA QUERIES MIXINS
       line-height: 150%;
       text-align: center;
       list-style: none;
-      min-height: 250px;
-      max-height: 250px; }
+      min-height: 225px;
+      max-height: 225px; }
       .aboutCard__col ul li {
         line-height: 170%;
         font-size: 1.6rem;
         font-weight: 500; }
+  .aboutCard i {
+    font-size: 4.8rem;
+    color: #00BFB2; }
 
 .footer {
   -webkit-animation-duration: 0.8s; }
