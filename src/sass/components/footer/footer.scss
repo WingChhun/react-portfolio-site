@@ -13,6 +13,7 @@
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
+    background-color:$palette-footer;
     }
     &__arrow {
         font-size: 4rem;
@@ -20,20 +21,20 @@
         color: white;
         padding: 1.2rem 2.3rem;
         position: absolute;
-        background-color: $pallete-secondary;
+        background-color: $palette-secondary;
         position: absolute;
         @include absCenter;
         transform: translate(-50%, -240%);
         z-index: 5;
-        @include respond(tab-port-large) {
-            transform: translate(-50%, -270%);
-        }
-        @include respond(tab-port) {
-            transform: translate(-50%, -300%);
-        }
-        @include respond(phone) {
-            transform: translate(-50%, -325%);
-        }
+        // @include respond(tab-port-large) {
+        //     transform: translate(-50%, -270%);
+        // }
+        // @include respond(tab-port) {
+        //     transform: translate(-50%, -300%);
+        // }
+        // @include respond(phone) {
+        //     transform: translate(-50%, -325%);
+        // }
     }
     &__copyright {
         display: block;
@@ -55,11 +56,11 @@
         max-width: 15%;
         display: inline-block;
         transition: all 0.4s ease;
-        @include respond(phone) {
-            max-width: 47.5%;
-            flex: 1 0 47.5%;
-            margin: 0;
-        }
+        // @include respond(phone) {
+        //     max-width: 47.5%;
+        //     flex: 1 0 47.5%;
+        //     margin: 0;
+        // }
         &:not(:last-child) {
             margin-right: 0;
         }

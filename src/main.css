@@ -1,3 +1,52 @@
+.about {
+  background-color: #834bff;
+  padding: 5rem 6rem;
+  text-align: center;
+  overflow: hidden; }
+  .about__container {
+    padding: 25px 50px;
+    width: 60vw;
+    color: white;
+    margin: 0 auto;
+    min-height: 350px;
+    position: relative; }
+    .about__container h2 {
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+      margin-bottom: 15px; }
+    .about__container p {
+      line-height: 150%;
+      width: 75%;
+      margin: 0 auto;
+      font-weight: 450; }
+
+#parent {
+  position: relative; }
+
+.aboutCard {
+  padding: 1.5rem;
+  width: 67.5vw;
+  margin: 0 auto;
+  height: 1000px;
+  box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
+  margin-top: -8rem;
+  z-index: 1500;
+  border-radius: 15px;
+  background-color: white;
+  display: block; }
+  .aboutCard__container {
+    padding: 1rem;
+    border: 3px dashed #1B242F;
+    height: 100%; }
+  .aboutCard__row {
+    border: 3px dotted pink;
+    padding: 10px; }
+    .aboutCard__row--header {
+      width: 100%;
+      padding: 0 4px;
+      line-height: 110%;
+      border-bottom: 2px solid #00BFB2; }
+
 .hero-video {
   position: relative;
   top: 0;
@@ -8,7 +57,7 @@
   z-index: 100;
   opacity: 1;
   overflow: hidden;
-  background-color: #834bff; }
+  background-color: #00BFB2; }
   .hero-video__content {
     height: 100%;
     width: 100%;
@@ -20,7 +69,7 @@
 
 .hero__content {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
@@ -32,15 +81,15 @@
   height: 40vh; }
   .hero__content h1 {
     letter-spacing: 0.1rem;
-    font-size: 60px;
-    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
     .hero__content h1 span {
       color: red;
       padding-left: 12px; }
   .hero__content h2 {
     margin-top: -30px;
-    font-size: 52.5px;
+    font-size: 42.5px;
     letter-spacing: 0.1rem; }
   .hero__content h1,
   .hero__content h2 {
@@ -54,9 +103,9 @@
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     color: white;
-    width: 35%;
-    font-size: 28px;
-    font-weight: 300;
+    width: 20%;
+    font-size: 24px;
+    font-weight: 500;
     transition: 0.2s all ease-out; }
     .hero__content button:hover {
       transition: 0.2s all ease-in;
@@ -77,12 +126,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 a,
 button {
   text-decoration: none;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 p {
-  font-family: "Lusitana", serif; }
+  font-family: "PT Sans Bold", serif;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 150%; }

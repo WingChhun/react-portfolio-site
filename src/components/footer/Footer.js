@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
-
+import FontAwesome from 'react-fontawesome';
 const styles = () => ({root: {}})
 
 class Footer extends Component

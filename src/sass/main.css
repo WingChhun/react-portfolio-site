@@ -28,7 +28,6 @@
   width: 67.5vw;
   margin: 0 auto;
   height: 1000px;
-  border: 2px solid black;
   box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
   margin-top: -8rem;
   z-index: 1500;
@@ -47,6 +46,72 @@
       padding: 0 4px;
       line-height: 110%;
       border-bottom: 2px solid #00BFB2; }
+
+.footer {
+  -webkit-animation-duration: 0.8s; }
+  .footer__container {
+    margin: 0 auto;
+    text-align: center;
+    height: 250px;
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #1B242F; }
+  .footer__arrow {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    padding: 1.2rem 2.3rem;
+    position: absolute;
+    background-color: #EE4266;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -240%);
+    z-index: 5; }
+  .footer__copyright {
+    display: block;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    flex: 1 0 80%;
+    padding: 1rem;
+    margin-top: 0; }
+  .footer__logo-img {
+    margin: 0.8rem 1.5%;
+    padding: 1.5rem 0.2rem;
+    background-color: #262F38;
+    font-size: 4.25rem;
+    color: white;
+    flex: 1 0 15%;
+    max-width: 15%;
+    display: inline-block;
+    transition: all 0.4s ease; }
+    .footer__logo-img:not(:last-child) {
+      margin-right: 0; }
+    .footer__logo-img--1:hover {
+      color: #007bb5;
+      background-color: rgba(0, 123, 181, 0.2); }
+    .footer__logo-img--2:hover {
+      color: #6e5494;
+      background-color: rgba(110, 84, 148, 0.2); }
+    .footer__logo-img--3:hover {
+      color: #ff3c41;
+      background-color: rgba(255, 60, 65, 0.2); }
+    .footer__logo-img--4:hover {
+      color: #c32aa3;
+      background-color: rgba(195, 42, 163, 0.2); }
+  .footer__logo-container {
+    width: 82.5vw;
+    display: flex;
+    flex-direction: row; }
 
 .hero-video {
   position: relative;
