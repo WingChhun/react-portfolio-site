@@ -8,11 +8,17 @@ import NavbarComponent from "../../components/Navbar/Navbar.js";
 import HeroComponent from "../../components/Hero/Hero.js";
 import HeroContent from "../../components/Hero/HeroContent.js";
 import AboutComponent from "../../components/About/About.js";
+import AboutCard from "../../components/About/AboutCard";
 import ProjectComponent from "../../components/Project/Project.js";
 import SkillComponent from "../../components/Skill/Skill.js";
-import FooterComponent from "../../components/Footer/Footer.js";
+import Footer from "../../components/Footer/Footer";
 
-const styles = () => ({root: {}})
+const styles = () => ({
+    root: {
+        position: 'relative',
+        zIndex: -100
+    }
+})
 
 class Landing extends Component
 {
@@ -29,14 +35,13 @@ class Landing extends Component
 
         return (
 
-            <div className={classes.root}>
+            <section>
 
                 <HeroComponent/>
-        
-              <h1> Outside landing</h1>
 
-
-            </div>
+                <AboutComponent/>
+                <Footer/>
+            </section>
 
         )
     }

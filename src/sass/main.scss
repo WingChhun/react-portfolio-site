@@ -1,14 +1,15 @@
 
 //TODO: Import abstracts, mixins, utilities, variables
-@import "./abstracts//mixins.scss";
 @import "./abstracts//palette.scss";
+@import "./abstracts//mixins.scss";
 @import "./abstracts//variables.scss";
 @import "./abstracts//utility.scss";
 //TODO: Import pages
 
 //TODO: Import Components
 @import "./components//navbar/navbar.scss";
-@import "./components//footer/footer.scss";
+@import "./components//about/about.scss";
+@import "./components//footer//footer.scss";
 @import "./components//hero/hero.scss";
 @import "./components//projects/project.scss";
 @import "./components//skills/skills.scss";
@@ -23,6 +24,25 @@ html {
     box-sizing: border-box;
 }
 
+//NOTE: TYPOGRAPHY
+html {
+    font-size: 62.5%; //reset REMS, to 10px = 1rem;
+    font-family: $font-primary; //Font size depending on screen size
+    //  Lowest REM possible is 8px
+    @include respond(tab-land) {
+        font-size: 56.25%; //9px = 1rem
+    }
+    @include respond(phone) {
+        font-size: 56.25%; //8.6 px = 1rem
+    }
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(desktop-large) {
+        font-size: 76.25%;
+    }
+}
 //$ Standardized typography
 h1,
 h2,
@@ -41,4 +61,7 @@ button {
 
 p {
     font-family: $font-secondary;
+    font-size: 1.4rem;
+    font-weight: 450;
+    line-height: 150%;
 }

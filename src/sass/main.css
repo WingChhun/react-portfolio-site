@@ -1,3 +1,147 @@
+/*
+MEDIA QUERIES MIXINS
+-Use EM, 16px = 1em
+-Breakpoints  include:
+-phone
+-tablet(port)
+-tablet(land)
+-desktop
+-desktop(large)ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+.about {
+  background-color: #834bff;
+  padding: 5rem 6rem;
+  text-align: center;
+  overflow: hidden; }
+  .about__container {
+    padding: 2.5rem 5rem;
+    width: 60vw;
+    color: white;
+    margin: 0 auto;
+    min-height: 350px;
+    position: relative; }
+    .about__container h2 {
+      font-weight: 700;
+      letter-spacing: -.05rem;
+      font-size: 3rem;
+      margin-bottom: 1.5rem; }
+    .about__container p {
+      line-height: 150%;
+      width: 75%;
+      margin: 0 auto;
+      font-weight: 450; }
+
+#parent {
+  position: relative; }
+
+.aboutCard {
+  padding: 1.5rem;
+  width: 67.5vw;
+  margin: 0 auto;
+  height: 1000px;
+  box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
+  margin-top: -8rem;
+  z-index: 1500;
+  border-radius: 1.5rem;
+  background-color: white;
+  display: block;
+  margin-bottom: 8rem; }
+  .aboutCard__container {
+    padding: 1rem;
+    border: 3px dashed #1B242F;
+    height: 100%; }
+  .aboutCard__row {
+    border: 3px dotted pink;
+    padding: 1rem; }
+    .aboutCard__row--header {
+      width: 100%;
+      padding: 0 0.4rem;
+      line-height: 110%;
+      border-bottom: 0.2rem solid #00BFB2; }
+
+.footer {
+  -webkit-animation-duration: 0.8s; }
+  .footer__container {
+    margin: 0 auto;
+    text-align: center;
+    height: 350px;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #1B242F; }
+  .footer__arrow {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    padding: 1.2rem 2.3rem;
+    position: absolute;
+    background-color: #EE4266;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -240%);
+    z-index: 5; }
+    @media only screen and (max-width: 65.63em) {
+      .footer__arrow {
+        transform: translate(-50%, -270%); } }
+    @media only screen and (max-width: 55em) {
+      .footer__arrow {
+        transform: translate(-50%, -300%); } }
+    @media only screen and (max-width: 30em) {
+      .footer__arrow {
+        transform: translate(-50%, -325%); } }
+  .footer__copyright {
+    display: block;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    flex: 1 0 80%;
+    padding: 1rem;
+    padding-bottom: .4rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .footer__logo-img {
+    margin: 0.8rem 1.5%;
+    padding: 1.5rem 0.2rem;
+    background-color: #262F38;
+    font-size: 4.25rem;
+    color: white;
+    flex: 1 0 15%;
+    max-width: 15%;
+    display: inline-block;
+    transition: all 0.4s ease; }
+    @media only screen and (max-width: 30em) {
+      .footer__logo-img {
+        max-width: 47.5%;
+        flex: 1 0 47.5%;
+        margin: 0; } }
+    .footer__logo-img:not(:last-child) {
+      margin-right: 0; }
+    .footer__logo-img--1:hover {
+      color: #007bb5;
+      background-color: rgba(0, 123, 181, 0.2); }
+    .footer__logo-img--2:hover {
+      color: #6e5494;
+      background-color: rgba(110, 84, 148, 0.2); }
+    .footer__logo-img--3:hover {
+      color: #ff3c41;
+      background-color: rgba(255, 60, 65, 0.2); }
+    .footer__logo-img--4:hover {
+      color: #c32aa3;
+      background-color: rgba(195, 42, 163, 0.2); }
+  .footer__logo-container {
+    width: 82.5vw;
+    display: flex;
+    flex-direction: row; }
+
 .hero-video {
   position: relative;
   top: 0;
@@ -20,7 +164,7 @@
 
 .hero__content {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
@@ -32,31 +176,31 @@
   height: 40vh; }
   .hero__content h1 {
     letter-spacing: 0.1rem;
-    font-size: 60px;
-    font-family: "Raleway", sans-serif;
+    font-size: 5rem;
+    font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
     .hero__content h1 span {
       color: red;
-      padding-left: 12px; }
+      padding-left: 1.2rem; }
   .hero__content h2 {
-    margin-top: -30px;
-    font-size: 52.5px;
+    margin-top: -3rem;
+    font-size: 4.25rem;
     letter-spacing: 0.1rem; }
   .hero__content h1,
   .hero__content h2 {
     color: white; }
   .hero__content button {
-    margin-top: -10px;
+    margin-top: -1rem;
     outline: none;
     background-color: transparent;
     border: 3px solid white;
-    padding: 14px 12px;
+    padding: 1.4rem 1.2rem;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     color: white;
-    width: 35%;
-    font-size: 28px;
-    font-weight: 300;
+    width: 20%;
+    font-size: 2.4rem;
+    font-weight: 500;
     transition: 0.2s all ease-out; }
     .hero__content button:hover {
       transition: 0.2s all ease-in;
@@ -71,18 +215,37 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%;
+  font-family: "Raleway Bold", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 55em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 76.25%; } }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 a,
 button {
   text-decoration: none;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway Bold", sans-serif; }
 
 p {
-  font-family: "Lusitana", serif; }
+  font-family: "PT Sans Bold", serif;
+  font-size: 1.4rem;
+  font-weight: 450;
+  line-height: 150%; }
