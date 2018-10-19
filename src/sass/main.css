@@ -11,7 +11,7 @@ MEDIA QUERIES MIXINS
 */
 .color-primary {
   color: #00BFB2;
-  padding-left: .8rem; }
+  padding: 0 .8rem; }
 
 .about {
   background-color: #834bff;

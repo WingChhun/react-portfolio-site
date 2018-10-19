@@ -29,12 +29,14 @@ class About extends Component
                             <strong>Hey thanks for visiting. Let me introduce myself.
                             </strong>
                         </h2>
-                        <p>Reprehenderit est do incididunt ea veniam Lorem mollit nulla. Consequat nisi
-                            deserunt pariatur ea incididunt anim laborum. Qui amet elit eiusmod ipsum
-                            eiusmod voluptate aute Lorem sint cillum aute ut esse laborum. Non dolore culpa
-                            nisi in sit tempor tempor tempor nulla sunt eu. Qui pariatur veniam amet nisi
-                            est sint id ad elit nisi labore exercitation dolore. Est pariatur aute do amet
-                            commodo anim consectetur cillum.</p>
+                        <p>
+                            It's been nearly two years since I've started this journey in this industry. I
+                            have been fortunate to have gained some experience interning under some of the
+                            best developer minds for a brief period of time. This industry has always
+                            excited me, the thought of having experienced working / working in an industry
+                            that does not allow you to stop learning is an exciting and contagious feeling.
+                            I take this to heart;I prefer to be in positions where
+                            <em>I am not the biggest fish in the pond</em>, persay. Always trying to pick the brains of everyone around me.</p>
                     </div>
                 </div>
                 <AboutCard/>

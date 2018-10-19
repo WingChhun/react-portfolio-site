@@ -5,6 +5,6 @@ $border-test-3: 3px dotted pink;
 
 .color {
     &-primary {
-        color: $palette-primary; padding-left: .8rem;
+        color: $palette-primary; padding: 0 .8rem;
     }
 }

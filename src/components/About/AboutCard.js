@@ -43,9 +43,15 @@ class AboutCard extends Component
                     <p>
                         Here are some of the tools and technologies I use to build great web
                         applications. Currently I have been breathing Javascript and exhaling all things
-                        related to React and Redux; primarily utilizing the
+                        related to
                         <span className="color-primary">
-                            MERN Stack</span>
+                            React
+                        </span>   
+                        and
+                        <span className="color-primary">Redux</span>
+                        primarily utilizing the
+                        <span className="color-primary">
+                            MERN Stack</span>. 
                     </p>
                     <br/>
                     <br/>
