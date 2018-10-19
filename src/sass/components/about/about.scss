@@ -8,7 +8,7 @@
 
     &__container {
 
-        padding: 25px 50px;
+        padding: 2.5rem 5rem;
         width: $grid-width-2;
         color: white;
         margin: 0 auto; // * Center
@@ -20,14 +20,16 @@
 
             //font-family: 'Playfair Display';
             font-weight: 700;
-            letter-spacing: -0.05rem;
-            margin-bottom: 15px;
+            letter-spacing: -.05rem;
+       font-size:3rem;
+            margin-bottom: 1.5rem;
         }
         p {
             line-height: 150%;
             width: 75%;
             margin: 0 auto;
             font-weight: 450;
+
         }
     }
 
@@ -45,14 +47,14 @@
     width: $grid-width-3;
     margin: 0 auto;
     height: 1000px;
-    
+
     box-shadow: $box-shadow-primary;
     margin-top: -8rem;
     z-index: 1500;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     background-color: white;
     display: block;
-margin-bottom:8rem;
+    margin-bottom: 8rem;
     &__container {
         padding: 1rem;
         border: $border-test-2;
@@ -62,13 +64,13 @@ margin-bottom:8rem;
     &__row {
         border: $border-test-3;
 
-        padding: 10px;
+        padding: 1rem;
 
         &--header {
             width: 100%;
-            padding: 0 4px;
-           line-height:110%;
-            border-bottom: 2px solid $palette-primary;
+            padding: 0 0.4rem;
+            line-height: 110%;
+            border-bottom: 0.2rem solid $palette-primary;
         }
 
         &__item {}
