@@ -33,7 +33,8 @@
   z-index: 1500;
   border-radius: 15px;
   background-color: white;
-  display: block; }
+  display: block;
+  margin-bottom: 8rem; }
   .aboutCard__container {
     padding: 1rem;
     border: 3px dashed #1B242F;
@@ -52,8 +53,8 @@
   .footer__container {
     margin: 0 auto;
     text-align: center;
-    height: 250px;
-    padding: 4rem 2rem 2rem;
+    height: 350px;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -83,7 +84,9 @@
     font-weight: 300;
     flex: 1 0 80%;
     padding: 1rem;
-    margin-top: 0; }
+    padding-bottom: .4rem;
+    margin-top: 0;
+    margin-bottom: 0; }
   .footer__logo-img {
     margin: 0.8rem 1.5%;
     padding: 1.5rem 0.2rem;
@@ -185,6 +188,10 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway Bold", sans-serif; }
 
 h1,
 h2,

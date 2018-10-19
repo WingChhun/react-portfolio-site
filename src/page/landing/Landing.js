@@ -41,7 +41,6 @@ class Landing extends Component
 
                 <AboutComponent/>
                 <Footer/>
-
             </section>
 
         )

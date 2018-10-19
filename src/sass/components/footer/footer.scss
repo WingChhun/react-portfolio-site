@@ -1,12 +1,13 @@
 .footer {
 
+    
     -webkit-animation-duration: 0.8s;
     &__container {
         margin: 0 auto;
 
         text-align: center;
-        height: 250px;
-        padding: 4rem 2rem 2rem;
+        height:350px;
+        padding: 2rem 2rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -44,7 +45,9 @@
         font-weight: 300;
         flex: 1 0 80%;
         padding: 1rem;
+        padding-bottom:.4rem;
         margin-top: 0;
+        margin-bottom:0;
     }
     &__logo-img {
         margin: 0.8rem 1.5%;
