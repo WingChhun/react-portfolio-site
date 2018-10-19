@@ -41,10 +41,10 @@
 }
 .aboutCard {
 
-    padding: 5rem;
-    width: $grid-width-2;
+    padding: 1.5rem;
+    width: $grid-width-3;
     margin: 0 auto;
-    height: 600px;
+    height: 1000px;
     border: $border-test;
     box-shadow: $box-shadow-primary;
     margin-top: -8rem;
@@ -52,6 +52,26 @@
     border-radius: 15px;
     background-color: white;
     display: block;
-    &__container {}
+
+    &__container {
+        padding: 1rem;
+        border: $border-test-2;
+        height: 100%;
+    }
+
+    &__row {
+        border: $border-test-3;
+
+        padding: 10px;
+
+        &--header {
+            width: 100%;
+            padding: 0 4px;
+           line-height:110%;
+            border-bottom: 2px solid $palette-primary;
+        }
+
+        &__item {}
+    }
 
 }

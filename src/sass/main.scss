@@ -1,7 +1,8 @@
 
 //TODO: Import abstracts, mixins, utilities, variables
-@import "./abstracts//mixins.scss";
 @import "./abstracts//palette.scss";
+@import "./abstracts//mixins.scss";
+
 @import "./abstracts//variables.scss";
 @import "./abstracts//utility.scss";
 //TODO: Import pages
@@ -9,7 +10,7 @@
 //TODO: Import Components
 @import "./components//navbar/navbar.scss";
 @import "./components//about/about.scss";
-@import "./components//footer/footer.scss";
+@import "./components//footer//footer.scss";
 @import "./components//hero/hero.scss";
 @import "./components//projects/project.scss";
 @import "./components//skills/skills.scss";

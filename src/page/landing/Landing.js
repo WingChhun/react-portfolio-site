@@ -11,7 +11,7 @@ import AboutComponent from "../../components/About/About.js";
 import AboutCard from "../../components/About/AboutCard";
 import ProjectComponent from "../../components/Project/Project.js";
 import SkillComponent from "../../components/Skill/Skill.js";
-import FooterComponent from "../../components/Footer/Footer.js";
+import Footer from "../../components/Footer/Footer";
 
 const styles = () => ({
     root: {
@@ -39,11 +39,8 @@ class Landing extends Component
 
                 <HeroComponent/>
 
-         
-      
-                    <AboutComponent/>
-
-             
+                <AboutComponent/>
+                <Footer/>
 
             </section>
 

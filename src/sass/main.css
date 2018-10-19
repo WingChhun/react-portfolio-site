@@ -24,10 +24,10 @@
   position: relative; }
 
 .aboutCard {
-  padding: 5rem;
-  width: 60vw;
+  padding: 1.5rem;
+  width: 67.5vw;
   margin: 0 auto;
-  height: 600px;
+  height: 1000px;
   border: 2px solid black;
   box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
   margin-top: -8rem;
@@ -35,6 +35,18 @@
   border-radius: 15px;
   background-color: white;
   display: block; }
+  .aboutCard__container {
+    padding: 1rem;
+    border: 3px dashed #1B242F;
+    height: 100%; }
+  .aboutCard__row {
+    border: 3px dotted pink;
+    padding: 10px; }
+    .aboutCard__row--header {
+      width: 100%;
+      padding: 0 4px;
+      line-height: 110%;
+      border-bottom: 2px solid #00BFB2; }
 
 .hero-video {
   position: relative;
