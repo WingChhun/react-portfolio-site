@@ -28,20 +28,20 @@ html {
 html {
     font-size: 62.5%; //reset REMS, to 10px = 1rem;
     font-family: $font-primary; //Font size depending on screen size
-    //Lowest REM possible is 8px
-    // @include respond(tab-land) {
-    //     font-size: 56.25%; //9px = 1rem
-    // }
-    // @include respond(phone) {
-    //     font-size: 56.25%; //8.6 px = 1rem
-    // }
-    // @include respond(tab-port) {
-    //     // width < 900?
-    //     font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    // }
-    // @include respond(desktop-large) {
-    //     font-size: 76.25%;
-    // }
+    //  Lowest REM possible is 8px
+    @include respond(tab-land) {
+        font-size: 56.25%; //9px = 1rem
+    }
+    @include respond(phone) {
+        font-size: 56.25%; //8.6 px = 1rem
+    }
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(desktop-large) {
+        font-size: 76.25%;
+    }
 }
 //$ Standardized typography
 h1,

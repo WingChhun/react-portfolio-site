@@ -1,3 +1,14 @@
+/*
+MEDIA QUERIES MIXINS
+-Use EM, 16px = 1em
+-Breakpoints  include:
+-phone
+-tablet(port)
+-tablet(land)
+-desktop
+-desktop(large)ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 .about {
   background-color: #834bff;
   padding: 5rem 6rem;
@@ -76,6 +87,15 @@
     transform: translate(-50%, -50%);
     transform: translate(-50%, -240%);
     z-index: 5; }
+    @media only screen and (max-width: 65.63em) {
+      .footer__arrow {
+        transform: translate(-50%, -270%); } }
+    @media only screen and (max-width: 55em) {
+      .footer__arrow {
+        transform: translate(-50%, -300%); } }
+    @media only screen and (max-width: 30em) {
+      .footer__arrow {
+        transform: translate(-50%, -325%); } }
   .footer__copyright {
     display: block;
     color: white;
@@ -97,6 +117,11 @@
     max-width: 15%;
     display: inline-block;
     transition: all 0.4s ease; }
+    @media only screen and (max-width: 30em) {
+      .footer__logo-img {
+        max-width: 47.5%;
+        flex: 1 0 47.5%;
+        margin: 0; } }
     .footer__logo-img:not(:last-child) {
       margin-right: 0; }
     .footer__logo-img--1:hover {
@@ -192,6 +217,18 @@ html {
 html {
   font-size: 62.5%;
   font-family: "Raleway Bold", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 55em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 76.25%; } }
 
 h1,
 h2,
