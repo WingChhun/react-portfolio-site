@@ -40,9 +40,13 @@ class AboutCard extends Component
 
                 <div className="aboutCard__container">
 
-                    <h2>Here are some of the tools and technologies I use to build great web
-                        applications.
-                    </h2>
+                    <p>
+                        Here are some of the tools and technologies I use to build great web
+                        applications. Currently I have been breathing Javascript and exhaling all things
+                        related to React and Redux; primarily utilizing the
+                        <span className="color-primary">
+                            MERN Stack</span>
+                    </p>
                     <br/>
                     <br/>
                     <div className="aboutCard__row">
@@ -54,7 +58,7 @@ class AboutCard extends Component
                                     <div className="aboutCard__col--header">
                                         <i className="fa fa-code fa-2x"></i>
                                         <h3>
-                                            Front-End</h3>
+                                            Front-End Development</h3>
                                     </div>
 
                                     <ul>
@@ -83,7 +87,7 @@ class AboutCard extends Component
                                     <div className="aboutCard__col--header">
                                         <i className="fa fa-database fa-2x"></i>
                                         <h3>
-                                            Back End</h3>
+                                            Back-End Development</h3>
                                     </div>
                                     <ul>
                                         <li>
@@ -115,7 +119,7 @@ class AboutCard extends Component
                                     <div className="aboutCard__col--header">
                                         <i className="fa fa-archive fa-2x"></i>
                                         <h3>
-                                           Other</h3>
+                                            Other</h3>
                                     </div>
                                     <ul>
                                         <li>Agile</li>

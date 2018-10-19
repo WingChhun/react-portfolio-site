@@ -1,4 +1,10 @@
 
-$border-test:2px solid black;
-$border-test-2:3px dashed $palette-footer;
-$border-test-3:3px dotted pink;
+$border-test: 2px solid black;
+$border-test-2: 3px dashed $palette-footer;
+$border-test-3: 3px dotted pink;
+
+.color {
+    &-primary {
+        color: $palette-primary; padding-left: .8rem;
+    }
+}
