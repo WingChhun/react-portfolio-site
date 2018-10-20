@@ -22,31 +22,88 @@ export default
 [
     {
         name: "Robo Friends",
-        github: "https://wingchhun.github.io/RickandMorty/",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
-        private: false,
         tags: [
             HTML, SASS, REACT, BOOTSTRAP
         ],
-        caption: "A project build in the MERN Stack for the mesmes"
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
     }, {
         name: "Robo Friends",
-        github: "https://wingchhun.github.io/RickandMorty/",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
-        private: false,
         tags: [
             HTML, SASS, REACT, BOOTSTRAP
         ],
-        caption: "A project build in the MERN Stack for the mesmes"
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
     }, {
         name: "Robo Friends",
-        github: "https://wingchhun.github.io/RickandMorty/",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
-        private: false,
         tags: [
             HTML, SASS, REACT, BOOTSTRAP
         ],
-        caption: "A project build in the MERN Stack for the mesmes"
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
+    }, {
+        name: "Robo Friends",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
+        img: robofriends,
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
+    }, {
+        name: "Robo Friends",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
+        img: robofriends,
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
+    }, {
+        name: "Robo Friends",
+        website: "https://wingchhun.github.io/RickandMorty/",
+
+        github: "https://github.com/WingChhun/RickandMorty",
+        img: robofriends,
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project build in the MERN Stack for the mesmes"
     }
 
 ];

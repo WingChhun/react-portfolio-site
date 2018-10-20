@@ -102,8 +102,10 @@ Project:{
     subtitle:'',
     description:'',
 
-    websiteURL:"",
-    githubURL:"",
+    website:"",
+    github:"",
+
+    tags:[],
 
     isPrivate:false,
     inProgress:false,

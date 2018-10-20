@@ -308,12 +308,15 @@ MEDIA QUERIES MIXINS
       transition: 0.2s all ease-in; }
 
 .dialog__carousel {
-  border: 3px solid #EE4266; }
+  border: 3px solid #EE4266;
+  padding: 1rem; }
 
 .dialog__container {
   border: 2px solid black;
+  min-height: 200px;
+  height: 100%;
+  max-height: 275px;
   padding: 1rem;
-  height: 200px;
   overflow: hidden; }
   .dialog__container--text {
     border: 3px dotted pink;
