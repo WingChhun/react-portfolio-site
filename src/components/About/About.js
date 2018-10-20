@@ -35,8 +35,8 @@ class About extends Component
                             best developer minds for a brief period of time. This industry has always
                             excited me, the thought of having experienced working / working in an industry
                             that does not allow you to stop learning is an exciting and contagious feeling.
-                            I take this to heart;I prefer to be in positions where
-                            <em>I am not the biggest fish in the pond</em>, persay. Always trying to pick the brains of everyone around me.</p>
+                            I take this to heart, I prefer to be in positions where
+                            <em>I am not the biggest fish in the pond</em>, persay. Always trying to pick the brains. of everyone around me.</p>
                     </div>
                 </div>
                 <AboutCard/>
