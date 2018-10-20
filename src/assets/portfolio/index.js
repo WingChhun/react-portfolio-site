@@ -25,22 +25,28 @@ export default
         github: "https://wingchhun.github.io/RickandMorty/",
         img: robofriends,
         private: false,
-        tags: [HTML, SASS, REACT, BOOTSTRAP]
-
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+        caption: "A project build in the MERN Stack for the mesmes"
     }, {
         name: "Robo Friends",
         github: "https://wingchhun.github.io/RickandMorty/",
         img: robofriends,
         private: false,
-        tags: [HTML, SASS, REACT, BOOTSTRAP]
-
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+        caption: "A project build in the MERN Stack for the mesmes"
     }, {
         name: "Robo Friends",
         github: "https://wingchhun.github.io/RickandMorty/",
         img: robofriends,
         private: false,
-        tags: [HTML, SASS, REACT, BOOTSTRAP]
-
+        tags: [
+            HTML, SASS, REACT, BOOTSTRAP
+        ],
+        caption: "A project build in the MERN Stack for the mesmes"
     }
 
 ];

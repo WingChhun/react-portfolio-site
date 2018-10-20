@@ -5,7 +5,7 @@ import {withStyles} from '@material-ui/core';
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
-
+import Fade from '@material-ui/core/Fade';
 import PROJECTS from "../../assets/portfolio";
 
 const styles = () => ({
@@ -73,15 +73,21 @@ class Project extends Component
                         ={1}
                         data-index={2}>
 
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
+                    
+                            {/* <img
+                                src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/> */}
+                  
 
                         <div class="project__overlay--caption">
 
-<h3>React Robofriends
-</h3>
+                            <h3>React Robofriends
+                            </h3>
 
+<div className = "project__overlay--caption-tags">
+<p>Javascript</p>
 </div>
+<a>Learn More</a>
+                        </div>
 
                     </Grid>
                     <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
