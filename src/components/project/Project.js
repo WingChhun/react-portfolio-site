@@ -45,6 +45,14 @@ class Project extends Component
         this.setState({hoverTrue: false})
     }
 
+    handleOpen = () => {
+        this.setState({openDialog: true});
+    }
+
+    handleClose = () => {
+        this.setState({openDialog: false});
+    }
+
     render()
     {
         const {classes} = this.props;
@@ -97,7 +105,8 @@ class Project extends Component
 
                             </Grid>
 
-                            <a>Learn More</a>
+                            <a onClick={this.handleOpen}>Learn More</a>
+                            <ProjectDialog open={this.state.openDialog} onClose={this.handleClose}/>
                         </div>
 
                     </Grid>

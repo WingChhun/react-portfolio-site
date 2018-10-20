@@ -15,25 +15,29 @@ MEDIA QUERIES MIXINS
 
 .about {
   background-color: #834bff;
-  padding: 5rem 6rem;
+  padding: 5rem 1rem;
   text-align: center;
   overflow: hidden; }
   .about__container {
-    padding: 2.5rem 5rem;
+    padding: 2.5rem 1rem 6rem;
     width: 85vw;
     color: white;
     margin: 0 auto;
-    min-height: 350px;
+    text-align: center;
+    min-height: 400px;
     position: relative; }
     .about__container h2 {
       font-weight: 700;
+      text-align: center;
       letter-spacing: -.05rem;
       font-size: 3rem;
-      margin-bottom: 1.5rem; }
+      width: 90%;
+      margin: 0 auto 1.5rem; }
     .about__container p {
-      line-height: 150%;
-      width: 75%;
+      line-height: 165%;
+      width: 90%;
       margin: 0 auto;
+      font-size: 1.5rem;
       font-weight: 450; }
 
 #parent {
@@ -43,11 +47,12 @@ MEDIA QUERIES MIXINS
   padding: 1.5rem;
   width: 85vw;
   margin: 0 auto;
-  height: 850px;
+  min-height: 800px;
+  height: 100%;
   max-height: 1200px;
-  padding-bottom: 14rem;
+  padding-bottom: 4rem;
   box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
-  margin-top: -8rem;
+  margin-top: -12rem;
   z-index: 1500;
   border-radius: 1.5rem;
   background-color: white;
@@ -55,20 +60,23 @@ MEDIA QUERIES MIXINS
   margin-bottom: 8rem; }
   .aboutCard__container {
     padding: 1rem;
-    border: 3px dashed #1B242F;
     height: 100%; }
     .aboutCard__container p {
       width: 80%;
       margin: 0 auto;
-      font-size: 1.8rem; }
+      font-weight: 350;
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 2rem 1rem; }
   .aboutCard__col {
-    border: 3px dotted pink;
     text-align: center; }
     .aboutCard__col h3 {
+      color: #00BFB2;
       margin-top: 3rem;
       font-size: 1.9rem;
-      border-bottom: 3px solid #EE4266;
-      border: 2px solid black; }
+      letter-spacing: 0.05rem;
+      font-weight: 700;
+      font-family: "Raleway Bold", sans-serif; }
     .aboutCard__col ul {
       padding-left: 0;
       line-height: 150%;
@@ -79,10 +87,11 @@ MEDIA QUERIES MIXINS
       .aboutCard__col ul li {
         line-height: 170%;
         font-size: 1.6rem;
-        font-weight: 500; }
+        font-weight: 300;
+        letter-spacing: 0.15rem; }
   .aboutCard i {
     font-size: 4.8rem;
-    color: #00BFB2; }
+    color: #834bff; }
 
 .footer {
   -webkit-animation-duration: 0.8s; }
@@ -222,7 +231,7 @@ MEDIA QUERIES MIXINS
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     color: white;
-    width: 20%;
+    width: 30%;
     font-size: 2.4rem;
     font-weight: 500;
     transition: 0.2s all ease-out; }
@@ -232,6 +241,71 @@ MEDIA QUERIES MIXINS
       color: #EE4266;
       border-color: #EE4266;
       font-weight: 700; }
+
+.project {
+  margin: 0 auto;
+  width: 85vw;
+  border: 2px solid black;
+  min-height: 700px;
+  height: 100%;
+  max-height: 1100px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  border-radius: 15px; }
+  .project h2 {
+    font-size: 2.4rem; }
+  .project img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    position: relative;
+    border: 2px solid black;
+    z-index: -50; }
+  .project__parent {
+    position: relative; }
+  .project__overlay {
+    transition: 0.2s all ease; }
+    .project__overlay--caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.2s all ease-out;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .project__overlay--caption h3 {
+        font-size: 2rem; }
+      .project__overlay--caption a {
+        margin: 0 auto;
+        width: 50%;
+        padding: 0.8rem 0.3rem;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        border: 2px solid #EE4266;
+        transition: 0.2s all ease-out; }
+        .project__overlay--caption a:hover {
+          color: white;
+          background-color: rgba(238, 66, 102, 0.6);
+          transition: 0.2s all ease-in; }
+      .project__overlay--caption-tags p {
+        font-size: 1.6rem;
+        letter-spacing: 0.01rem;
+        padding: 0.3rem 0.4rem;
+        color: #EE4266;
+        font-weight: 400;
+        color: #EE4266; }
+    .project__overlay:hover div {
+      background-color: rgba(238, 66, 102, 0.4);
+      visibility: visible;
+      transition: 0.2s all ease-in; }
 
 body,
 html {
