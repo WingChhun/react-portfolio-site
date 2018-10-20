@@ -53,6 +53,13 @@ class Project extends Component
         this.setState({openDialog: false});
     }
 
+    renderOverlay = (project) => {
+
+        //TODO: Destructure project object
+
+        //TODO: REnder
+    }
+
     render()
     {
         const {classes} = this.props;
@@ -93,13 +100,13 @@ class Project extends Component
                             </h3>
 
                             <Grid className="project__overlay--caption-tags" container spacing ={8}>
-                                <Grid xs={12} md={4}>
+                                <Grid xs={12} sm ={4} md={3}>
                                     <p>Javascript</p>
                                 </Grid>
-                                <Grid xs={12} md={4}>
+                                <Grid xs={12} sm ={4} md={3}>
                                     <p>Javascript</p>
                                 </Grid>
-                                <Grid xs={12} md={4}>
+                                <Grid xs={12} sm ={4} md={3}>
                                     <p>Javascript</p>
                                 </Grid>
 
