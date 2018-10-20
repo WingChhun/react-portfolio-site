@@ -78,6 +78,7 @@ const styles = () => ({
 
     rightIcon: {
         paddingLeft: '.8rem'
+    ,color:"white"
     },
 
     divider: {

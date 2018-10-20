@@ -329,14 +329,14 @@ MEDIA QUERIES MIXINS
     max-height: 185px;
     overflow: hidden; }
     .dialog__container--text {
-      border: 3px dotted pink;
       line-height: 100%;
       padding: 0.5rem;
       text-align: left; }
       .dialog__container--text--header {
         font-size: 2.2rem; }
       .dialog__container--text--sub {
-        font-size: 2rem; }
+        font-size: 2rem;
+        color: #00BFB2; }
       .dialog__container--text--p {
         line-height: 150%;
         font-size: 1.6rem;
@@ -351,13 +351,19 @@ MEDIA QUERIES MIXINS
           background-color: rgba(0, 191, 178, 0.6); }
 
 .carousel {
-  border: 2px solid black;
+  padding: 1rem;
   height: 100%;
   overflow: hidden;
   max-width: 450px;
   flex-grow: 1;
   width: 100%;
   margin: 0 auto; }
+  .carousel__label {
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    color: #00BFB2;
+    font-family: "Raleway Bold", sans-serif;
+    padding: 0; }
 
 body,
 html {

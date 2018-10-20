@@ -16,7 +16,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = theme => ({
     root: {
-        maxWidth: '97%',
+        maxWidth: '95%',
         flexGrow: 1,
         overflow: 'hidden'
     },
@@ -25,7 +25,7 @@ const styles = theme => ({
         alignItems: 'center',
         height: 50,
         fontSize: '1.8rem',
-        paddingLeft: theme.spacing.unit * 4,
+        paddingLeft: '1rem',
         backgroundColor: theme.palette.background.default,
         overflow: 'hidden'
     },
@@ -35,7 +35,9 @@ const styles = theme => ({
         maxWidth: '100%',
         overflow: 'hidden',
         width: '100%'
-    }
+    },
+
+    primary: {}
 });
 
 class StepperCarousel extends React.Component {
@@ -86,7 +88,7 @@ class StepperCarousel extends React.Component {
         return (
             <div className={classNames(classes.root, 'carousel')}>
                 <Paper square elevation={0} className={classes.header}>
-                    <Typography>{carousel[activeStep].label}</Typography>
+                    <h3 className={'carousel__label'}>{carousel[activeStep].label}</h3>
                 </Paper>
                 <AutoPlaySwipeableViews
                     axis={theme.direction === 'rtl'
@@ -95,14 +97,19 @@ class StepperCarousel extends React.Component {
                     index={activeStep}
                     onChangeIndex={this.handleStepChange}
                     enableMouseEvents>
+
                     {carousel.map((step, index) => (
+
                         <div key={`${step.label}_${index}`}>
                             {Math.abs(activeStep - index) <= 2
                                 ? (<img className={classes.img} src={step.imgPath} alt={step.label}/>)
                                 : null}
+
                         </div>
+
                     ))}
                 </AutoPlaySwipeableViews>
+
                 <MobileStepper
                     steps={maxSteps}
                     position="static"

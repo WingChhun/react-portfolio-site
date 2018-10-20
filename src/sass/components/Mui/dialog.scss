@@ -13,16 +13,18 @@
 
         //$ Title
         &--text {
-            border: $border-test-3;
+
             line-height: 100%;
             padding: 0.5rem;
             text-align: left;
             &--header {
                 font-size: 2.2rem;
+
             }
 
             &--sub {
                 font-size: 2rem;
+                color: $palette-primary;
             }
 
             &--p {
@@ -54,7 +56,7 @@
 
 .carousel {
 
-    border: $border-test;
+    padding: 1rem;
     height: 100%;
 
     overflow: hidden;
@@ -63,4 +65,11 @@
     width: 100%;
     margin: 0 auto;
 
+    &__label {
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+        color: $palette-primary;
+        font-family: $font-primary;
+        padding: 0;
+    }
 }
