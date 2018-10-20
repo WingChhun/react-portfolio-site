@@ -9,12 +9,18 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogActions from '@material-ui/core/DialogActions';
 import PersonIcon from '@material-ui/icons/Person';
 import AddIcon from '@material-ui/icons/Add';
 import Typography from '@material-ui/core/Typography';
 import blue from '@material-ui/core/colors/blue';
 import StepperCarousel from "../Stepper/StepperCarousel";
-const emails = ['username@gmail.com', 'user02@gmail.com'];
+import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
+
+
 const styles = {
     avatar: {
         backgroundColor: blue[100],
@@ -27,10 +33,17 @@ class ProjectDialog extends React.Component {
     constructor(props)
     {
         super(props);
-        
-        this.state ={
 
+        this.state = {
+            selectedValue: props.selectedValue,
+            open: props.open || false
         };
+    }
+
+    componentWillReceiveProps = props => {
+        if (props.open) {
+            this.setState({open: props.open})
+        }
     }
     handleClose = () => {
         this
@@ -54,32 +67,23 @@ class ProjectDialog extends React.Component {
 
         return (
             <Dialog
+                open={this.state.open}
                 onClose={this.handleClose}
-                aria-labelledby="simple-dialog-title"
-                {...other}>
-                <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-                <div>
-                    <List>
-                        {emails.map(email => (
-                            <ListItem button onClick={() => this.handleListItemClick(email)} key={email}>
-                                <ListItemAvatar>
-                                    <Avatar className={classes.avatar}>
-                                        <PersonIcon/>
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary={email}/>
-                            </ListItem>
-                        ))}
-                        <ListItem button onClick={() => this.handleListItemClick('addAccount')}>
-                            <ListItemAvatar>
-                                <Avatar>
-                                    <AddIcon/>
-                                </Avatar>
-                            </ListItemAvatar>
-                            <ListItemText primary="add account"/>
-                        </ListItem>
-                    </List>
-                </div>
+                aria-labelledby="form-dialog-title">
+                <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        To subscribe to this website, please enter your email address here. We will send
+                        updates occasionally.
+                    </DialogContentText>
+
+                </DialogContent>
+                <DialogActions>
+
+                    <Button onClick={this.handleClose} color="primary">
+                        Subscribe
+                    </Button>
+                </DialogActions>
             </Dialog>
         );
     }
@@ -91,35 +95,4 @@ ProjectDialog.propTypes = {
     selectedValue: PropTypes.string
 };
 
-const ProjectDialogWrapped = withStyles(styles)(ProjectDialog);
-
-class ProjectDialogDemo extends React.Component {
-    state = {
-        open: false,
-        selectedValue: emails[1]
-    };
-
-    handleClickOpen = () => {
-        this.setState({open: true});
-    };
-
-    handleClose = value => {
-        this.setState({selectedValue: value, open: false});
-    };
-
-    render() {
-        return (
-            <div>
-                <Typography variant="subtitle1">Selected: {this.state.selectedValue}</Typography>
-                <br/>
-                <Button onClick={this.handleClickOpen}>Open simple dialog</Button>
-                <ProjectDialogWrapped
-                    selectedValue={this.state.selectedValue}
-                    open={this.state.open}
-                    onClose={this.handleClose}/>
-            </div>
-        );
-    }
-}
-
-export default ProjectDialog;
+export default withStyles(styles)(ProjectDialog);
