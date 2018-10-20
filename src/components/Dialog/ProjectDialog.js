@@ -24,6 +24,7 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import LaunchIcon from "@material-ui/icons/Launch";
 import CancelIcon from "@material-ui/icons/Cancel";
 import CodeIcon from "@material-ui/icons/Code";
+import SnackbarComponent from "../Snackbar/Snackbar.js";
 
 const styles = () => ({
     root: {},
@@ -218,6 +219,7 @@ Project:{
                     </a>
 
                 </DialogActions>
+                <SnackbarComponent/>
             </Dialog>
         );
     }
