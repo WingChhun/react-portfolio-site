@@ -9,49 +9,30 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import {autoPlay} from 'react-swipeable-views-utils';
-
+import classNames from 'classnames';
+import ArrowBack from '@material-ui/icons/ArrowBack';
+import ArrowForward from '@material-ui/icons/ArrowForward';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const tutorialSteps = [
-    {
-        label: 'San Francisco – Oakland Bay Bridge, United States',
-        imgPath: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=cro' +
-                'p&w=400&h=250&q=60'
-    }, {
-        label: 'Bird',
-        imgPath: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=cro' +
-                'p&w=400&h=250&q=60'
-    }, {
-        label: 'Bali, Indonesia',
-        imgPath: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=cro' +
-                'p&w=400&h=250&q=80'
-    }, {
-        label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
-        imgPath: 'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=cro' +
-                'p&w=400&h=250&q=60'
-    }, {
-        label: 'Goč, Serbia',
-        imgPath: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=cro' +
-                'p&w=400&h=250&q=60'
-    }
-];
 
 const styles = theme => ({
     root: {
-        maxWidth: 400,
-        flexGrow: 1
+        maxWidth: '97%',
+        flexGrow: 1,
+        overflow: 'hidden'
     },
     header: {
         display: 'flex',
         alignItems: 'center',
         height: 50,
+        fontSize: '1.8rem',
         paddingLeft: theme.spacing.unit * 4,
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.background.default,
+        overflow: 'hidden'
     },
     img: {
-        height: 255,
+        height: '100%',
         display: 'block',
-        maxWidth: 400,
+        maxWidth: '100%',
         overflow: 'hidden',
         width: '100%'
     }
@@ -64,10 +45,23 @@ class StepperCarousel extends React.Component {
         super(props);
 
         this.state = {
-            activeStep: 0
+            activeStep: 0,
+            project: props.project || {},
+            carousel: props.project.carouselArr || []
         };
     }
 
+    componentWillReceiveProps = props => {
+        const {project} = props;
+
+        if (project) {
+            this.setState({
+                project
+            }, () => {
+                this.setState({carousel: project.carouselArr});
+            });
+        }
+    }
     handleNext = () => {
         this.setState(prevState => ({
             activeStep: prevState.activeStep + 1
@@ -86,13 +80,13 @@ class StepperCarousel extends React.Component {
 
     render() {
         const {classes, theme} = this.props;
-        const {activeStep} = this.state;
-        const maxSteps = tutorialSteps.length;
+        const {activeStep, project, carousel} = this.state;
+        const maxSteps = carousel.length;
 
         return (
-            <div className={classes.root}>
+            <div className={classNames(classes.root, 'carousel')}>
                 <Paper square elevation={0} className={classes.header}>
-                    <Typography>{tutorialSteps[activeStep].label}</Typography>
+                    <Typography>{carousel[activeStep].label}</Typography>
                 </Paper>
                 <AutoPlaySwipeableViews
                     axis={theme.direction === 'rtl'
@@ -101,8 +95,8 @@ class StepperCarousel extends React.Component {
                     index={activeStep}
                     onChangeIndex={this.handleStepChange}
                     enableMouseEvents>
-                    {tutorialSteps.map((step, index) => (
-                        <div key={step.label}>
+                    {carousel.map((step, index) => (
+                        <div key={`${step.label}_${index}`}>
                             {Math.abs(activeStep - index) <= 2
                                 ? (<img className={classes.img} src={step.imgPath} alt={step.label}/>)
                                 : null}
@@ -119,10 +113,10 @@ class StepperCarousel extends React.Component {
                 }
                 disabled = {
                     activeStep === maxSteps - 1
-                } > Next {
+                } > {
                     theme.direction === 'rtl'
-                        ? <KeyboardArrowLeft/>
-                        : <KeyboardArrowRight/>
+                        ? <ArrowBack/>
+                        : <ArrowForward/>
                 } < /Button>}
                     backButton={< Button size = "small" onClick = {
                     this.handleBack
@@ -131,10 +125,9 @@ class StepperCarousel extends React.Component {
                     activeStep === 0
                 } > {
                     theme.direction === 'rtl'
-                        ? <KeyboardArrowRight/>
-                        : <KeyboardArrowLeft/>
-                }
-                Back < /Button>}/>
+                        ? <ArrowForward/>
+                        : <ArrowBack/>
+                } < /Button>}/>
             </div>
         );
     }

@@ -321,36 +321,43 @@ MEDIA QUERIES MIXINS
       .project__overlay:hover div .project__overlay--caption-tags {
         visibility: visible; }
 
-.dialog__carousel {
-  border: 3px solid #EE4266;
-  padding: 1rem; }
-
-.dialog__container {
-  min-height: 150px;
-  height: 100%;
-  max-height: 185px;
+.dialog {
   overflow: hidden; }
-  .dialog__container--text {
-    border: 3px dotted pink;
-    line-height: 100%;
-    padding: 0.5rem;
-    text-align: left; }
-    .dialog__container--text--header {
-      font-size: 2.2rem; }
-    .dialog__container--text--sub {
-      font-size: 2rem; }
-    .dialog__container--text--p {
-      line-height: 150%;
-      font-size: 1.6rem;
-      font-weight: 400; }
-  .dialog__container--action {
-    padding: 0 1rem 1.5rem;
-    justify-content: flex-start;
-    flex-wrap: wrap; }
-    .dialog__container--action--btn {
-      background-color: #00BFB2; }
-      .dialog__container--action--btn:hover {
-        background-color: rgba(0, 191, 178, 0.6); }
+  .dialog__container {
+    min-height: 150px;
+    height: 100%;
+    max-height: 185px;
+    overflow: hidden; }
+    .dialog__container--text {
+      border: 3px dotted pink;
+      line-height: 100%;
+      padding: 0.5rem;
+      text-align: left; }
+      .dialog__container--text--header {
+        font-size: 2.2rem; }
+      .dialog__container--text--sub {
+        font-size: 2rem; }
+      .dialog__container--text--p {
+        line-height: 150%;
+        font-size: 1.6rem;
+        font-weight: 400; }
+    .dialog__container--action {
+      padding: 0 1rem 1.5rem;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .dialog__container--action--btn {
+        background-color: #00BFB2; }
+        .dialog__container--action--btn:hover {
+          background-color: rgba(0, 191, 178, 0.6); }
+
+.carousel {
+  border: 2px solid black;
+  height: 100%;
+  overflow: hidden;
+  max-width: 450px;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto; }
 
 body,
 html {

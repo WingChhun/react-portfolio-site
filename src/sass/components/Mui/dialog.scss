@@ -1,15 +1,8 @@
 
 .dialog {
-
-    &__carousel {
-        border: 3px solid $palette-secondary;
-        padding: 1rem;
-    }
-
+    overflow: hidden;
     //$ Main container for content
     &__container {
-
-      
 
         //Note Dimensions
         min-height: 150px;
@@ -61,5 +54,13 @@
 
 .carousel {
 
- 
+    border: $border-test;
+    height: 100%;
+
+    overflow: hidden;
+    max-width: 450px;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 auto;
+
 }

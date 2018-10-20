@@ -87,6 +87,12 @@ const styles = () => ({
     visit: {
         textDecoration: 'none',
         color: 'white'
+    },
+
+    carousel: {
+        border: '2px solid pink',
+        width: '100%',
+        height: '100%'
     }
 });
 
@@ -181,27 +187,28 @@ Project:{
 
         return (
             <Dialog
-                open={this.state.open}
+                //open={this.state.open}
+                open={true}
                 onClose={this.handleClose}
                 onBlur={this.handleClose}
                 onExit={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
                 <div className="dialog__carousel">
-                    <h1>
-                        Carousel Here</h1>
+
+                    <StepperCarousel  project={project}/>
                 </div>
                 <DialogContent className={"dialog__container"}>
 
                     <div className="dialog__container--text">
                         <h2 className="dialog__container--text--header">React Robofriends</h2>
                         <h3 className="dialog__container--text--sub">Personal Project</h3>
-                   
-                    <Divider className={classes.divider}/>
-                    <DialogContentText className="dialog__container--text--p">
-                        To subscribe to this website, please enter your email address here. We will send
-                        updates occasionally.
-                    </DialogContentText>
+
+                        <Divider className={classes.divider}/>
+                        <DialogContentText className="dialog__container--text--p">
+                            To subscribe to this website, please enter your email address here. We will send
+                            updates occasionally.
+                        </DialogContentText>
                     </div>
                 </DialogContent>
 
@@ -234,7 +241,7 @@ Project:{
                         title={project.isPrivate
                         ? "Project is private"
                         : "Take a peek under the hood"}>
-       
+
                         <Button
                             variant="contained"
                             className={classNames(classes.button, classes.buttonGithub)}

@@ -22,6 +22,18 @@ export default
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -37,6 +49,18 @@ export default
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -52,6 +76,18 @@ export default
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -67,6 +103,18 @@ export default
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -82,6 +130,12 @@ export default
 
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -97,6 +151,18 @@ export default
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
         imgRel: 'Robofriends',
+        carouselArr: [
+            {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }, {
+                label: "Robofriends cover",
+                imgPath: robofriends
+            }
+        ],
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
