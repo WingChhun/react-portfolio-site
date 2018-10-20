@@ -266,7 +266,8 @@ MEDIA QUERIES MIXINS
   .project__parent {
     position: relative; }
   .project__overlay {
-    transition: 0.2s all ease; }
+    transition: 0.2s all ease;
+    height: 300px; }
     .project__overlay--caption {
       position: absolute;
       top: 50%;
@@ -280,7 +281,7 @@ MEDIA QUERIES MIXINS
       justify-content: center;
       align-items: center; }
       .project__overlay--caption h3 {
-        font-size: 2rem; }
+        font-size: 2.4rem; }
       .project__overlay--caption a {
         margin: 0 auto;
         width: 50%;
@@ -307,10 +308,35 @@ MEDIA QUERIES MIXINS
       visibility: visible;
       transition: 0.2s all ease-in; }
 
+.dialog__carousel {
+  border: 3px solid #EE4266;
+  padding: 1rem; }
+
 .dialog__container {
   border: 2px solid black;
-  width: 700px;
+  min-height: 200px;
+  height: 100%;
+  max-height: 275px;
+  padding: 1rem;
   overflow: hidden; }
+  .dialog__container--text {
+    border: 3px dotted pink;
+    line-height: 100%; }
+    .dialog__container--text--header {
+      font-size: 2.2rem; }
+    .dialog__container--text--sub {
+      font-size: 2rem; }
+    .dialog__container--text--p {
+      line-height: 150%;
+      font-size: 1.6rem;
+      font-weight: 400; }
+  .dialog__container--action {
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+    .dialog__container--action--btn {
+      background-color: #00BFB2; }
+      .dialog__container--action--btn:hover {
+        background-color: rgba(0, 191, 178, 0.6); }
 
 .carousel {
   border: 3px dashed #1B242F; }
