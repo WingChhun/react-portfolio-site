@@ -314,7 +314,10 @@ MEDIA QUERIES MIXINS
   overflow: hidden; }
   .dialog__container--action {
     border: 2px solid black;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    width: 80%; }
+    .dialog__container--action--btn {
+      background-color: #00BFB2; }
 
 .carousel {
   border: 3px dashed #1B242F; }

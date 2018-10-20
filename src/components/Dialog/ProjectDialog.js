@@ -20,7 +20,10 @@ import blue from '@material-ui/core/colors/blue';
 import StepperCarousel from "../Stepper/StepperCarousel";
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+import LaunchIcon from "@material-ui/icons/Launch";
+import CancelIcon from "@material-ui/icons/Cancel";
+import CodeIcon from "@material-ui/icons/Code";
 
 const styles = () => ({
     root: {},
@@ -36,7 +39,22 @@ const styles = () => ({
 
     //Icons on the right of button
     button: {
-        borderRadius: '15px'
+        borderRadius: '5px',
+        display: 'flex',
+        justifyContent: 'space-around',
+        fontSize: '1.3rem',
+        letterSpacing: '.05rem'
+
+    },
+
+    buttonVisit: {
+        backgroundColor: '#00BFB2',
+        width: '1 0 35%'
+    },
+
+    buttonGithub: {
+        backgroundColor: '#834bff',
+        width: '1 0 35%'
     },
 
     rightIcon: {
@@ -50,15 +68,44 @@ class ProjectDialog extends React.Component {
     {
         super(props);
 
+        //TODO: Get the selected Data passed in
         this.state = {
             selectedValue: props.selectedValue,
-            open: props.open || false
+            open: props.open || false,
+            project: props.project || {}
         };
+
+        //TODO: Data shoudl look like
+        /*
+Project:{
+    title:"",
+    subtitle:'',
+    description:'',
+
+    websiteURL:"",
+    githubURL:"",
+
+    isPrivate:false,
+    inProgress:false,
+
+}
+        */
     }
 
+    /*
+@function componentWillReceiveProps(propss)
+
+    */
     componentWillReceiveProps = props => {
-        if (props.open) {
-            this.setState({open: props.open})
+
+        const {open, project} = props;
+
+        if (open) {
+            this.setState({open});
+        }
+
+        if (project) {
+            this.setState({project});
         }
     }
     handleClose = () => {
@@ -97,16 +144,28 @@ class ProjectDialog extends React.Component {
                 <DialogActions
                     className={classNames("dialog__container--action", classes.dialogActions)}>
 
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={classNames(classes.button)}>
-                        Visit Website
-                        <CloudUploadIcon className={classes.rightIcon}/>
-                    </Button>
-                    <Button onClick={this.handleClose} color="primary">
-                        Subscribe
-                    </Button>
+                    <a href="" target="blank">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classNames(classes.button, classes.buttonVisit)}>
+                            Visit Website
+                            <LaunchIcon className={classes.rightIcon}/>
+                        </Button>
+                    </a>
+
+                    <a href="" target="blank">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classNames(classes.button, classes.buttonGithub)}>
+                            Github
+
+                            <CodeIcon className={classes.rightIcon}/>
+
+                        </Button>
+                    </a>
+
                 </DialogActions>
             </Dialog>
         );
@@ -115,7 +174,7 @@ class ProjectDialog extends React.Component {
 
 ProjectDialog.propTypes = {
     classes: PropTypes.object.isRequired,
-    onClose: PropTypes.func,
+    onClose: PropTypes.func.isRequired,
     selectedValue: PropTypes.string
 };
 

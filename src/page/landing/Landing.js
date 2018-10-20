@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
-
-// ! - Import Components
 import NavbarComponent from "../../components/Navbar/Navbar.js";
 import HeroComponent from "../../components/Hero/Hero.js";
 import HeroContent from "../../components/Hero/HeroContent.js";
