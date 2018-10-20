@@ -1,25 +1,54 @@
 
 .dialog {
 
+    &__carousel {
+        border: 3px solid $palette-secondary;
+    }
+
     //$ Main container for content
     &__container {
 
         border: $border-test;
 
         padding: 1rem;
-        height: 400px;
+        height: 200px;
         overflow: hidden;
+
+        //$ Title
+        &--text {
+            border: $border-test-3;
+            line-height: 100%;
+
+            &--header {
+                font-size: 2.2rem;
+            }
+
+            &--sub {
+                font-size: 2rem;
+            }
+
+            &--p {
+                line-height: 150%;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+        }
 
         //$ ACtion
         &--action {
-            border: $border-test;
-            justify-content: flex-start;
-            width: 80%;
 
+            justify-content: flex-start;
+
+            flex-wrap: wrap;
             //$ Stytle the button; change the background color
             &--btn {
 
                 background-color: $palette-primary;
+
+                //$ Hover a action item button in the dialog
+                &:hover {
+                    background-color: rgba($palette-primary,.6);
+                }
             }
         }
     }

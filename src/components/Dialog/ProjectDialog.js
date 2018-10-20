@@ -43,22 +43,42 @@ const styles = () => ({
         display: 'flex',
         justifyContent: 'space-around',
         fontSize: '1.3rem',
-        letterSpacing: '.05rem'
+        letterSpacing: '.05rem',
+        color: '#fff'
 
     },
 
     buttonVisit: {
         backgroundColor: '#00BFB2',
-        width: '1 0 35%'
+        width: '1 0 35%',
+        transition: '0.3s all ease-out',
+
+        '&:hover': {
+
+            transition: '0.3s all ease-in',
+            backgroundColor: '#03DA36'
+        }
     },
 
     buttonGithub: {
         backgroundColor: '#834bff',
-        width: '1 0 35%'
+        width: '1 0 35%',
+
+        transition: '0.3s all ease-out',
+
+        '&:hover': {
+
+            transition: '0.3s all ease-in',
+            backgroundColor: '#3700B3'
+        }
     },
 
     rightIcon: {
         paddingLeft: '.8rem'
+    },
+  
+    divider: {
+        margin: '1rem 0'
     }
 });
 
@@ -133,9 +153,19 @@ Project:{
                 open={true}
                 onClose={this.handleClose}
                 aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+
+                <div className="dialog__carousel">
+                    <h1>
+                        Carousel Here</h1>
+                </div>
                 <DialogContent className={"dialog__container"}>
-                    <DialogContentText>
+
+                    <div className="dialog__container--text">
+                        <h2 className="dialog__container--text--header">React Robofriends</h2>
+                        <h3 className="dialog__container--text--sub">Personal Project</h3>
+                    </div>
+                    <Divider className={classes.divider}/>
+                    <DialogContentText className="dialog__container--text--p">
                         To subscribe to this website, please enter your email address here. We will send
                         updates occasionally.
                     </DialogContentText>
@@ -147,8 +177,7 @@ Project:{
                     <a href="" target="blank">
                         <Button
                             variant="contained"
-                            color="primary"
-                            className={classNames(classes.button, classes.buttonVisit)}>
+                            className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}>
                             Visit Website
                             <LaunchIcon className={classes.rightIcon}/>
                         </Button>
@@ -157,8 +186,7 @@ Project:{
                     <a href="" target="blank">
                         <Button
                             variant="contained"
-                            color="primary"
-                            className={classNames(classes.button, classes.buttonGithub)}>
+                            className={classNames(classes.button, classes.buttonGithub, 'dialog__container--action--btn')}>
                             Github
 
                             <CodeIcon className={classes.rightIcon}/>
