@@ -8,6 +8,8 @@ import Divider from "@material-ui/core/Divider";
 import Fade from '@material-ui/core/Fade';
 import PROJECTS from "../../assets/portfolio";
 import Chip from '@material-ui/core/Chip';
+import ProjectDialog from '../../components/Dialog/ProjectDialog';
+
 const styles = () => ({
     root: {},
     parentRelative: {
