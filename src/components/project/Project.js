@@ -29,8 +29,8 @@ class Project extends Component
             projects: PROJECTS,
             filteredProjects: PROJECTS || [],
             openDialog: false,
-            hoverTrue: false
-
+            hoverTrue: false,
+            indexSelected: -1
         };
     }
 
@@ -45,12 +45,13 @@ class Project extends Component
         this.setState({hoverTrue: false})
     }
 
-    handleOpen = () => {
-        this.setState({openDialog: true});
+    handleOpen = index => (event) => {
+
+        this.setState({openDialog: true, indexSelected: index});
     }
 
     handleClose = () => {
-        this.setState({openDialog: false});
+        this.setState({openDialog: false, indexSelected: -1});
     }
 
     handleChange = field => event => {
@@ -80,15 +81,16 @@ class Project extends Component
     renderContent = () => {
 
         const {classes} = this.props;
-        const {projects, filteredProjects} = this.state;
+        const {projects, filteredProjects, indexSelected} = this.state;
         const {openDialog} = this.state;
 
+        //$ Create an array of grids based on projects
         const content = projects.map((project, index) => (
 
             <Grid
                 key={`${project.name}_${index}`}
                 className={classnames(classes.parentRelative, "project__overlay")}
-                xs={6}
+                xs={12}
                 sm={6}
                 md={4}
                 data-index={index}>
@@ -104,16 +106,18 @@ class Project extends Component
                         {project.tags && project
                             .tags
                             .map((tag, index) => (
-                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={4} md={3}>
+                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={3}>
                                     <p>{tag}</p>
                                 </Grid>
                             ))}
 
                     </Grid>
 
-                    <a onClick={this.handleOpen}>Learn More</a>
+                    <a onClick={this.handleOpen(index)}>Learn More</a>
                     <ProjectDialog
-                        indexOpen={index}
+                        project={project}
+                        index={index}
+                        indexSelected={indexSelected}
                         open={this.state.openDialog}
                         onClose={this.handleClose}/>
                 </div>
@@ -148,7 +152,7 @@ class Project extends Component
                 <Grid container spacing={0} xs ={12}>
 
                     {this.renderContent()}
-               
+
                 </Grid>
             </div>
 

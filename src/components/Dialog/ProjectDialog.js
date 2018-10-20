@@ -91,9 +91,10 @@ class ProjectDialog extends React.Component {
         //TODO: Get the selected Data passed in
         this.state = {
             selectedValue: props.selectedValue,
-            open: props.open || false,
+            open: false,
             project: props.project || {},
-            indexOpen: props.indexOpen
+            index: props.index || -1,
+            indexSelected: props.indexSelected
         };
 
         //TODO: Data shoudl look like
@@ -121,20 +122,37 @@ Project:{
     */
     componentWillReceiveProps = props => {
 
-        const {open, project} = props;
-
-        if (open) {
-            this.setState({open});
-        }
+        const {open, project, index, indexSelected} = props;
 
         if (project) {
             this.setState({project});
         }
+
+        if (index) {
+            this.setState({index});
+        }
+
+        if (indexSelected) {
+            this.setState({indexSelected});
+        }
+
+        //$ Only open if selected matches
+        if ((index === indexSelected)) {
+            this.setState({open: true})
+        }
     }
+
+    /*
+@function: handleClose()
+@desc: Set Open state to false, then call props.onClose() to change state in parent component
+    */
     handleClose = () => {
+
+        this.setState({open: false});
         this
             .props
             .onClose(this.props.selectedValue);
+
     };
 
     handleListItemClick = value => {
@@ -156,6 +174,7 @@ Project:{
                 open={this.state.open}
                 onClose={this.handleClose}
                 onBlur={this.handleClose}
+                onExit={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
                 <div className="dialog__carousel">
@@ -204,11 +223,16 @@ Project:{
     }
 }
 
+/*
+@functino: propTypes
+- Opena  dialog depending if the indexSelected matches the index
+*/
 ProjectDialog.propTypes = {
     classes: PropTypes.object.isRequired,
     onClose: PropTypes.func.isRequired,
     project: PropTypes.object.isRequired,
-    indexOpen: PropTypes.number.isRequired,
+    index: PropTypes.number.isRequired,
+    indexSelected: PropTypes.number.isRequired,
     selectedValue: PropTypes.string
 };
 
