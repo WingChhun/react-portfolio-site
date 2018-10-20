@@ -17,7 +17,7 @@ export default
 [
     {
         name: "Robo Friends",
-        website: "https://wingchhun.github.io/RickandMorty/",
+       // website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,

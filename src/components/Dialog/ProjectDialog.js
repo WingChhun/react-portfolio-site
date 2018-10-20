@@ -77,8 +77,8 @@ const styles = () => ({
     },
 
     rightIcon: {
-        paddingLeft: '.8rem'
-    ,color:"white"
+        paddingLeft: '.8rem',
+        color: "white"
     },
 
     divider: {
@@ -87,7 +87,8 @@ const styles = () => ({
 
     visit: {
         textDecoration: 'none',
-        color: 'white'
+        color: 'white',
+        padding: '1rem 1.2rem'
     },
 
     carousel: {
@@ -188,8 +189,7 @@ Project:{
 
         return (
             <Dialog
-                //open={this.state.open}
-                open={true}
+                open={this.state.open}
                 onClose={this.handleClose}
                 onBlur={this.handleClose}
                 onExit={this.handleClose}
@@ -197,7 +197,7 @@ Project:{
 
                 <div className="dialog__carousel">
 
-                    <StepperCarousel  project={project}/>
+                    <StepperCarousel project={project}/>
                 </div>
                 <DialogContent className={"dialog__container"}>
 
@@ -218,23 +218,29 @@ Project:{
 
                     <Tooltip
                         className={classes.buttonVisit}
-                        title={!project.inProgress
-                        ? "Visit the site"
-                        : "Site still in progress!"}>
-                        <Button
-                            variant="contained"
-                            className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}
-                            disabled={!project.website && !project.inProgress
-                            ? true
-                            : false}>
+                        title={project.inProgress
+                        ? "Site still in progress!"
+                        : "Visit the site"}>
 
-                            {project.website && !project.inProgress
-                                ? <a className={classes.visit} href={project.website}>Visit Website</a>
-                                : 'Visit Website'}
+                        <a
+                            className={classNames(classes.visit, 'dialog__link')}
+                            href={project.website
+                            ? project.website
+                            : null}
+                            target="blank">
 
-                            <LaunchIcon className={classes.rightIcon}/>
+                            <Button
+                                variant="contained"
+                                className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}
+                                disabled={!project.website && !project.inProgress
+                                ? true
+                                : false}>
 
-                        </Button>
+                                Visit Website
+                                <LaunchIcon className={classes.rightIcon}/>
+
+                            </Button>
+                        </a>
                     </Tooltip>
 
                     <Tooltip
@@ -242,21 +248,24 @@ Project:{
                         title={project.isPrivate
                         ? "Project is private"
                         : "Take a peek under the hood"}>
+                        <a
+                            className={classNames(classes.visit, "dialog__link")}
+                            target="blank"
+                            href={project.github && !project.isPrivate
+                            ? project.github
+                            : null}>
+                            <Button
+                                variant="contained"
+                                className={classNames(classes.button, classes.buttonGithub)}
+                                disabled={project.isPrivate
+                                ? true
+                                : false}>
 
-                        <Button
-                            variant="contained"
-                            className={classNames(classes.button, classes.buttonGithub)}
-                            disabled={project.isPrivate
-                            ? true
-                            : false}>
+                                Github
+                                <CodeIcon className={classes.rightIcon}/>
 
-                            {project.website && !project.inProgress
-                                ? <a className={classNames(classes.visit)} target="blank" href={project.github}>Github</a>
-                                : 'Github'}
-
-                            <CodeIcon className={classes.rightIcon}/>
-
-                        </Button>
+                            </Button>
+                        </a>
                     </Tooltip>
                 </DialogActions>
             </Dialog>

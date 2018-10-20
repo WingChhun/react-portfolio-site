@@ -36,7 +36,7 @@
 
         //$ ACtion
         &--action {
-            padding: 0 1rem 1.5rem;
+            padding: 1rem 1rem 1.5rem;
             justify-content: flex-start;
 
             flex-wrap: wrap;
@@ -51,6 +51,12 @@
                 }
             }
         }
+    }
+
+    //Visit websites and Github buttons
+    &__link {
+
+        padding: 1.2rem 1.4rem;
     }
 }
 
