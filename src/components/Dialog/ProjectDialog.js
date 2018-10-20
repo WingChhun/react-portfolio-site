@@ -24,6 +24,7 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import LaunchIcon from "@material-ui/icons/Launch";
 import CancelIcon from "@material-ui/icons/Cancel";
 import CodeIcon from "@material-ui/icons/Code";
+import Tooltip from '@material-ui/core/Tooltip';
 import SnackbarComponent from "../Snackbar/Snackbar.js";
 
 const styles = () => ({
@@ -80,6 +81,11 @@ const styles = () => ({
 
     divider: {
         margin: '1rem 0'
+    },
+
+    visit: {
+        textDecoration: 'none',
+        color: 'white'
     }
 });
 
@@ -170,6 +176,8 @@ Project:{
             ...other
         } = this.props;
 
+        const {project} = this.state;
+
         return (
             <Dialog
                 open={this.state.open}
@@ -195,39 +203,58 @@ Project:{
                     </DialogContentText>
 
                 </DialogContent>
+
                 <DialogActions
                     className={classNames("dialog__container--action", classes.dialogActions)}>
 
-                    <a href="" target="blank">
+                    <Tooltip
+                        className={classes.buttonVisit}
+                        title={!project.inProgress
+                        ? "Visit the site"
+                        : "Site still in progress!"}>
                         <Button
                             variant="contained"
-                            className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}>
-                            Visit Website
-                            <LaunchIcon className={classes.rightIcon}/>
-                        </Button>
-                    </a>
+                            className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}
+                            disabled={!project.website && !project.inProgress
+                            ? true
+                            : false}>
 
-                    <a href="" target="blank">
+                            {project.website && !project.inProgress
+                                ? <a className={classes.visit} href={project.website}>Visit Website</a>
+                                : 'Visit Website'}
+
+                            <LaunchIcon className={classes.rightIcon}/>
+
+                        </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                        className={classes.buttonGithub}
+                        title={project.isPrivate
+                        ? "Project is private"
+                        : "Take a peek under the hood"}>
                         <Button
                             variant="contained"
-                            className={classNames(classes.button, classes.buttonGithub, 'dialog__container--action--btn')}>
-                            Github
+                            className={classNames(classes.button, classes.buttonGithub)}
+                            disabled={project.isPrivate
+                            ? true
+                            : false}>
+
+                            {project.website && !project.inProgress
+                                ? <a className={classNames(classes.visit)} target="blank" href={project.github}>Github</a>
+                                : 'Github'}
 
                             <CodeIcon className={classes.rightIcon}/>
 
                         </Button>
-                    </a>
-
+                    </Tooltip>
                 </DialogActions>
-                <SnackbarComponent/>
             </Dialog>
         );
     }
 }
 
-/*
-@functino: propTypes
-- Opena  dialog depending if the indexSelected matches the index
+/* @functino : propTypes - Opena dialog depending if the indexSelected matches the index
 */
 ProjectDialog.propTypes = {
     classes: PropTypes.object.isRequired,

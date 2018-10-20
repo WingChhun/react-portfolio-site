@@ -26,7 +26,7 @@ export default
             JAVASCRIPT, REACT, REDUX
         ],
 
-        isPrivate: false,
+        isPrivate: true,
         inProgress: false,
 
         description: "A project build in the MERN Stack for the mesmes"

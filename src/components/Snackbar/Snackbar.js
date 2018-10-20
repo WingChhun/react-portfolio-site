@@ -3,20 +3,23 @@ import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import PropTypes from 'prop-types';
 
-class PositionedSnackbar extends React.Component {
-    constructor(props)
+class SnackbarComponent extends React.Component {
+ 
+  constructor(props)
     {
         super(props);
 
         this.state = {
-            open: false,
-            vertical: 'bottom',
-            horizontal: 'center'
+            open: props.open || false,
+            vertical: props.vertical || 'bottom',
+            horizontal: props.horizontal || 'center',
+            message: props.message || "This is a snackbar"
         };
     }
 
     componentWillReceiveProps = props => {
-        const {open, vertical, horizontal} = props;
+
+        const {open, vertical, horizontal, message} = props;
 
         if (open) {
             this.setState({open});
@@ -28,6 +31,10 @@ class PositionedSnackbar extends React.Component {
 
         if (horizontal) {
             this.setState({horizontal});
+        }
+
+        if (message) {
+            this.setState({message});
         }
     }
 
@@ -43,7 +50,9 @@ class PositionedSnackbar extends React.Component {
     };
 
     render() {
-        const {vertical, horizontal, open} = this.state;
+
+        const {vertical, horizontal, open, message} = this.state;
+
         return (
             <div>
 
@@ -52,15 +61,19 @@ class PositionedSnackbar extends React.Component {
                     vertical,
                     horizontal
                 }}
-                    open={open}
+                    open={true}
+                    autoHideDuration
+                    ={4000}
                     onClose={this.handleClose}
                     ContentProps={{
                     'aria-describedby': 'message-id'
                 }}
-                    message={< span id = "message-id" > I love snacks < /span>}/>
+                    message={<span id = "message-id"> {
+                    message
+                } </span>}/>
             </div>
         );
     }
 }
 
-export default PositionedSnackbar;
+export default SnackbarComponent;
