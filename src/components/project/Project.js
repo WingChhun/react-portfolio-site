@@ -26,8 +26,8 @@ class Project extends Component
         super(props);
 
         this.state = {
-            Projects: PROJECTS,
-
+            projects: PROJECTS,
+            filteredProjects: PROJECTS || [],
             openDialog: false,
             hoverTrue: false
 
@@ -53,11 +53,77 @@ class Project extends Component
         this.setState({openDialog: false});
     }
 
+    handleChange = field => event => {
+
+        const value = event
+            .target
+            .value
+            .trim();
+
+        //TODO: Filter contents for projects to be displayed
+
+        switch (field) {
+
+            default:
+                break;
+        }
+
+    }
+
     renderOverlay = (project) => {
 
         //TODO: Destructure project object
 
         //TODO: REnder
+    }
+
+    renderContent = () => {
+
+        const {classes} = this.props;
+        const {projects, filteredProjects} = this.state;
+        const {openDialog} = this.state;
+
+        const content = projects.map((project, index) => (
+
+            <Grid
+                key={`${project.name}_${index}`}
+                className={classnames(classes.parentRelative, "project__overlay")}
+                xs={6}
+                sm={6}
+                md={4}
+                data-index={index}>
+
+                <img src={project.img} rel ={project.imageRel}/>
+
+                <div class="project__overlay--caption">
+
+                    <h3>{project.name}</h3>
+
+                    <Grid className="project__overlay--caption-tags" container spacing ={8}>
+
+                        {project.tags && project
+                            .tags
+                            .map((tag, index) => (
+                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={4} md={3}>
+                                    <p>{tag}</p>
+                                </Grid>
+                            ))}
+
+                    </Grid>
+
+                    <a onClick={this.handleOpen}>Learn More</a>
+                    <ProjectDialog
+                        indexOpen={index}
+                        open={this.state.openDialog}
+                        onClose={this.handleClose}/>
+                </div>
+
+            </Grid>
+        )); //! End Map
+
+        //!Return rendered content
+        return content;
+
     }
 
     render()
@@ -68,76 +134,21 @@ class Project extends Component
 
             <div className={"project"}>
 
-                <h2>
+                <h2 className="project--header">
                     My Projects
                 </h2>
 
-                <p>Here's a few I'm proud enough to share. If interested in seeing more,
-                    checkout my
+                <p className="project--sub">Here's a few I'm proud enough to share. If
+                    interested in seeing more, checkout my
                     <a href="https://github.com/WingChhun" target="blank">
                         Github
                     </a>
                 </p>
-                <Grid container spacing={0}>
 
-                    <Grid
-                        className={classnames(classes.parentRelative, "project__overlay")}
-                        xs={6}
-                        sm={6}
-                        md={4}
-                        onMouseOver={this.handleMouseOver}
-                        onMouseLeave={this.handleMouseLeave}
-                        index
-                        ={1}
-                        data-index={2}>
+                <Grid container spacing={0} xs ={12}>
 
-                        {/* <img
-                                src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/> */}
-
-                        <div class="project__overlay--caption">
-
-                            <h3>React Robofriends
-                            </h3>
-
-                            <Grid className="project__overlay--caption-tags" container spacing ={8}>
-                                <Grid xs={12} sm ={4} md={3}>
-                                    <p>Javascript</p>
-                                </Grid>
-                                <Grid xs={12} sm ={4} md={3}>
-                                    <p>Javascript</p>
-                                </Grid>
-                                <Grid xs={12} sm ={4} md={3}>
-                                    <p>Javascript</p>
-                                </Grid>
-
-                            </Grid>
-
-                            <a onClick={this.handleOpen}>Learn More</a>
-                            <ProjectDialog open={this.state.openDialog} onClose={this.handleClose}/>
-                        </div>
-
-                    </Grid>
-                    <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
-                    </Grid>
-                    <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
-                    </Grid>
-                    <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
-                    </Grid>
-                    <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
-                    </Grid>
-                    <Grid className={classes.parentRelative} xs={6} sm={6} md={4}>
-                        <img
-                            src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=500&q=60"/>
-                    </Grid>
-
+                    {this.renderContent()}
+               
                 </Grid>
             </div>
 

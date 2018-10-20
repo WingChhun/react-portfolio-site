@@ -76,7 +76,7 @@ const styles = () => ({
     rightIcon: {
         paddingLeft: '.8rem'
     },
-  
+
     divider: {
         margin: '1rem 0'
     }
@@ -92,7 +92,8 @@ class ProjectDialog extends React.Component {
         this.state = {
             selectedValue: props.selectedValue,
             open: props.open || false,
-            project: props.project || {}
+            project: props.project || {},
+            indexOpen: props.indexOpen
         };
 
         //TODO: Data shoudl look like
@@ -152,8 +153,9 @@ Project:{
 
         return (
             <Dialog
-                open={true}
+                open={this.state.open}
                 onClose={this.handleClose}
+                onBlur={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
                 <div className="dialog__carousel">
@@ -205,6 +207,8 @@ Project:{
 ProjectDialog.propTypes = {
     classes: PropTypes.object.isRequired,
     onClose: PropTypes.func.isRequired,
+    project: PropTypes.object.isRequired,
+    indexOpen: PropTypes.number.isRequired,
     selectedValue: PropTypes.string
 };
 

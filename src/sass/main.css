@@ -266,7 +266,8 @@ MEDIA QUERIES MIXINS
   .project__parent {
     position: relative; }
   .project__overlay {
-    transition: 0.2s all ease; }
+    transition: 0.2s all ease;
+    height: 300px; }
     .project__overlay--caption {
       position: absolute;
       top: 50%;

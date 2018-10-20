@@ -39,13 +39,13 @@
     &__overlay {
 
         transition: 0.2s all ease;
-
+        height: 300px;
         &--caption {
             @include absCenter;
             // display: none;
             //visibility: hidden;
             transition: 0.2s all ease-out;
-        
+
             height: 100%;
             width: 100%;
 
@@ -96,8 +96,7 @@
             }
         }
         &:hover {
-           
-           
+
             & div {
 
                 background-color: rgba($palette-secondary, .4);
