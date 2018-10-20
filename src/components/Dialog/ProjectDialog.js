@@ -196,13 +196,13 @@ Project:{
                     <div className="dialog__container--text">
                         <h2 className="dialog__container--text--header">React Robofriends</h2>
                         <h3 className="dialog__container--text--sub">Personal Project</h3>
-                    </div>
+                   
                     <Divider className={classes.divider}/>
                     <DialogContentText className="dialog__container--text--p">
                         To subscribe to this website, please enter your email address here. We will send
                         updates occasionally.
                     </DialogContentText>
-
+                    </div>
                 </DialogContent>
 
                 <DialogActions
@@ -234,6 +234,7 @@ Project:{
                         title={project.isPrivate
                         ? "Project is private"
                         : "Take a peek under the hood"}>
+       
                         <Button
                             variant="contained"
                             className={classNames(classes.button, classes.buttonGithub)}
