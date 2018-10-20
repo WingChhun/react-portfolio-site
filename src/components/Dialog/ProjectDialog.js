@@ -26,6 +26,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import CodeIcon from "@material-ui/icons/Code";
 import Tooltip from '@material-ui/core/Tooltip';
 import SnackbarComponent from "../Snackbar/Snackbar.js";
+import Fade from '@material-ui/core/Fade';
 
 const styles = () => ({
     root: {},

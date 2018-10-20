@@ -19,6 +19,23 @@
 
     }
 
+    //$ Header text
+    &--header {
+        font-size: 2.6rem;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+    }
+
+    //$ Under test
+    &--sub {
+        line-height: 145%;
+        font-weight: 300;
+        font-size: 1.6rem;
+        a {
+            padding-left: 0.8rem;
+        }
+    }
+
     //$ Project related shit
 
     img {
@@ -39,16 +56,17 @@
     &__overlay {
 
         transition: 0.2s all ease;
-        height: 300px;
+        height: 400px;
+
+        //TODO: Edit height for responsive design
         &--caption {
             @include absCenter;
-            // display: none;
-            //visibility: hidden;
-            transition: 0.2s all ease-out;
-
+            //$ Control hidden
+            display: none;
+            visibility: hidden;
+         
             height: 100%;
             width: 100%;
-
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -71,18 +89,19 @@
                 text-transform: uppercase;
                 border: 2px solid $palette-secondary;
 
-                transition: 0.2s all ease-out;
+             
                 &:hover {
 
                     color: white;
                     background-color: rgba($palette-secondary,.6);
-                    transition: 0.2s all ease-in;
+                    transition: 0.1s all ease-in;
                 }
             }
 
             //$ Tags container
             &-tags {
 
+                visibility: hidden;
                 //$ Label
                 p {
 
@@ -99,11 +118,15 @@
 
             & div {
 
-                background-color: rgba($palette-secondary, .4);
+                background-color: white;
 
-                //   display: block;
                 visibility: visible;
-                transition: 0.2s all ease-in;
+            
+
+                //$ Show the tags prevent delay
+                .project__overlay--caption-tags {
+                    visibility: visible;
+                }
 
             }
         }

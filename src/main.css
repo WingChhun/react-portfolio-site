@@ -256,6 +256,16 @@ MEDIA QUERIES MIXINS
   border-radius: 15px; }
   .project h2 {
     font-size: 2.4rem; }
+  .project--header {
+    font-size: 2.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500; }
+  .project--sub {
+    line-height: 145%;
+    font-weight: 300;
+    font-size: 1.6rem; }
+    .project--sub a {
+      padding-left: 0.8rem; }
   .project img {
     width: 100%;
     height: 100%;
@@ -267,13 +277,15 @@ MEDIA QUERIES MIXINS
     position: relative; }
   .project__overlay {
     transition: 0.2s all ease;
-    height: 300px; }
+    height: 400px; }
     .project__overlay--caption {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: 0.2s all ease-out;
+      display: none;
+      visibility: hidden;
+      transition: 0.1s all ease-out;
       height: 100%;
       width: 100%;
       display: flex;
@@ -291,20 +303,25 @@ MEDIA QUERIES MIXINS
         letter-spacing: 0.1rem;
         text-transform: uppercase;
         border: 2px solid #EE4266;
-        transition: 0.2s all ease-out; }
+        transition: 0.1s all ease-out; }
         .project__overlay--caption a:hover {
           color: white;
           background-color: rgba(238, 66, 102, 0.6);
-          transition: 0.2s all ease-in; }
-      .project__overlay--caption-tags p {
-        font-size: 1.6rem;
-        letter-spacing: 0.01rem;
-        padding: 0.3rem 0.4rem;
-        color: #EE4266;
-        font-weight: 400;
-        color: #EE4266; }
+          transition: 0.1s all ease-in; }
+      .project__overlay--caption-tags {
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; }
+        .project__overlay--caption-tags p {
+          font-size: 1.6rem;
+          letter-spacing: 0.01rem;
+          padding: 0.3rem 0.4rem;
+          color: #EE4266;
+          font-weight: 400;
+          color: #EE4266; }
     .project__overlay:hover div {
-      background-color: rgba(238, 66, 102, 0.4);
+      background-color: white;
       visibility: visible;
       transition: 0.2s all ease-in; }
 

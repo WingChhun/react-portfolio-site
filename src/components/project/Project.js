@@ -6,8 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Fade from '@material-ui/core/Fade';
-import PROJECTS from "../../assets/portfolio";
 import Chip from '@material-ui/core/Chip';
+import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
 
 const styles = () => ({
@@ -30,7 +30,8 @@ class Project extends Component
             filteredProjects: PROJECTS || [],
             openDialog: false,
             hoverTrue: false,
-            indexSelected: -1
+            indexSelected: -1,
+            fadeIn: true
         };
     }
 
@@ -81,8 +82,7 @@ class Project extends Component
     renderContent = () => {
 
         const {classes} = this.props;
-        const {projects, filteredProjects, indexSelected} = this.state;
-        const {openDialog} = this.state;
+        const {projects, filteredProjects, indexSelected, openDialog, fadeIn} = this.state;
 
         //$ Create an array of grids based on projects
         const content = projects.map((project, index) => (
@@ -97,31 +97,32 @@ class Project extends Component
 
                 <img src={project.img} rel ={project.imageRel}/>
 
-                <div class="project__overlay--caption">
+                
+                    <div class="project__overlay--caption">
 
-                    <h3>{project.name}</h3>
+                        <h3>{project.name}</h3>
 
-                    <Grid className="project__overlay--caption-tags" container spacing ={8}>
+                        <Grid className="project__overlay--caption-tags" container spacing ={4} >
 
-                        {project.tags && project
-                            .tags
-                            .map((tag, index) => (
-                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={3}>
-                                    <p>{tag}</p>
-                                </Grid>
-                            ))}
+                            {project.tags && project
+                                .tags
+                                .map((tag, index) => (
+                                    <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
+                                        <p>{tag}</p>
+                                    </Grid>
+                                ))}
 
-                    </Grid>
+                        </Grid>
 
-                    <a onClick={this.handleOpen(index)}>Learn More</a>
-                    <ProjectDialog
-                        project={project}
-                        index={index}
-                        indexSelected={indexSelected}
-                        open={this.state.openDialog}
-                        onClose={this.handleClose}/>
-                </div>
-
+                        <a onClick={this.handleOpen(index)}>Learn More</a>
+                        <ProjectDialog
+                            project={project}
+                            index={index}
+                            indexSelected={indexSelected}
+                            open={this.state.openDialog}
+                            onClose={this.handleClose}/>
+                    </div>
+            
             </Grid>
         )); //! End Map
 
