@@ -40,6 +40,8 @@ class Landing extends Component
                 <HeroComponent/>
 
                 <AboutComponent/>
+
+                <ProjectComponent/>
                 <Footer/>
             </section>
 

@@ -2,32 +2,37 @@
 
     background-color: $palette-tertiary;
 
-    padding: 5rem 6rem;
+    padding: 5rem 1rem;
     text-align: center;
     overflow: hidden;
 
     &__container {
 
-        padding: 2.5rem 5rem;
+        padding: 2.5rem 1rem 6rem;
         width: $grid-width;
         color: white;
         margin: 0 auto; // * Center
-
-        min-height: 350px;
+        text-align: center;
+        min-height: 400px;
         position: relative;
         //$ The caption
         h2 {
 
             //font-family: 'Playfair Display';
             font-weight: 700;
+            text-align: center;
             letter-spacing: -.05rem;
             font-size: 3rem;
-            margin-bottom: 1.5rem;
+
+            width: 90%;
+            margin: 0 auto 1.5rem;
         }
         p {
-            line-height: 150%;
-            width: 75%;
+
+            line-height: 165%;
+            width: 90%;
             margin: 0 auto;
+            font-size: 1.5rem;
             font-weight: 450;
 
         }
@@ -46,39 +51,47 @@
     padding: 1.5rem;
     width: $grid-width;
     margin: 0 auto;
-    height: 850px;
+    min-height: 800px;
+    height: 100%;
     max-height: 1200px;
-    padding-bottom: 14rem;
+    padding-bottom: 4rem;
 
     box-shadow: $box-shadow-primary;
-    margin-top: -8rem;
+    margin-top: -12rem;
     z-index: 1500;
     border-radius: 1.5rem;
     background-color: white;
     display: block;
     margin-bottom: 8rem;
+
     &__container {
+
         padding: 1rem;
-        border: $border-test-2;
         height: 100%;
 
         p {
             width: 80%;
             margin: 0 auto;
-            font-size: 1.8rem;
+            font-weight: 350;
+            font-size: 1.7rem;
+            text-align: center;
+            padding: 2rem 1rem;
         }
     }
 
     &__col {
-        border: $border-test-3;
+
         text-align: center;
         h3 {
 
+            color: $palette-primary;
             margin-top: 3rem;
             font-size: 1.9rem;
-            border-bottom: 3px solid $palette-secondary;
+            //border-bottom: 3px solid $palette-secondary;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            font-family: $font-primary;
 
-            border: $border-test;
         }
 
         ul {
@@ -91,7 +104,8 @@
             li {
                 line-height: 170%;
                 font-size: 1.6rem;
-                font-weight: 500;
+                font-weight: 300;
+                letter-spacing: 0.15rem;
             }
         }
     }
@@ -99,7 +113,7 @@
     //NOTE: FONT AWESOME
     i {
         font-size: 4.8rem;
-        color: $palette-primary;
+        color: $palette-tertiary;
 
     }
 

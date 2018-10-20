@@ -1,0 +1,14 @@
+
+.dialog {
+
+    &__container {
+        border: $border-test;
+        width: 700px;
+        overflow: hidden;
+    }
+}
+
+.carousel {
+
+    border: $border-test-2;
+}

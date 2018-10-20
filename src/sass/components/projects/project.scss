@@ -1,0 +1,112 @@
+.project {
+
+    margin: 0 auto;
+    width: $grid-width;
+
+    border: $border-test;
+
+    min-height: 700px;
+    height: 100%;
+    max-height: 1100px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+
+    border-radius: 15px;
+    h2 {
+        font-size: 2.4rem;
+
+    }
+
+    //$ Project related shit
+
+    img {
+        width: 100%;
+
+        height: 100%;
+        max-height: 400px;
+        position: relative;
+        border: $border-test;
+
+        z-index: -50;
+    }
+
+    &__parent {
+        position: relative;
+    }
+
+    &__overlay {
+
+        transition: 0.2s all ease;
+
+        &--caption {
+            @include absCenter;
+            // display: none;
+            //visibility: hidden;
+            transition: 0.2s all ease-out;
+        
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            //$ Button
+            a {
+
+                margin: 0 auto;
+                width: 50%;
+                padding: 0.8rem 0.3rem;
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                letter-spacing: 0.1rem;
+
+                text-transform: uppercase;
+                border: 2px solid $palette-secondary;
+
+                transition: 0.2s all ease-out;
+                &:hover {
+
+                    color: white;
+                    background-color: rgba($palette-secondary,.6);
+                    transition: 0.2s all ease-in;
+                }
+            }
+
+            //$ Tags container
+            &-tags {
+
+                //$ Label
+                p {
+
+                    font-size: 1.6rem;
+                    letter-spacing: 0.01rem;
+                    padding: 0.3rem 0.4rem;
+                    color: $palette-secondary;
+                    font-weight: 400;
+                    color: $palette-secondary;
+                }
+            }
+        }
+        &:hover {
+            & div {
+
+                background-color: rgba($palette-secondary, .4);
+
+                //   display: block;
+                visibility: visible;
+                transition: 0.2s all ease-in;
+
+            }
+        }
+
+    }
+
+}

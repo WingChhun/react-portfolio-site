@@ -1,23 +1,43 @@
+/*
+MEDIA QUERIES MIXINS
+-Use EM, 16px = 1em
+-Breakpoints  include:
+-phone
+-tablet(port)
+-tablet(land)
+-desktop
+-desktop(large)ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+.color-primary {
+  color: #00BFB2;
+  padding: 0 .8rem; }
+
 .about {
   background-color: #834bff;
-  padding: 5rem 6rem;
+  padding: 5rem 1rem;
   text-align: center;
   overflow: hidden; }
   .about__container {
-    padding: 25px 50px;
-    width: 60vw;
+    padding: 2.5rem 1rem 6rem;
+    width: 85vw;
     color: white;
     margin: 0 auto;
-    min-height: 350px;
+    text-align: center;
+    min-height: 400px;
     position: relative; }
     .about__container h2 {
       font-weight: 700;
-      letter-spacing: -0.05rem;
-      margin-bottom: 15px; }
+      text-align: center;
+      letter-spacing: -.05rem;
+      font-size: 3rem;
+      width: 90%;
+      margin: 0 auto 1.5rem; }
     .about__container p {
-      line-height: 150%;
-      width: 75%;
+      line-height: 165%;
+      width: 90%;
       margin: 0 auto;
+      font-size: 1.5rem;
       font-weight: 450; }
 
 #parent {
@@ -25,27 +45,135 @@
 
 .aboutCard {
   padding: 1.5rem;
-  width: 67.5vw;
+  width: 85vw;
   margin: 0 auto;
-  height: 1000px;
+  min-height: 800px;
+  height: 100%;
+  max-height: 1200px;
+  padding-bottom: 4rem;
   box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
-  margin-top: -8rem;
+  margin-top: -12rem;
   z-index: 1500;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   background-color: white;
-  display: block; }
+  display: block;
+  margin-bottom: 8rem; }
   .aboutCard__container {
     padding: 1rem;
-    border: 3px dashed #1B242F;
     height: 100%; }
-  .aboutCard__row {
-    border: 3px dotted pink;
-    padding: 10px; }
-    .aboutCard__row--header {
-      width: 100%;
-      padding: 0 4px;
-      line-height: 110%;
-      border-bottom: 2px solid #00BFB2; }
+    .aboutCard__container p {
+      width: 80%;
+      margin: 0 auto;
+      font-weight: 350;
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 2rem 1rem; }
+  .aboutCard__col {
+    text-align: center; }
+    .aboutCard__col h3 {
+      color: #00BFB2;
+      margin-top: 3rem;
+      font-size: 1.9rem;
+      letter-spacing: 0.05rem;
+      font-weight: 700;
+      font-family: "Raleway Bold", sans-serif; }
+    .aboutCard__col ul {
+      padding-left: 0;
+      line-height: 150%;
+      text-align: center;
+      list-style: none;
+      min-height: 225px;
+      max-height: 225px; }
+      .aboutCard__col ul li {
+        line-height: 170%;
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 0.15rem; }
+  .aboutCard i {
+    font-size: 4.8rem;
+    color: #834bff; }
+
+.footer {
+  -webkit-animation-duration: 0.8s; }
+  .footer__container {
+    margin: 0 auto;
+    text-align: center;
+    height: 350px;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #1B242F; }
+  .footer__arrow {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    padding: 1.2rem 2.3rem;
+    position: absolute;
+    background-color: #EE4266;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -240%);
+    z-index: 5; }
+    @media only screen and (max-width: 65.63em) {
+      .footer__arrow {
+        transform: translate(-50%, -270%); } }
+    @media only screen and (max-width: 55em) {
+      .footer__arrow {
+        transform: translate(-50%, -300%); } }
+    @media only screen and (max-width: 30em) {
+      .footer__arrow {
+        transform: translate(-50%, -325%); } }
+  .footer__copyright {
+    display: block;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    flex: 1 0 80%;
+    padding: 1rem;
+    padding-bottom: .4rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .footer__logo-img {
+    margin: 0.8rem 1.5%;
+    padding: 1.5rem 0.2rem;
+    background-color: #262F38;
+    font-size: 4.25rem;
+    color: white;
+    flex: 1 0 15%;
+    max-width: 15%;
+    display: inline-block;
+    transition: all 0.4s ease; }
+    @media only screen and (max-width: 30em) {
+      .footer__logo-img {
+        max-width: 47.5%;
+        flex: 1 0 47.5%;
+        margin: 0; } }
+    .footer__logo-img:not(:last-child) {
+      margin-right: 0; }
+    .footer__logo-img--1:hover {
+      color: #007bb5;
+      background-color: rgba(0, 123, 181, 0.2); }
+    .footer__logo-img--2:hover {
+      color: #6e5494;
+      background-color: rgba(110, 84, 148, 0.2); }
+    .footer__logo-img--3:hover {
+      color: #ff3c41;
+      background-color: rgba(255, 60, 65, 0.2); }
+    .footer__logo-img--4:hover {
+      color: #c32aa3;
+      background-color: rgba(195, 42, 163, 0.2); }
+  .footer__logo-container {
+    width: 85vw;
+    display: flex;
+    flex-direction: row; }
 
 .hero-video {
   position: relative;
@@ -73,7 +201,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  width: 82.5vw;
+  width: 85vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,30 +209,30 @@
   height: 40vh; }
   .hero__content h1 {
     letter-spacing: 0.1rem;
-    font-size: 50px;
+    font-size: 5rem;
     font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
     .hero__content h1 span {
       color: red;
-      padding-left: 12px; }
+      padding-left: 1.2rem; }
   .hero__content h2 {
-    margin-top: -30px;
-    font-size: 42.5px;
+    margin-top: -3rem;
+    font-size: 4.25rem;
     letter-spacing: 0.1rem; }
   .hero__content h1,
   .hero__content h2 {
     color: white; }
   .hero__content button {
-    margin-top: -10px;
+    margin-top: -1rem;
     outline: none;
     background-color: transparent;
     border: 3px solid white;
-    padding: 14px 12px;
+    padding: 1.4rem 1.2rem;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     color: white;
-    width: 20%;
-    font-size: 24px;
+    width: 30%;
+    font-size: 2.4rem;
     font-weight: 500;
     transition: 0.2s all ease-out; }
     .hero__content button:hover {
@@ -114,11 +242,92 @@
       border-color: #EE4266;
       font-weight: 700; }
 
+.project {
+  margin: 0 auto;
+  width: 85vw;
+  border: 2px solid black;
+  min-height: 700px;
+  height: 100%;
+  max-height: 1100px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  border-radius: 15px; }
+  .project h2 {
+    font-size: 2.4rem; }
+  .project img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    position: relative;
+    border: 2px solid black;
+    z-index: -50; }
+  .project__parent {
+    position: relative; }
+  .project__overlay {
+    transition: 0.2s all ease; }
+    .project__overlay--caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.2s all ease-out;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .project__overlay--caption h3 {
+        font-size: 2rem; }
+      .project__overlay--caption a {
+        margin: 0 auto;
+        width: 50%;
+        padding: 0.8rem 0.3rem;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        border: 2px solid #EE4266;
+        transition: 0.2s all ease-out; }
+        .project__overlay--caption a:hover {
+          color: white;
+          background-color: rgba(238, 66, 102, 0.6);
+          transition: 0.2s all ease-in; }
+      .project__overlay--caption-tags p {
+        font-size: 1.6rem;
+        letter-spacing: 0.01rem;
+        padding: 0.3rem 0.4rem;
+        color: #EE4266;
+        font-weight: 400;
+        color: #EE4266; }
+    .project__overlay:hover div {
+      background-color: rgba(238, 66, 102, 0.4);
+      visibility: visible;
+      transition: 0.2s all ease-in; }
+
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway Bold", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 55em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 76.25%; } }
 
 h1,
 h2,
@@ -135,6 +344,6 @@ button {
 
 p {
   font-family: "PT Sans Bold", serif;
-  font-size: 16px;
+  font-size: 1.4rem;
   font-weight: 450;
   line-height: 150%; }
