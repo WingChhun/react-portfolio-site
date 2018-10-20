@@ -26,6 +26,7 @@ class Project extends Component
         this.state = {
             Projects: PROJECTS,
 
+            openDialog: false,
             hoverTrue: false
 
         };
