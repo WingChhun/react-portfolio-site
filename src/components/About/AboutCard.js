@@ -4,7 +4,13 @@ import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import logos from "../../assets/skills";
-const styles = () => ({root: {}})
+import Divider from "@material-ui/core/Divider";
+const styles = () => ({
+    root: {},
+    divider: {
+        margin: '1.5rem 0 2.25rem'
+    }
+})
 
 class AboutCard extends Component
 {
@@ -46,19 +52,21 @@ class AboutCard extends Component
                         related to
                         <span className="color-primary">
                             React
-                        </span>   
+                        </span>
                         and
                         <span className="color-primary">Redux</span>
                         primarily utilizing the
                         <span className="color-primary">
-                            MERN Stack</span>. 
+                            MERN Stack</span>.
                     </p>
+
                     <br/>
                     <br/>
+                    <Divider className={classes.divider} inset light/>
                     <div className="aboutCard__row">
                         <Grid container spacing={0}>
 
-                            <Grid xs={12} sm ={6} md={4}>
+                            <Grid xs={12} sm ={4} md={4}>
                                 <div className="aboutCard__col">
 
                                     <div className="aboutCard__col--header">
@@ -74,21 +82,9 @@ class AboutCard extends Component
                                         <li>Javascript</li>
                                     </ul>
 
-                                    <h3>
-                                        Libaries / Frameworks:
-                                    </h3>
-
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Redux</li>
-                                        <li>Material UI</li>
-                                        <li>Bootstrap</li>
-                                        <li>jQuery</li>
-                                    </ul>
-
                                 </div>
                             </Grid>
-                            <Grid xs={12} sm ={6} md={4}>
+                            <Grid xs={12} sm ={4} md={4}>
                                 <div className="aboutCard__col">
                                     <div className="aboutCard__col--header">
                                         <i className="fa fa-database fa-2x"></i>
@@ -108,19 +104,10 @@ class AboutCard extends Component
                                         </li>
 
                                     </ul>
-                                    <h3>
-                                        Tools I Use:</h3>
 
-                                    <ul>
-
-                                        <li>
-                                            Postman
-                                        </li>
-
-                                    </ul>
                                 </div>
                             </Grid>
-                            <Grid xs={12} sm ={6} md={4}>
+                            <Grid xs={12} sm ={4} md={4}>
                                 <div className="aboutCard__col">
                                     <div className="aboutCard__col--header">
                                         <i className="fa fa-archive fa-2x"></i>
@@ -136,6 +123,42 @@ class AboutCard extends Component
                                         <li>Webstorm</li>
                                     </ul>
 
+                                </div>
+                            </Grid>
+                        </Grid>
+
+                        <Grid container spacing={0}>
+                            <Grid xs={12} sm ={4} md={4}>
+                                <div className="aboutCard__col">
+                                    <h3>
+                                        Libaries / Frameworks:
+                                    </h3>
+
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Redux</li>
+                                        <li>Material UI</li>
+                                        <li>Bootstrap</li>
+                                        <li>jQuery</li>
+                                    </ul>
+                                </div>
+                            </Grid>
+                            <Grid xs={12} sm ={4} md={4}>
+                                <div className="aboutCard__col">
+                                    <h3>
+                                        Tools I Use:</h3>
+
+                                    <ul>
+
+                                        <li>
+                                            Postman
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </Grid>
+                            <Grid xs={12} sm ={4} md={4}>
+                                <div className="aboutCard__col">
                                     <h3>Notable:</h3>
                                     <ul>
                                         <li>C++</li>
@@ -144,7 +167,6 @@ class AboutCard extends Component
                                 </div>
                             </Grid>
                         </Grid>
-
                     </div>
                 </div>
 
