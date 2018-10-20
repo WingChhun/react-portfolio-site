@@ -272,10 +272,7 @@ MEDIA QUERIES MIXINS
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      display: none;
-      visibility: hidden;
       transition: 0.2s all ease-out;
-      border: 3px dotted pink;
       height: 100%;
       width: 100%;
       display: flex;
@@ -284,17 +281,27 @@ MEDIA QUERIES MIXINS
       align-items: center; }
       .project__overlay--caption h3 {
         font-size: 2rem; }
-      .project__overlay--caption-tags {
-        display: flex;
-        flex-wrap: wrap;
-        width: 95%;
+      .project__overlay--caption a {
         margin: 0 auto;
-        justify-content: space-around; }
-        .project__overlay--caption-tags p {
-          border: 2px solid black;
-          padding: 0.6rem 0.4rem;
-          color: #EE4266;
-          font-weight: 400; }
+        width: 50%;
+        padding: 0.8rem 0.3rem;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        border: 2px solid #EE4266;
+        transition: 0.2s all ease-out; }
+        .project__overlay--caption a:hover {
+          color: white;
+          background-color: rgba(238, 66, 102, 0.6);
+          transition: 0.2s all ease-in; }
+      .project__overlay--caption-tags p {
+        font-size: 1.6rem;
+        letter-spacing: 0.01rem;
+        padding: 0.3rem 0.4rem;
+        color: #EE4266;
+        font-weight: 400;
+        color: #EE4266; }
     .project__overlay:hover div {
       background-color: rgba(238, 66, 102, 0.4);
       visibility: visible;

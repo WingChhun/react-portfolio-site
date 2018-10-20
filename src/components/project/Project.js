@@ -81,12 +81,19 @@ class Project extends Component
                             <h3>React Robofriends
                             </h3>
 
-                            <div className="project__overlay--caption-tags">
-                                <p>Javascript</p>
-                                <p>Javascript</p>
-                                <p>Javascript</p>
+                            <Grid className="project__overlay--caption-tags" container spacing ={8}>
+                                <Grid xs={12} md={4}>
+                                    <p>Javascript</p>
+                                </Grid>
+                                <Grid xs={12} md={4}>
+                                    <p>Javascript</p>
+                                </Grid>
+                                <Grid xs={12} md={4}>
+                                    <p>Javascript</p>
+                                </Grid>
 
-                            </div>
+                            </Grid>
+
                             <a>Learn More</a>
                         </div>
 

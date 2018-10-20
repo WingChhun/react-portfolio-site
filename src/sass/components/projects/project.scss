@@ -42,10 +42,10 @@
 
         &--caption {
             @include absCenter;
-            display: none;
-            visibility: hidden;
+            // display: none;
+            //visibility: hidden;
             transition: 0.2s all ease-out;
-            border: $border-test-3;
+        
             height: 100%;
             width: 100%;
 
@@ -59,24 +59,39 @@
             }
 
             //$ Button
-            a {}
+            a {
+
+                margin: 0 auto;
+                width: 50%;
+                padding: 0.8rem 0.3rem;
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                letter-spacing: 0.1rem;
+
+                text-transform: uppercase;
+                border: 2px solid $palette-secondary;
+
+                transition: 0.2s all ease-out;
+                &:hover {
+
+                    color: white;
+                    background-color: rgba($palette-secondary,.6);
+                    transition: 0.2s all ease-in;
+                }
+            }
 
             //$ Tags container
             &-tags {
 
-                display: flex;
-                flex-wrap: wrap;
-                width: 95%;
-                margin: 0 auto;
-
-                justify-content: space-around;
-
                 //$ Label
                 p {
-                    border: $border-test;
-                    padding: 0.6rem 0.4rem;
+
+                    font-size: 1.6rem;
+                    letter-spacing: 0.01rem;
+                    padding: 0.3rem 0.4rem;
                     color: $palette-secondary;
                     font-weight: 400;
+                    color: $palette-secondary;
                 }
             }
         }
