@@ -1,22 +1,17 @@
-import robofriends from "./robofriends.PNG";
+import robofriends from "./images/robofriends.PNG";
 
-//$ Front End
-const HTML = 'HTML';
-const SASS = 'SASS';
-const CSS = 'CSS';
-const JAVASCRIPT = 'Javascript';
-
-//$ CSS Frameworksd
-const MATERIALUI = "Material UI";
-const BOOTSTRAP = "Bootstrap";
-
-//$ Libraries
-const REACT = 'React';
-const REDUX = 'Redux';
-
-//$ Backend
-const NODEJS = 'NodeJS';
-const MONGODB = 'MongoDB';
+import {
+    HTML,
+    SASS,
+    CSS,
+    JAVASCRIPT,
+    MATERIALUI,
+    BOOTSTRAP,
+    REACT,
+    REDUX,
+    NODEJS,
+    MONGODB
+} from "./constants";
 
 export default
 [
@@ -79,8 +74,8 @@ export default
     }, {
         name: "Robo Friends",
         website: "https://wingchhun.github.io/RickandMorty/",
-
         github: "https://github.com/WingChhun/RickandMorty",
+
         img: robofriends,
         tags: [
             HTML, SASS, REACT, BOOTSTRAP
