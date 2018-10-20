@@ -307,6 +307,14 @@ MEDIA QUERIES MIXINS
       visibility: visible;
       transition: 0.2s all ease-in; }
 
+.dialog__container {
+  border: 2px solid black;
+  width: 700px;
+  overflow: hidden; }
+
+.carousel {
+  border: 3px dashed #1B242F; }
+
 body,
 html {
   margin: 0;

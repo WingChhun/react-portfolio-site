@@ -55,7 +55,7 @@
             align-items: center;
 
             h3 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
 
             //$ Button
@@ -96,6 +96,8 @@
             }
         }
         &:hover {
+           
+           
             & div {
 
                 background-color: rgba($palette-secondary, .4);

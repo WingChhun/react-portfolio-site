@@ -1,10 +1,20 @@
 
 .dialog {
 
+    //$ Main container for content
     &__container {
+
         border: $border-test;
-        width: 700px;
+
+        padding: 1rem;
+        height: 400px;
         overflow: hidden;
+
+        //$ ACtion
+        &--action {
+            border: $border-test;
+            justify-content: flex-start;
+        }
     }
 }
 

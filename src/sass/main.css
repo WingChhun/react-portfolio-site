@@ -280,7 +280,7 @@ MEDIA QUERIES MIXINS
       justify-content: center;
       align-items: center; }
       .project__overlay--caption h3 {
-        font-size: 2rem; }
+        font-size: 2.4rem; }
       .project__overlay--caption a {
         margin: 0 auto;
         width: 50%;
@@ -309,8 +309,12 @@ MEDIA QUERIES MIXINS
 
 .dialog__container {
   border: 2px solid black;
-  width: 700px;
+  padding: 1rem;
+  height: 400px;
   overflow: hidden; }
+  .dialog__container--action {
+    border: 2px solid black;
+    justify-content: flex-start; }
 
 .carousel {
   border: 3px dashed #1B242F; }
