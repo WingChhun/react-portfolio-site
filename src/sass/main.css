@@ -90,6 +90,10 @@ MEDIA QUERIES MIXINS
         font-size: 1.6rem;
         font-weight: 300;
         letter-spacing: 0.15rem; }
+  .aboutCard__btn--resume {
+    margin: 1.5rem auto;
+    width: 30%;
+    border: 2px solid teal; }
   .aboutCard i {
     font-size: 4.8rem;
     color: #834bff; }
@@ -97,9 +101,11 @@ MEDIA QUERIES MIXINS
 .footer {
   -webkit-animation-duration: 0.8s; }
   .footer__container {
-    margin: 0 auto;
+    margin: 3.5rem auto 0;
     text-align: center;
-    height: 350px;
+    min-height: 350px;
+    height: 100%;
+    max-height: 450px;
     padding: 2rem 2rem;
     display: flex;
     flex-direction: row;
@@ -240,7 +246,7 @@ MEDIA QUERIES MIXINS
       transition: 0.2s all ease-in;
       background-color: #1B242F;
       color: #EE4266;
-      border-color: #EE4266;
+      border: 3px solid transparent;
       font-weight: 700; }
 
 .project {
@@ -311,6 +317,7 @@ MEDIA QUERIES MIXINS
           background-color: rgba(238, 66, 102, 0.6);
           transition: 0.1s all ease-in; }
       .project__overlay--caption-tags {
+        opacity: 0;
         visibility: hidden; }
         .project__overlay--caption-tags p {
           font-size: 1.6rem;
@@ -321,9 +328,12 @@ MEDIA QUERIES MIXINS
           color: #EE4266; }
     .project__overlay:hover div {
       background-color: white;
-      visibility: visible; }
+      visibility: visible;
+      transition: 0.7s all ease; }
       .project__overlay:hover div .project__overlay--caption-tags {
-        visibility: visible; }
+        visibility: visible;
+        opacity: 1;
+        transition: 0.7s all ease; }
 
 .dialog {
   overflow: hidden; }

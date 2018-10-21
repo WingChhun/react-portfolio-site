@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Fade from '@material-ui/core/Fade';
 import Chip from '@material-ui/core/Chip';
+import {Animated} from "react-animated-css";
 import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
 
@@ -31,19 +32,25 @@ class Project extends Component
             openDialog: false,
             hoverTrue: false,
             indexSelected: -1,
-            fadeIn: true
+            fadeIn: false
         };
     }
 
-    handleMouseOver = (event) => {
-        this.setState({hoverTrue: true})
+    handleMouseOver = index => (event) => {
+
+        event.stopPropagation();
+        this.setState({fadeIn: true});
+        //this.setState({fadeIn: true})
 
         //TODO: event.currentTarget.dataset.index = 2
 
     }
 
-    handleMouseLeave = () => {
-        this.setState({hoverTrue: false})
+    handleMouseLeave = index => (event) => {
+
+        event.stopPropagation();
+
+        this.setState({fadeIn: false})
     }
 
     handleOpen = index => (event) => {
@@ -90,38 +97,49 @@ class Project extends Component
             <Grid
                 key={`${project.name}_${index}`}
                 className={classnames(classes.parentRelative, "project__overlay")}
+               
                 xs={12}
                 sm={6}
                 md={4}
-                data-index={index}>
+               
+                data-index={index}
+                onMouseOver={this.handleMouseOver(index)}
+                onMouseLeave={this.handleMouseLeave(index)}>
 
                 <img src={project.img} rel ={project.imageRel}/>
 
-                <div class="project__overlay--caption">
+                <Animated
+                    animationIn="fadeIn"
+                    animationOutDelay={200}
+                    animationInDelay={200}
+                    animationOut="fadeOut"
+                    isVisible={true}>
+                    <div class="project__overlay--caption">
 
-                    <h3>{project.name}</h3>
+                        <h3>{project.name}</h3>
 
-                    <Grid className="project__overlay--caption-tags" container spacing ={4}>
+                        <Grid className="project__overlay--caption-tags" container spacing ={4}>
 
-                        {project.tags && project
-                            .tags
-                            .map((tag, index) => (
-                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
-                                    <p>{tag}</p>
-                                </Grid>
-                            ))}
+                          
+                                {project.tags && project
+                                    .tags
+                                    .map((tag, index) => (
+                                        <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
+                                            <p>{tag}</p>
+                                        </Grid>
+                                    ))}
+                       
+                        </Grid>
 
-                    </Grid>
-
-                    <a onClick={this.handleOpen(index)}>Learn More</a>
-                    <ProjectDialog
-                        project={project}
-                        index={index}
-                        indexSelected={indexSelected}
-                        open={this.state.openDialog}
-                        onClose={this.handleClose}/>
-                </div>
-
+                        <a onClick={this.handleOpen(index)}>Learn More</a>
+                        <ProjectDialog
+                            project={project}
+                            index={index}
+                            indexSelected={indexSelected}
+                            open={this.state.openDialog}
+                            onClose={this.handleClose}/>
+                    </div>
+                </Animated>
             </Grid>
         )); //! End Map
 

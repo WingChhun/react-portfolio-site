@@ -21,7 +21,7 @@
 
     //$ Header text
     &--header {
-        padding:1rem auto;
+        padding: 1rem auto;
         font-size: 2.6rem;
         letter-spacing: 0.1rem;
         font-weight: 500;
@@ -31,8 +31,8 @@
     &--sub {
         line-height: 150%;
         font-weight: 400;
-        margin:0 auto 6rem;
-        width:70%;
+        margin: 0 auto 6rem;
+        width: 70%;
         font-size: 1.6rem;
         a {
             padding-left: 0.8rem;
@@ -67,7 +67,7 @@
             //$ Control hidden
             display: none;
             visibility: hidden;
-         
+
             height: 100%;
             width: 100%;
             display: flex;
@@ -91,8 +91,6 @@
 
                 text-transform: uppercase;
                 border: 2px solid $palette-secondary;
-
-             
                 &:hover {
 
                     color: white;
@@ -103,8 +101,9 @@
 
             //$ Tags container
             &-tags {
-
+                opacity: 0;
                 visibility: hidden;
+
                 //$ Label
                 p {
 
@@ -122,13 +121,14 @@
             & div {
 
                 background-color: white;
-
                 visibility: visible;
-            
+                transition: 0.7s all ease;
 
                 //$ Show the tags prevent delay
                 .project__overlay--caption-tags {
                     visibility: visible;
+                    opacity: 1;
+                    transition: 0.7s all ease;
                 }
 
             }

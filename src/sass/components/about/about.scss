@@ -100,7 +100,7 @@
             text-align: center;
             list-style: none;
             min-height: 200px;
-            height:100%;
+            height: 100%;
             max-height: 250px;
             li {
                 line-height: 170%;
@@ -108,6 +108,15 @@
                 font-weight: 300;
                 letter-spacing: 0.15rem;
             }
+        }
+    }
+
+    //NOTE: RESUME BUTTON
+    &__btn {
+        &--resume {
+            margin: 1.5rem auto;
+            width: 30%;
+            border: 2px solid teal;
         }
     }
 
