@@ -285,7 +285,6 @@ MEDIA QUERIES MIXINS
       transform: translate(-50%, -50%);
       display: none;
       visibility: hidden;
-      transition: 0.1s all ease-out;
       height: 100%;
       width: 100%;
       display: flex;
@@ -302,17 +301,13 @@ MEDIA QUERIES MIXINS
         margin-top: 1rem;
         letter-spacing: 0.1rem;
         text-transform: uppercase;
-        border: 2px solid #EE4266;
-        transition: 0.1s all ease-out; }
+        border: 2px solid #EE4266; }
         .project__overlay--caption a:hover {
           color: white;
           background-color: rgba(238, 66, 102, 0.6);
           transition: 0.1s all ease-in; }
       .project__overlay--caption-tags {
-        border: 2px solid black;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap; }
+        visibility: hidden; }
         .project__overlay--caption-tags p {
           font-size: 1.6rem;
           letter-spacing: 0.01rem;
@@ -322,41 +317,55 @@ MEDIA QUERIES MIXINS
           color: #EE4266; }
     .project__overlay:hover div {
       background-color: white;
-      visibility: visible;
-      transition: 0.2s all ease-in; }
+      visibility: visible; }
+      .project__overlay:hover div .project__overlay--caption-tags {
+        visibility: visible; }
 
-.dialog__carousel {
-  border: 3px solid #EE4266;
-  padding: 1rem; }
-
-.dialog__container {
-  border: 2px solid black;
-  min-height: 200px;
-  height: 100%;
-  max-height: 275px;
-  padding: 1rem;
+.dialog {
   overflow: hidden; }
-  .dialog__container--text {
-    border: 3px dotted pink;
-    line-height: 100%; }
-    .dialog__container--text--header {
-      font-size: 2.2rem; }
-    .dialog__container--text--sub {
-      font-size: 2rem; }
-    .dialog__container--text--p {
-      line-height: 150%;
-      font-size: 1.6rem;
-      font-weight: 400; }
-  .dialog__container--action {
-    justify-content: flex-start;
-    flex-wrap: wrap; }
-    .dialog__container--action--btn {
-      background-color: #00BFB2; }
-      .dialog__container--action--btn:hover {
-        background-color: rgba(0, 191, 178, 0.6); }
+  .dialog__container {
+    min-height: 150px;
+    height: 100%;
+    max-height: 185px;
+    overflow: hidden; }
+    .dialog__container--text {
+      line-height: 100%;
+      padding: 0.5rem;
+      text-align: left; }
+      .dialog__container--text--header {
+        font-size: 2.2rem; }
+      .dialog__container--text--sub {
+        font-size: 2rem;
+        color: #00BFB2; }
+      .dialog__container--text--p {
+        line-height: 150%;
+        font-size: 1.6rem;
+        font-weight: 400; }
+    .dialog__container--action {
+      padding: 1rem 1rem 1.5rem;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .dialog__container--action--btn {
+        background-color: #00BFB2; }
+        .dialog__container--action--btn:hover {
+          background-color: rgba(0, 191, 178, 0.6); }
+  .dialog__link {
+    padding: 1.2rem 1.4rem; }
 
 .carousel {
-  border: 3px dashed #1B242F; }
+  padding: 1rem;
+  height: 100%;
+  overflow: hidden;
+  max-width: 450px;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto; }
+  .carousel__label {
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    color: #00BFB2;
+    font-family: "Raleway Bold", sans-serif;
+    padding: 0; }
 
 body,
 html {

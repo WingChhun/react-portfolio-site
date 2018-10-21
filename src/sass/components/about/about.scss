@@ -51,9 +51,9 @@
     padding: 1.5rem;
     width: $grid-width;
     margin: 0 auto;
-    min-height: 800px;
+    min-height: 1000px;
     height: 100%;
-    max-height: 1200px;
+    max-height: 2500px;
     padding-bottom: 4rem;
 
     box-shadow: $box-shadow-primary;
@@ -99,8 +99,9 @@
             line-height: 150%;
             text-align: center;
             list-style: none;
-            min-height: 225px;
-            max-height: 225px;
+            min-height: 200px;
+            height:100%;
+            max-height: 250px;
             li {
                 line-height: 170%;
                 font-size: 1.6rem;

@@ -8,7 +8,8 @@ import Divider from "@material-ui/core/Divider";
 const styles = () => ({
     root: {},
     divider: {
-        margin: '1.5rem 0 2.25rem'
+        margin: '1rem  auto 6rem',
+        width: '80%'
     }
 })
 
