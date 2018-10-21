@@ -97,32 +97,31 @@ class Project extends Component
 
                 <img src={project.img} rel ={project.imageRel}/>
 
-                
-                    <div class="project__overlay--caption">
+                <div class="project__overlay--caption">
 
-                        <h3>{project.name}</h3>
+                    <h3>{project.name}</h3>
 
-                        <Grid className="project__overlay--caption-tags" container spacing ={4} >
+                    <Grid className="project__overlay--caption-tags" container spacing ={4}>
 
-                            {project.tags && project
-                                .tags
-                                .map((tag, index) => (
-                                    <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
-                                        <p>{tag}</p>
-                                    </Grid>
-                                ))}
+                        {project.tags && project
+                            .tags
+                            .map((tag, index) => (
+                                <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
+                                    <p>{tag}</p>
+                                </Grid>
+                            ))}
 
-                        </Grid>
+                    </Grid>
 
-                        <a onClick={this.handleOpen(index)}>Learn More</a>
-                        <ProjectDialog
-                            project={project}
-                            index={index}
-                            indexSelected={indexSelected}
-                            open={this.state.openDialog}
-                            onClose={this.handleClose}/>
-                    </div>
-            
+                    <a onClick={this.handleOpen(index)}>Learn More</a>
+                    <ProjectDialog
+                        project={project}
+                        index={index}
+                        indexSelected={indexSelected}
+                        open={this.state.openDialog}
+                        onClose={this.handleClose}/>
+                </div>
+
             </Grid>
         )); //! End Map
 
@@ -143,10 +142,12 @@ class Project extends Component
                     My Projects
                 </h2>
 
-                <p className="project--sub">Here's a few I'm proud enough to share. If
-                    interested in seeing more, checkout my
+                <p className="project--sub">Here's a few projects that I'm working on or have
+                    completed. If you are interested in seeing more, checkout my
                     <a href="https://github.com/WingChhun" target="blank">
-                        Github
+                        <em>
+                            Github
+                        </em>
                     </a>
                 </p>
 

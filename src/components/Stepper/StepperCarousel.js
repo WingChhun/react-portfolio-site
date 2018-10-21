@@ -12,6 +12,8 @@ import {autoPlay} from 'react-swipeable-views-utils';
 import classNames from 'classnames';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import ArrowForward from '@material-ui/icons/ArrowForward';
+import CloseIcon from '@material-ui/icons/Close';
+import Tooltip from '@material-ui/core/Tooltip';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = theme => ({
@@ -23,6 +25,7 @@ const styles = theme => ({
     header: {
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'space-between',
         height: 50,
         fontSize: '1.8rem',
         paddingLeft: '1rem',
@@ -65,15 +68,21 @@ class StepperCarousel extends React.Component {
         }
     }
     handleNext = () => {
-        this.setState(prevState => ({
-            activeStep: prevState.activeStep + 1
-        }));
+        const {activeStep} = this.state;
+
+        this.setState({
+            activeStep: activeStep + 1
+        })
+
     };
 
     handleBack = () => {
-        this.setState(prevState => ({
-            activeStep: prevState.activeStep - 1
-        }));
+        const {activeStep} = this.state;
+
+        this.setState({
+            activeStep: activeStep - 1
+        })
+
     };
 
     handleStepChange = activeStep => {
@@ -81,7 +90,7 @@ class StepperCarousel extends React.Component {
     };
 
     render() {
-        const {classes, theme} = this.props;
+        const {classes, theme, handleClose} = this.props;
         const {activeStep, project, carousel} = this.state;
         const maxSteps = carousel.length;
 
@@ -89,6 +98,10 @@ class StepperCarousel extends React.Component {
             <div className={classNames(classes.root, 'carousel')}>
                 <Paper square elevation={0} className={classes.header}>
                     <h3 className={'carousel__label'}>{carousel[activeStep].label}</h3>
+
+<Tooltip  title = {"Close dialog"}>
+                    <CloseIcon className="carousel__close" onClick={handleClose}/>
+                    </Tooltip>
                 </Paper>
                 <AutoPlaySwipeableViews
                     axis={theme.direction === 'rtl'
@@ -115,7 +128,7 @@ class StepperCarousel extends React.Component {
                     position="static"
                     activeStep={activeStep}
                     className={classes.mobileStepper}
-                    nextButton={< Button size = "small" onClick = {
+                    nextButton={<Button size = "small" onClick = {
                     this.handleNext
                 }
                 disabled = {
@@ -124,8 +137,8 @@ class StepperCarousel extends React.Component {
                     theme.direction === 'rtl'
                         ? <ArrowBack/>
                         : <ArrowForward/>
-                } < /Button>}
-                    backButton={< Button size = "small" onClick = {
+                } </Button>}
+                    backButton={<Button size = "small" onClick = {
                     this.handleBack
                 }
                 disabled = {
@@ -134,7 +147,7 @@ class StepperCarousel extends React.Component {
                     theme.direction === 'rtl'
                         ? <ArrowForward/>
                         : <ArrowBack/>
-                } < /Button>}/>
+                } </Button>}/>
             </div>
         );
     }
@@ -142,7 +155,9 @@ class StepperCarousel extends React.Component {
 
 StepperCarousel.propTypes = {
     classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired
+    theme: PropTypes.object.isRequired,
+    project: PropTypes.object.isRequired,
+    handleClose: PropTypes.func.isRequired
 };
 
 export default withStyles(styles, {withTheme: true})(StepperCarousel);

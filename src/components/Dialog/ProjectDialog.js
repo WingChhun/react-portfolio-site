@@ -191,13 +191,13 @@ Project:{
             <Dialog
                 open={this.state.open}
                 onClose={this.handleClose}
-                onBlur={this.handleClose}
-                onExit={this.handleClose}
+               // onBlur={this.handleClose}
+               // onExit={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
                 <div className="dialog__carousel">
 
-                    <StepperCarousel project={project}/>
+                    <StepperCarousel handleClose = {this.handleClose}project={project}/>
                 </div>
                 <DialogContent className={"dialog__container"}>
 
@@ -217,6 +217,7 @@ Project:{
                     className={classNames("dialog__container--action", classes.dialogActions)}>
 
                     <Tooltip
+                    placement="top"
                         className={classes.buttonVisit}
                         title={project.inProgress
                         ? "Site still in progress!"
@@ -244,6 +245,7 @@ Project:{
                     </Tooltip>
 
                     <Tooltip
+                    placement="top"
                         className={classes.buttonGithub}
                         title={project.isPrivate
                         ? "Project is private"
