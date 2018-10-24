@@ -38,10 +38,45 @@
         }
     }
 
-    //! About Card CSS
+    //NOTE: RESUME BUTTON
+    &__btn {
+
+        &--resume {
+            display: flex;
+            justify-content: center;
+            font-size: 1.7rem;
+            margin: 3rem auto;
+            width: 25%;
+
+            color: $palette-white;
+            align-items: center;
+            letter-spacing: 0.1rem;
+
+            padding: 0.8rem 0.6rem;
+
+            border: 2px solid $palette-secondary;
+            background-color: rgba($palette-secondary,.2);
+
+            transition: 0.2s all ease;
+            box-shadow: 3.4px 5px 40px rgba($palette-black,.4);
+            
+            &:hover {
+                border-color: $palette-white;
+                color: $palette-secondary;
+                box-shadow: $box-shadow-primary;
+                transition: 0.2s all ease;
+            }
+            
+            &:focus {
+                transition: 0.2s all ease;
+                box-shadow: none;
+            }
+        }
+    }
 
 }
 
+//! About Card CSS
 #parent {
 
     position: relative;
@@ -51,18 +86,24 @@
     padding: 1.5rem;
     width: $grid-width;
     margin: 0 auto;
-    min-height: 1000px;
+    min-height: 1150px;
     height: 100%;
     max-height: 2500px;
     padding-bottom: 4rem;
 
-    box-shadow: $box-shadow-primary;
     margin-top: -12rem;
     z-index: 1500;
     border-radius: 1.5rem;
     background-color: white;
     display: block;
     margin-bottom: 8rem;
+    box-shadow: $box-shadow-secondary;
+    transition: 0.2s all ease;
+
+    //hover box shadow animation
+    &:hover {
+        box-shadow: $box-shadow-primary;
+    }
 
     &__container {
 
@@ -108,15 +149,6 @@
                 font-weight: 300;
                 letter-spacing: 0.15rem;
             }
-        }
-    }
-
-    //NOTE: RESUME BUTTON
-    &__btn {
-        &--resume {
-            margin: 1.5rem auto;
-            width: 30%;
-            border: 2px solid teal;
         }
     }
 

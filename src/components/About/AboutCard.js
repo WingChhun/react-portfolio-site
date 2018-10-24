@@ -154,6 +154,9 @@ class AboutCard extends Component
                                         <li>
                                             Postman
                                         </li>
+                                        <li>
+                                            Robo3T
+                                        </li>
 
                                     </ul>
                                 </div>
@@ -164,6 +167,7 @@ class AboutCard extends Component
                                     <ul>
                                         <li>C++</li>
                                         <li>Heroku</li>
+                                        <li>Terminal / Bash</li>
                                     </ul>
                                 </div>
                             </Grid>

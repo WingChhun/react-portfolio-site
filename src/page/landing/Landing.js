@@ -40,7 +40,7 @@ class Landing extends Component
         this.state = {
             openSnackbar: false,
             vertical: 'bottom',
-            horizontal: 'left',
+            horizontal: 'center',
             snackbarMessage: "This website is still a work in progress!"
         };
     }

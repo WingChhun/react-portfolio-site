@@ -27,27 +27,28 @@ class About extends Component
         super(props);
 
         this.state = {
-            openSnackbar:false,
-            vertical:"bottom",
-            horizontal:'center'
+            openSnackbar: false,
+            vertical: "bottom",
+            horizontal: 'center'
         };
     }
 
-    handleOpen = () =>
-    {
-        this.setState({openSnackbar:true});
+    handleOpen = () => {
+        this.setState({openSnackbar: true});
     }
 
-    handleClose = () =>
-    {
-        this.setState({openSnackbar:false})
-    }
-    ;
+    handleClose = () => {
+        this.setState({openSnackbar: false})
+    };
     render()
     {
         const {classes} = this.props;
-const {vertical,horizontal, openSnackbar} = this.state;
-const MESSAGE = (<span> Download started </span>)
+        const {vertical, horizontal, openSnackbar} = this.state;
+        const MESSAGE = (
+            <span>
+                Download started
+            </span>
+        )
         return (
 
             <div>
@@ -67,13 +68,26 @@ const MESSAGE = (<span> Download started </span>)
                             I take this to heart, I prefer to be in positions where
                             <em>I am not the biggest fish in the pond</em>, persay. Always trying to pick the brains. of everyone around me.</p>
 
-                        <a href={RESUME}  download onClick = {this.handleOpen}>
-                            <Button className ="about__btn--resume">
-                              Resume
-                              <i class="fa fa-download"></i>
-                            </Button>
+                        <a
+                            href={RESUME}
+                            className="about__btn--resume"
+                            download
+                            onClick={this.handleOpen}>
+                          
+                          <p>Resume   <i class="fa fa-download"></i></p>
+                          
                         </a>
-                        <Snackbar className = {classes.snackbar} anchorOrigin ={{vertical,horizontal}} open = {openSnackbar} autoHideDuration={4000} onClose = {this.handleClose} message = {MESSAGE}/>
+                        <Snackbar
+                            className={classes.snackbar}
+                            anchorOrigin
+                            ={{
+                            vertical,
+                            horizontal
+                        }}
+                            open={openSnackbar}
+                            autoHideDuration={4000}
+                            onClose={this.handleClose}
+                            message={MESSAGE}/>
                     </div>
                 </div>
 

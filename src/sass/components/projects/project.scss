@@ -1,9 +1,8 @@
 .project {
 
     margin: 0 auto;
+    margin-top: 4rem;
     width: $grid-width;
-
-    border: $border-test;
 
     min-height: 1100px;
     height: 100%;
@@ -12,8 +11,17 @@
     text-align: center;
     margin-top: 8rem;
     margin-bottom: 4rem;
-
+    box-shadow: $box-shadow-secondary;
     border-radius: 15px;
+
+    //hover; make box shadow larger
+
+    transition: 0.2s all ease;
+    &:hover {
+        box-shadow: $box-shadow-primary;
+        transition: 0.2s all ease;
+    }
+
     h2 {
         font-size: 2.4rem;
 
@@ -131,6 +139,13 @@
                     transition: 0.7s all ease;
                 }
 
+            }
+        }
+        &:not(:hover) {
+            & div {
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.7s all ease;
             }
         }
 
