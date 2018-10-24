@@ -371,7 +371,7 @@ MEDIA QUERIES MIXINS
     text-align: center;
     width: 32.5%;
     padding: 0.9rem 1.2rem;
-    color: #6e5494;
+    color: #00BFB2;
     font-size: 2.1rem;
     letter-spacing: 0.1rem;
     background-color: rgba(131, 75, 255, 0.1);
@@ -382,9 +382,10 @@ MEDIA QUERIES MIXINS
     box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.6); }
     .project__btn:hover {
       transition: 0.3s all ease;
-      color: #6e5494;
+      color: #fff;
       width: 33.75%;
-      border-color: #EE4266; }
+      background-color: rgba(0, 191, 178, 0.3);
+      border-color: #00BFB2; }
 
 .dialog {
   overflow: hidden; }

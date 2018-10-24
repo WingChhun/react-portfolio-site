@@ -173,7 +173,7 @@ class Project extends Component
 
                     {this.renderContent()}
 
-                    <a className="project__btn">Visit my Github
+                    <a className="project__btn" href="https://github.com/WingChhun">Visit my Github
                         <i className="fa fa-2x fa-github"/></a>
                 </Grid>
             </div>

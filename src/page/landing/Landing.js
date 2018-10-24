@@ -11,23 +11,19 @@ import ProjectComponent from "../../components/Project/Project.js";
 import SkillComponent from "../../components/Skill/Skill.js";
 import Footer from "../../components/Footer/Footer";
 import Snackbar from '@material-ui/core/Snackbar';
-
+import Contact from "../../components/Contact/Contact";
 const styles = () => ({
     root: {
         position: 'relative',
         zIndex: -100
     },
-    snackbar: {
-    
-    
-    },
+    snackbar: {},
     snackbarMessage: {
 
         fontSize: '1.6rem',
         fontWeight: '400',
         letterSpacing: '.05rem',
-        padding: '2.25rem 1rem',
-       
+        padding: '2.25rem 1rem'
     }
 })
 
@@ -40,7 +36,7 @@ class Landing extends Component
         this.state = {
             openSnackbar: false,
             vertical: 'bottom',
-            horizontal: 'center',
+            horizontal: 'centerb',
             snackbarMessage: "This website is still a work in progress!"
         };
     }
@@ -67,6 +63,9 @@ class Landing extends Component
                 <AboutComponent/>
 
                 <ProjectComponent/>
+
+                <Contact/>
+
                 <Footer/>
 
                 <Snackbar
@@ -86,6 +85,7 @@ class Landing extends Component
                 } > {
                     snackbarMessage
                 } < /span>}/>
+
             </section>
 
         )
