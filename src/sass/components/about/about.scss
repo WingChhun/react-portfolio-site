@@ -57,19 +57,20 @@
             border: 2px solid $palette-secondary;
             background-color: rgba($palette-secondary,.2);
 
-            transition: 0.2s all ease;
+            transition: 0.3s all ease;
             box-shadow: 3.4px 5px 40px rgba($palette-black,.4);
             
             &:hover {
                 border-color: $palette-white;
                 color: $palette-secondary;
                 box-shadow: $box-shadow-primary;
-                transition: 0.2s all ease;
+                transition: 0.3s all ease;
             }
             
             &:focus {
-                transition: 0.2s all ease;
+                transition: 0.3s all ease;
                 box-shadow: none;
+                color:white;
             }
         }
     }

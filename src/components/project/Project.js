@@ -5,6 +5,7 @@ import {withStyles} from '@material-ui/core';
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
+import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
 import Chip from '@material-ui/core/Chip';
 import {Animated} from "react-animated-css";
@@ -97,11 +98,9 @@ class Project extends Component
             <Grid
                 key={`${project.name}_${index}`}
                 className={classnames(classes.parentRelative, "project__overlay")}
-               
                 xs={12}
                 sm={6}
                 md={4}
-               
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>
@@ -120,15 +119,14 @@ class Project extends Component
 
                         <Grid className="project__overlay--caption-tags" container spacing ={4}>
 
-                          
-                                {project.tags && project
-                                    .tags
-                                    .map((tag, index) => (
-                                        <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
-                                            <p>{tag}</p>
-                                        </Grid>
-                                    ))}
-                       
+                            {project.tags && project
+                                .tags
+                                .map((tag, index) => (
+                                    <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
+                                        <p>{tag}</p>
+                                    </Grid>
+                                ))}
+
                         </Grid>
 
                         <a onClick={this.handleOpen(index)}>Learn More</a>
@@ -157,7 +155,9 @@ class Project extends Component
             <div className={"project"}>
 
                 <h2 className="project--header">
-                    My Projects
+                    My
+                    <span className="color-primary">Projects
+                    </span>
                 </h2>
 
                 <p className="project--sub">Here's a few projects that I'm working on or have
@@ -173,6 +173,8 @@ class Project extends Component
 
                     {this.renderContent()}
 
+                    <a className="project__btn">Visit my Github
+                        <i className="fa fa-2x fa-github"/></a>
                 </Grid>
             </div>
 

@@ -1,7 +1,6 @@
 .project {
 
-    margin: 0 auto;
-    margin-top: 4rem;
+    margin: 4rem auto 0;
     width: $grid-width;
 
     min-height: 1100px;
@@ -10,7 +9,7 @@
     padding: 2rem;
     text-align: center;
     margin-top: 8rem;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     box-shadow: $box-shadow-secondary;
     border-radius: 15px;
 
@@ -149,6 +148,36 @@
             }
         }
 
+    }
+
+    //Github button
+    &__btn {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        text-align: center;
+        width: 32.5%;
+        padding: 0.9rem 1.2rem;
+        color: $palette-github;
+        font-size: 2.1rem;
+        letter-spacing: 0.1rem;
+
+        background-color: rgba($palette-tertiary,.1);
+        border: 2px solid $palette-tertiary;
+        margin: 4.5rem auto;
+        border-radius: 25px;
+
+        transition: 0.3s all ease;
+        box-shadow: 4px 5px 40px rgba($palette-black,.6);
+        &:hover {
+
+            transition: 0.3s all ease;
+            color: $palette-github;
+            width: 33.75%;
+            border-color: $palette-secondary;
+        }
     }
 
 }
