@@ -58,9 +58,13 @@ class Landing extends Component
 
             <section>
 
-                <HeroComponent/>
+                <HeroComponent aboutScroll={this.state.aboutRef}/>
 
-                <AboutComponent/>
+                <AboutComponent
+                    ref=
+                    {(about) => {this.about = about;}}
+                    setAboutRef=
+                    {(about) => { this.setState({aboutRef:about}) }}/>
 
                 <ProjectComponent/>
 

@@ -165,9 +165,8 @@ class AboutCard extends Component
                                 <div className="aboutCard__col">
                                     <h3>Testing & Notable:</h3>
                                     <ul>
-                                    <li>Jest</li>
-                                    <li>Enzyme</li>
-                                    <li>Terminal / Bash</li>
+                                        <li>Jest</li>
+                                        <li>Enzyme</li>
                                         <li>C++</li>
                                         <li>Heroku</li>
                                         <li>Terminal / Bash</li>

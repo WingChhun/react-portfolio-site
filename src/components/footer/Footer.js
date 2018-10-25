@@ -19,13 +19,16 @@ class Footer extends Component
     render()
     {
         const {classNamees} = this.props;
-
+        const ARROW = (
+            <a href="#home" className="footer__arrow">
+                <i className="fa fa-angle-double-up"></i>
+            </a>
+        );
+        
         return (
 
             <footer className="footer">
-                <a href="#home" className="footer__arrow">
-                    <i className="fa fa-angle-double-up"></i>
-                </a>
+
                 <div className="footer__container">
 
                     <a

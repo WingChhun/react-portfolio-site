@@ -33,6 +33,17 @@ class About extends Component
         };
     }
 
+    // Note: Pass ref to section-about back to parent hero component to allow for
+    // slider
+    componentDidMount = () => {
+
+        const {setAboutRef} = this.props;
+        const {about} = this;
+
+        setAboutRef(about);
+
+    };
+
     handleOpen = () => {
         this.setState({openSnackbar: true});
     }
@@ -52,7 +63,11 @@ class About extends Component
         return (
 
             <div>
-                <div className="about">
+                <div
+                    id="section-about"
+                    className="about"
+                    ref=
+                    {(about) => {this.about = about;}}>
                     <div className="about__container">
 
                         <h2>
@@ -73,9 +88,9 @@ class About extends Component
                             className="project__btn project__btn--2"
                             download
                             onClick={this.handleOpen}>
-                          
-                          Resume
-                          <i class="fa fa-download"></i>
+
+                            Resume
+                            <i class="fa fa-download"></i>
                         </a>
                         <Snackbar
                             className={classes.snackbar}
@@ -100,7 +115,8 @@ class About extends Component
 };
 
 About.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    setAboutRef: PropTypes.func.isRequired
 };
 
 export default withStyles(styles)(About);

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {withStyles} from '@material-ui/core';
-
+import scrollToComponent from 'react-scroll-to-component';
 const styles = () => ({root: {}})
 
 class HeroContent extends Component
@@ -16,7 +16,7 @@ class HeroContent extends Component
 
     render()
     {
-        const {classes} = this.props;
+        const {classes, aboutScroll} = this.props;
 
         return (
 
@@ -28,7 +28,10 @@ class HeroContent extends Component
                 </h1>
                 <h2>A Web Developer</h2>
 
-                <button className="hero__content-btn">View Work
+                <button
+                    className="hero__content-btn"
+                    onClick=
+                    {() => scrollToComponent(aboutScroll, { offset: 0, align: 'middle', duration: 500, ease:'inExpo'})}>View Work
                 </button>
             </div>
         )
@@ -36,7 +39,8 @@ class HeroContent extends Component
 };
 
 HeroContent.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    aboutScroll: PropTypes.any.isRequired
 };
 
 export default withStyles(styles)(HeroContent);
