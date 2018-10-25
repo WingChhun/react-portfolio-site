@@ -30,7 +30,7 @@
     "build-css": "node-sass-chokidar    --include-path ./src/sass ./src/sass/main.scss ./src/main.css --include-path ./src/sass  -o",
     "watch-css": "npm run build-css && node-sass-chokidar ./src/sass/main.scss ./src/sass/main.css --watch --recursive",
     "start-js": "react-scripts start",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages  -d build",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
