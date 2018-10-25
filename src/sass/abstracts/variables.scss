@@ -1,19 +1,17 @@
 //$ BOX-SHADOW
-$box-shadow-primary:.1rem 2rem 4rem rgba($palette-black, .4);
-$box-shadow-secondary:.05rem 1.5rem 2.5rem rgba($palette-black, .4);
-
+$box-shadow-primary: 0.1rem 2rem 4rem rgba($palette-black, .4);
+$box-shadow-secondary: 0.05rem 1.5rem 2.5rem rgba($palette-black, .4);
 
 //$ Grid related
-$grid-width:85vw;
-$grid-width-2:60vw;
-$grid-width-3:67.5vw;
-
+$grid-width: 85vw;
+$grid-width-2: 60vw;
+$grid-width-3: 67.5vw;
+@include respond(phone-large) {
+    $grid-width: 90vw;
+    $grid-width-2: 75vw;
+    $grid-width-3: 82.5vw;
+}
 
 //$ Font
-$font-primary: 
-"Raleway Bold",
-sans-serif;
-$font-secondary:
-'PT Sans Bold',
-serif;
-
+$font-primary: "Raleway Bold", sans-serif;
+$font-secondary: 'PT Sans Bold', serif;

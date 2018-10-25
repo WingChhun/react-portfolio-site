@@ -159,10 +159,10 @@ MEDIA QUERIES MIXINS
         transform: translate(-50%, -270%); } }
     @media only screen and (max-width: 55em) {
       .footer__arrow {
-        transform: translate(-50%, -300%); } }
+        transform: translate(-50%, -250%); } }
     @media only screen and (max-width: 30em) {
       .footer__arrow {
-        transform: translate(-50%, -325%); } }
+        transform: translate(-50%, -275%); } }
   .footer__copyright {
     display: block;
     color: white;
@@ -239,11 +239,20 @@ MEDIA QUERIES MIXINS
   align-items: center;
   text-align: center;
   height: 40vh; }
+  @media only screen and (max-width: 49em) {
+    .hero__content {
+      width: 90vw; } }
+  @media only screen and (max-width: 49em) {
+    .hero__content {
+      height: 45vh; } }
   .hero__content h1 {
     letter-spacing: 0.1rem;
     font-size: 5rem;
     font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
+    @media only screen and (max-width: 55em) {
+      .hero__content h1 {
+        font-size: 4.5rem; } }
     .hero__content h1 span {
       color: red;
       padding-left: 1.2rem; }
@@ -267,6 +276,9 @@ MEDIA QUERIES MIXINS
     font-size: 2.4rem;
     font-weight: 500;
     transition: 0.2s all ease-out; }
+    @media only screen and (max-width: 49em) {
+      .hero__content button {
+        width: 50%; } }
     .hero__content button:hover {
       transition: 0.2s all ease-in;
       background-color: #1B242F;
@@ -287,6 +299,9 @@ MEDIA QUERIES MIXINS
   box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   transition: 0.2s all ease; }
+  @media only screen and (max-width: 49em) {
+    .project {
+      max-height: 4000px; } }
   .project:hover {
     box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
     transition: 0.2s all ease; }
@@ -317,6 +332,12 @@ MEDIA QUERIES MIXINS
   .project__overlay {
     transition: 0.2s all ease;
     height: 400px; }
+    @media only screen and (max-width: 30em) {
+      .project__overlay {
+        margin: 0.4rem auto; } }
+    @media only screen and (min-width: 20em) and (max-width: 29em) {
+      .project__overlay {
+        margin: 1rem auto; } }
     .project__overlay--caption {
       position: absolute;
       top: 50%;
@@ -355,6 +376,10 @@ MEDIA QUERIES MIXINS
           color: #EE4266;
           font-weight: 400;
           color: #EE4266; }
+          @media only screen and (max-width: 49em) {
+            .project__overlay--caption-tags p {
+              font-size: 1.5rem;
+              font-weight: 500; } }
     .project__overlay:hover div {
       background-color: white;
       visibility: visible;
@@ -383,12 +408,18 @@ MEDIA QUERIES MIXINS
     border-radius: 25px;
     transition: 0.3s all ease;
     box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.6); }
+    @media only screen and (max-width: 49em) {
+      .project__btn {
+        width: 55.5%; } }
     .project__btn:hover {
       transition: 0.3s all ease;
       color: #fff;
       width: 31.5%;
       background-color: rgba(0, 191, 178, 0.3);
       border-color: #00BFB2; }
+      @media only screen and (max-width: 49em) {
+        .project__btn:hover {
+          width: 62%; } }
     .project__btn i {
       padding: 0 2.5%; }
     .project__btn--2 {
@@ -397,12 +428,18 @@ MEDIA QUERIES MIXINS
       border: 2px solid #00BFB2;
       color: white;
       background-color: rgba(0, 191, 178, 0.2); }
+      @media only screen and (max-width: 49em) {
+        .project__btn--2 {
+          width: 50%; } }
       .project__btn--2:hover {
         transition: 0.3s all ease;
         color: #fff;
         width: 23.25%;
         background-color: rgba(0, 191, 178, 0.3);
         border-color: #fff; }
+        @media only screen and (max-width: 49em) {
+          .project__btn--2:hover {
+            width: 55%; } }
 
 .dialog {
   overflow: hidden; }

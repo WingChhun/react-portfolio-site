@@ -39,10 +39,10 @@
             transform: translate(-50%, -270%);
         }
         @include respond(tab-port) {
-            transform: translate(-50%, -300%);
+            transform: translate(-50%, -250%);
         }
         @include respond(phone) {
-            transform: translate(-50%, -325%);
+            transform: translate(-50%, -275%);
         }
     }
     &__copyright {

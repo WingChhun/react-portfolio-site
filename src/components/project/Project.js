@@ -99,8 +99,8 @@ class Project extends Component
                 key={`${project.name}_${index}`}
                 className={classnames(classes.parentRelative, "project__overlay")}
                 xs={12}
-                sm={6}
-                md={4}
+                sm={12}
+                md={6}
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>
@@ -122,7 +122,7 @@ class Project extends Component
                             {project.tags && project
                                 .tags
                                 .map((tag, index) => (
-                                    <Grid xs={12} key={`${project}_${tag}_${index}`} sm ={6} md={4}>
+                                    <Grid xs={4} key={`${project}_${tag}_${index}`} sm ={4} md={3}>
                                         <p>{tag}</p>
                                     </Grid>
                                 ))}
@@ -169,7 +169,7 @@ class Project extends Component
                     </a>
                 </p>
 
-                <Grid container spacing={0} xs ={12}>
+                <Grid container spacing={4} xs ={12}>
 
                     {this.renderContent()}
 
