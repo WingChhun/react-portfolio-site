@@ -40,11 +40,20 @@
             justify-content: flex-start;
 
             flex-wrap: wrap;
+
+            //TODO: Make responsive 
+            @include respond(phone) {
+                justify-content: center;
+            }
             //$ Stytle the button; change the background color
             &--btn {
+                
 
                 background-color: $palette-primary;
-
+                @include respond(phone) {
+                    width: 100%;
+                    margin: 0.4rem auto;
+                }
                 //$ Hover a action item button in the dialog
                 &:hover {
                     background-color: rgba($palette-primary,.6);
