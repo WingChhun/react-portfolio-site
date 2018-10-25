@@ -48,7 +48,7 @@ class Footer extends Component
                     </a>
                     <a
                         target="blank"
-                        href="https://www.instagram.com/wingchhun_codes/"
+                        href="https://www.instagram.com/wingchhun/"
                         className="footer__logo-img footer__logo-img--4">
                         <i className="fa fa-instagram"></i>
                     </a>
