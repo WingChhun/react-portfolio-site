@@ -19,7 +19,7 @@ class Contact extends Component
         return (
 
          <div>
-             <h1> hlelo</h1>
+
          </div>
 
         )
