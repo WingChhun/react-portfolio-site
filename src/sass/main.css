@@ -122,6 +122,7 @@ MEDIA QUERIES MIXINS
     color: #834bff; }
 
 .footer {
+  position: relative;
   -webkit-animation-duration: 0.8s; }
   .footer__container {
     margin: 0 auto;
@@ -138,6 +139,8 @@ MEDIA QUERIES MIXINS
     text-align: center;
     background-color: #1B242F; }
   .footer__arrow {
+    border: 5px solid red;
+    z-index: 1000;
     font-size: 4rem;
     font-weight: 700;
     color: white;
@@ -367,9 +370,9 @@ MEDIA QUERIES MIXINS
   .project__btn {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-    width: 32.5%;
+    width: 28.5%;
     padding: 0.9rem 1.2rem;
     color: #00BFB2;
     font-size: 2.1rem;
@@ -383,19 +386,21 @@ MEDIA QUERIES MIXINS
     .project__btn:hover {
       transition: 0.3s all ease;
       color: #fff;
-      width: 33.75%;
+      width: 31.5%;
       background-color: rgba(0, 191, 178, 0.3);
       border-color: #00BFB2; }
+    .project__btn i {
+      padding: 0 2.5%; }
     .project__btn--2 {
+      justify-content: center;
       width: 20%;
       border: 2px solid #00BFB2;
       color: white;
-      background-color: rgba(0, 191, 178, 0.2);
-      justify-content: space-around; }
+      background-color: rgba(0, 191, 178, 0.2); }
       .project__btn--2:hover {
         transition: 0.3s all ease;
         color: #fff;
-        width: 25%;
+        width: 23.25%;
         background-color: rgba(0, 191, 178, 0.3);
         border-color: #fff; }
 

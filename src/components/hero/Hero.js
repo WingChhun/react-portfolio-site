@@ -19,7 +19,7 @@ class Hero extends Component
 
     render()
     {
-        const {classes} = this.props;
+        const {classes, aboutScroll} = this.props;
 
         return (
 
@@ -31,14 +31,15 @@ class Hero extends Component
 
                 </video>
                 
-                <HeroContent/>
+                <HeroContent aboutScroll = {aboutScroll}/>
             </div>
         )
     }
 };
 
 Hero.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    aboutScroll:PropTypes.any.isRequired
 };
 
 export default withStyles(styles)(Hero);

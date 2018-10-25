@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from '@material-ui/core';
-
+import scrollToComponent from 'react-scroll-to-component';
 import Grid from "@material-ui/core/Grid";
 
 const styles = () => ({root: {}})
@@ -18,16 +18,23 @@ class Footer extends Component
 
     render()
     {
-        const {classNamees} = this.props;
+        const {classNames, heroScroll} = this.props;
+        const ARROW = (
+            <a
+                href="#home"
+                className="footer__arrow"
+                onClick=
+                {() => scrollToComponent(heroScroll, { offset: 0, align: 'middle', duration: 1000, ease:'inExpo'})}>
+                <i className="fa fa-angle-double-up"></i>
+            </a>
+        );
 
         return (
 
             <footer className="footer">
-                <a href="#home" className="footer__arrow">
-                    <i className="fa fa-angle-double-up"></i>
-                </a>
-                <div className="footer__container">
 
+                <div className="footer__container">
+                    {ARROW}
                     <a
                         target="blank"
                         href="https://www.linkedin.com/in/james-chhun-16b1b5120/"
@@ -63,7 +70,8 @@ class Footer extends Component
 };
 
 Footer.propTypes = {
-    classNamees: PropTypes.object.isRequired
+    classNamees: PropTypes.object.isRequired,
+    heroScroll: PropTypes.any.isRequired
 };
 
 export default withStyles(styles)(Footer);
