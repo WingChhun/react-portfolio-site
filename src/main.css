@@ -39,6 +39,29 @@ MEDIA QUERIES MIXINS
       margin: 0 auto;
       font-size: 1.5rem;
       font-weight: 450; }
+  .about__btn--resume {
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin: 3rem auto;
+    width: 25%;
+    color: #fff;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 0.6rem;
+    border: 2px solid #EE4266;
+    background-color: rgba(238, 66, 102, 0.2);
+    transition: 0.3s all ease;
+    box-shadow: 3.4px 5px 40px rgba(0, 0, 0, 0.4); }
+    .about__btn--resume:hover {
+      border-color: #fff;
+      color: #EE4266;
+      box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
+      transition: 0.3s all ease; }
+    .about__btn--resume:focus {
+      transition: 0.3s all ease;
+      box-shadow: none;
+      color: white; }
 
 #parent {
   position: relative; }
@@ -47,17 +70,20 @@ MEDIA QUERIES MIXINS
   padding: 1.5rem;
   width: 85vw;
   margin: 0 auto;
-  min-height: 1000px;
+  min-height: 1150px;
   height: 100%;
   max-height: 2500px;
   padding-bottom: 4rem;
-  box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
   margin-top: -12rem;
   z-index: 1500;
   border-radius: 1.5rem;
   background-color: white;
   display: block;
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+  box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+  transition: 0.2s all ease; }
+  .aboutCard:hover {
+    box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4); }
   .aboutCard__container {
     padding: 1rem;
     height: 100%; }
@@ -90,10 +116,6 @@ MEDIA QUERIES MIXINS
         font-size: 1.6rem;
         font-weight: 300;
         letter-spacing: 0.15rem; }
-  .aboutCard__btn--resume {
-    margin: 1.5rem auto;
-    width: 30%;
-    border: 2px solid teal; }
   .aboutCard i {
     font-size: 4.8rem;
     color: #834bff; }
@@ -250,17 +272,21 @@ MEDIA QUERIES MIXINS
       font-weight: 700; }
 
 .project {
-  margin: 0 auto;
+  margin: 4rem auto 0;
   width: 85vw;
-  border: 2px solid black;
   min-height: 1100px;
   height: 100%;
   max-height: 2500px;
   padding: 2rem;
   text-align: center;
   margin-top: 8rem;
-  margin-bottom: 4rem;
-  border-radius: 15px; }
+  margin-bottom: 7rem;
+  box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  transition: 0.2s all ease; }
+  .project:hover {
+    box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
+    transition: 0.2s all ease; }
   .project h2 {
     font-size: 2.4rem; }
   .project--header {
@@ -334,6 +360,32 @@ MEDIA QUERIES MIXINS
         visibility: visible;
         opacity: 1;
         transition: 0.7s all ease; }
+    .project__overlay:not(:hover) div {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.7s all ease; }
+  .project__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 32.5%;
+    padding: 0.9rem 1.2rem;
+    color: #00BFB2;
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+    background-color: rgba(131, 75, 255, 0.1);
+    border: 2px solid #834bff;
+    margin: 4.5rem auto;
+    border-radius: 25px;
+    transition: 0.3s all ease;
+    box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.6); }
+    .project__btn:hover {
+      transition: 0.3s all ease;
+      color: #fff;
+      width: 33.75%;
+      background-color: rgba(0, 191, 178, 0.3);
+      border-color: #00BFB2; }
 
 .dialog {
   overflow: hidden; }

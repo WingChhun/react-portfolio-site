@@ -70,12 +70,12 @@ class About extends Component
 
                         <a
                             href={RESUME}
-                            className="about__btn--resume"
+                            className="project__btn project__btn--2"
                             download
                             onClick={this.handleOpen}>
                           
-                          <p>Resume   <i class="fa fa-download"></i></p>
-                          
+                          Resume
+                          <i class="fa fa-download"></i>
                         </a>
                         <Snackbar
                             className={classes.snackbar}

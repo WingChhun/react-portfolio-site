@@ -174,10 +174,26 @@
         &:hover {
 
             transition: 0.3s all ease;
-            color: $palette-white;
+            color: $palette-github;
             width: 33.75%;
             background-color: rgba($palette-primary,.3);
             border-color: $palette-primary;
+        }
+
+        &--2 {
+            width: 20%;
+            border: 2px solid $palette-primary;
+            color: white;
+            background-color: rgba($palette-primary,.2);
+            justify-content: space-around;
+            &:hover {
+
+                transition: 0.3s all ease;
+                color: $palette-white;
+                width: 25%;
+                background-color: rgba($palette-primary,.3);
+                border-color: $palette-white;
+            }
         }
     }
 
