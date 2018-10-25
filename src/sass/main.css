@@ -122,6 +122,7 @@ MEDIA QUERIES MIXINS
     color: #834bff; }
 
 .footer {
+  position: relative;
   -webkit-animation-duration: 0.8s; }
   .footer__container {
     margin: 0 auto;
@@ -138,6 +139,8 @@ MEDIA QUERIES MIXINS
     text-align: center;
     background-color: #1B242F; }
   .footer__arrow {
+    border: 5px solid red;
+    z-index: 1000;
     font-size: 4rem;
     font-weight: 700;
     color: white;

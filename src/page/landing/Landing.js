@@ -58,7 +58,10 @@ class Landing extends Component
 
             <section>
 
-                <HeroComponent aboutScroll={this.state.aboutRef}/>
+                <HeroComponent
+                    ref=
+                    {(hero) => {this.hero = hero;}}
+                    aboutScroll={this.state.aboutRef}/>
 
                 <AboutComponent
                     ref=
@@ -70,7 +73,7 @@ class Landing extends Component
 
                 <Contact/>
 
-                <Footer/>
+                <Footer heroScroll={this.hero}/>
 
                 <Snackbar
                     className={classes.snackbar}

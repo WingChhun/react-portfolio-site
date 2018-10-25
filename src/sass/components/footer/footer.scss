@@ -1,5 +1,7 @@
 .footer {
 
+    position: relative;
+
     -webkit-animation-duration: 0.8s;
     &__container {
         margin: 0 auto;
@@ -21,6 +23,8 @@
         background-color: $palette-footer;
     }
     &__arrow {
+        border: 5px solid red;
+        z-index: 1000;
         font-size: 4rem;
         font-weight: 700;
         color: white;
