@@ -2,6 +2,7 @@
   "name": "react-portfolio-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wingchhun.github.io/react-portfolio-site",
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@material-ui/icons": "^3.0.1",
@@ -28,7 +29,9 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar    --include-path ./src/sass ./src/sass/main.scss ./src/main.css --include-path ./src/sass  -o",
     "watch-css": "npm run build-css && node-sass-chokidar ./src/sass/main.scss ./src/sass/main.css --watch --recursive",
-    "start-js": "react-scripts start"
+    "start-js": "react-scripts start",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
