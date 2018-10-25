@@ -368,7 +368,9 @@ MEDIA QUERIES MIXINS
           transition: 0.1s all ease-in; }
       .project__overlay--caption-tags {
         opacity: 0;
-        visibility: hidden; }
+        visibility: hidden;
+        display: flex;
+        justify-content: space-around; }
         .project__overlay--caption-tags p {
           font-size: 1.6rem;
           letter-spacing: 0.01rem;

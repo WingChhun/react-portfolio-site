@@ -119,7 +119,8 @@
             &-tags {
                 opacity: 0;
                 visibility: hidden;
-
+                display: flex;
+                justify-content: space-around;
                 //$ Label
                 p {
 
