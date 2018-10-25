@@ -18,22 +18,9 @@ class Contact extends Component
 
         return (
 
-            <section classNames={classes.root}>
-                <Grid className="contact" container spacing={8} xs={12}>
-
-                    <div className="contact__container">
-                        <h2>Have a question?</h2>
-
-                        <p>
-                            Feel free to send me an email at
-
-                            <a href="mailto:capt.wing.chhun@gmail.com">
-                                capt.wing.chhun@gmail.com</a>
-                        </p>
-                    </div>
-
-                </Grid>
-            </section>
+         <div>
+             <h1> hlelo</h1>
+         </div>
 
         )
     }

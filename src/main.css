@@ -124,12 +124,12 @@ MEDIA QUERIES MIXINS
 .footer {
   -webkit-animation-duration: 0.8s; }
   .footer__container {
-    margin: 3.5rem auto 0;
+    margin: 0 auto;
     text-align: center;
     min-height: 350px;
     height: 100%;
     max-height: 450px;
-    padding: 2rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -167,8 +167,7 @@ MEDIA QUERIES MIXINS
     letter-spacing: 0.2rem;
     font-weight: 300;
     flex: 1 0 80%;
-    padding: 1rem;
-    padding-bottom: .4rem;
+    padding: 1rem 1rem 0.4rem;
     margin-top: 0;
     margin-bottom: 0; }
   .footer__logo-img {
@@ -456,13 +455,28 @@ MEDIA QUERIES MIXINS
     padding: 0; }
 
 .contact {
-  border: 2px solid black;
   padding: 5rem 2rem;
   width: 100%;
+  background-color: #ff3c41;
   max-width: 85vw;
-  min-height: 800px;
+  color: black;
+  min-height: 400px;
   height: 100%;
-  max-height: 1200px; }
+  max-height: 500px;
+  margin: 0 auto;
+  text-align: center; }
+  .contact__container {
+    width: 85vw;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem; }
+  .contact h2 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem; }
+  .contact a {
+    color: #834bff;
+    padding-left: 0.5rem; }
 
 body,
 html {
