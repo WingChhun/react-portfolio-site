@@ -31,19 +31,27 @@
         z-index: 100;
 
         width: $grid-width;
+        @include respond(phone-large) {
+            width: 90vw;
+        }
         display: flex;
         flex-direction: column;
 
         align-items: center;
         text-align: center;
         height: 40vh;
+        @include respond(phone-large) {
+            height: 45vh;
+        }
         //$Header
         h1 {
             letter-spacing: 0.1rem;
             font-size: 5rem;
             font-family: $font-primary;
             font-weight: 700;
-
+            @include respond(tab-port) {
+                font-size: 4.5rem;
+            }
             span {
                 color: red;
                 padding-left: 1.2rem;
@@ -74,13 +82,15 @@
             width: 30%;
             font-size: 2.4rem;
             font-weight: 500;
-
+            @include respond(phone-large) {
+                width: 50%;
+            }
             transition: 0.2s all ease-out;
             &:hover {
                 transition: 0.2s all ease-in;
                 background-color: $palette-footer;
                 color: $palette-secondary;
-                border:3px solid transparent;
+                border: 3px solid transparent;
                 font-weight: 700;
             }
 
