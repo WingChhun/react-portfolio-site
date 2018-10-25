@@ -6,6 +6,9 @@ $box-shadow-secondary: 0.05rem 1.5rem 2.5rem rgba($palette-black, .4);
 $grid-width: 85vw;
 $grid-width-2: 60vw;
 $grid-width-3: 67.5vw;
+
+//$ responsive grid for phone
+$grid-width-phone: 92.5vw;
 @include respond(phone-large) {
     $grid-width: 90vw;
     $grid-width-2: 75vw;
