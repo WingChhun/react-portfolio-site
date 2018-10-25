@@ -41,9 +41,13 @@
         @include respond(tab-port) {
             transform: translate(-50%, -250%);
         }
-        @include respond(phone) {
-            transform: translate(-50%, -275%);
+        @include respond(phone-large) {
+            transform: translate(-50%,-275%);
         }
+        @include respond(phone) {
+            transform: translate(-50%, -295%);
+        }
+        
     }
     &__copyright {
         display: block;

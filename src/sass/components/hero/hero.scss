@@ -21,6 +21,7 @@
             object-fit: cover;
             opacity: 0.3;
             z-index: -99;
+
         }
     }
 
@@ -42,6 +43,7 @@
         height: 40vh;
         @include respond(phone-large) {
             height: 45vh;
+            width: $grid-width-phone;
         }
         //$Header
         h1 {
@@ -51,6 +53,9 @@
             font-weight: 700;
             @include respond(tab-port) {
                 font-size: 4.5rem;
+            }
+            @include respond(phone-large) {
+                font-size: 3.75rem;
             }
             span {
                 color: red;
@@ -62,6 +67,15 @@
             margin-top: -3rem; //note: Move subheader higher 
             font-size: 4.25rem;
             letter-spacing: 0.1rem;
+            @include respond(tab-port) {
+                font-size: 3.75rem;
+            }
+            @include respond(phone-large) {
+                font-size: 3.25rem;
+                margin-top: -1.25rem;
+                margin-bottom: 3rem;
+
+            }
         }
 
         h1,
@@ -84,6 +98,11 @@
             font-weight: 500;
             @include respond(phone-large) {
                 width: 50%;
+            }
+            @include respond(phone) {
+                width: 75%;
+                min-height: 80px;
+                padding: 1.6rem 1.4rem;
             }
             transition: 0.2s all ease-out;
             &:hover {
