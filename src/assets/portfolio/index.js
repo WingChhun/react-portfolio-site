@@ -11,38 +11,38 @@ import {
     MONGODB,
     POSTGRESQL
 } from "./constants";
-import {robofriends, portfolio_1, portfolio_2} from "./images";
+
 import CHERRY from "./images/cherry";
 import CARD from "./images/card";
+import REACT_CARD from "./images/react_card";
 import PORTFOLIO from "./images/portfolio";
 import OLD_PORTFOLIO from "./images/old_portfolio";
 import MODERN_PORTFOLIO from "./images/modern_portfolio";
 import NATOUR from "./images/natour";
-import REACT_CARD from "./images/react_card";
 import ORANGE_RABBIT from "./images/orange_rabbit";
+import PIXABAY from "./images/pixabay";
+import RICK_MORTY from "./images/rick_morty";
 
+const mapCarousel = (objectData) => {
+    const carouselArr = Object
+        .keys(objectData)
+        .map(key => {
+            return {label: key, imgPath: objectData[key]};
+        });
+
+    return carouselArr;
+}
 //TODO: Only use Javascript Tags
 export default
 [
     {
         name: "Robo Friends",
-        // website: "https://wingchhun.github.io/RickandMorty/",
+        website: "https://wingchhun.github.io/natour.github.io/",
 
-        github: "https://github.com/WingChhun/RickandMorty",
-        img: robofriends,
-        imgRel: 'Robofriends',
-        carouselArr: [
-            {
-                label: "Robofriends cover",
-                imgPath: robofriends
-            }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
-            }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
-            }
-        ],
+        github: "https://github.com/WingChhun/natour.github.io",
+        img: NATOUR[Object.keys(NATOUR)[0]],
+        imgRel: 'NATOUR',
+        carouselArr: mapCarousel(NATOUR),
         tags: [
             JAVASCRIPT, REACT, REDUX
         ],
@@ -56,18 +56,18 @@ export default
         website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
-        img: robofriends,
-        imgRel: 'Robofriends',
+        img: NATOUR,
+        imgRel: 'NATOUR',
         carouselArr: [
             {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }
         ],
         tags: [
@@ -83,18 +83,18 @@ export default
         website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
-        img: robofriends,
-        imgRel: 'Robofriends',
+        img: NATOUR,
+        imgRel: 'NATOUR',
         carouselArr: [
             {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }
         ],
         tags: [
@@ -110,18 +110,18 @@ export default
         website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
-        img: robofriends,
-        imgRel: 'Robofriends',
+        img: NATOUR,
+        imgRel: 'NATOUR',
         carouselArr: [
             {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }
         ],
         tags: [
@@ -137,12 +137,12 @@ export default
         website: "https://wingchhun.github.io/RickandMorty/",
         github: "https://github.com/WingChhun/RickandMorty",
 
-        img: robofriends,
-        imgRel: 'Robofriends',
+        img: NATOUR,
+        imgRel: 'NATOUR',
         carouselArr: [
             {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }
         ],
         tags: [POSTGRESQL],
@@ -156,18 +156,18 @@ export default
         website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
-        img: robofriends,
-        imgRel: 'Robofriends',
+        img: NATOUR,
+        imgRel: 'NATOUR',
         carouselArr: [
             {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }, {
-                label: "Robofriends cover",
-                imgPath: robofriends
+                label: "NATOUR cover",
+                imgPath: NATOUR
             }
         ],
         tags: [

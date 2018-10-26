@@ -140,7 +140,7 @@ class Project extends Component
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>
 
-                <img src={project.img} rel ={project.imageRel}/>
+                <img src={project.img} alt ={project.imageRel}/>
 
                 <Animated
                     animationIn="fadeIn"
