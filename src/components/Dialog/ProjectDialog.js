@@ -29,10 +29,15 @@ import SnackbarComponent from "../Snackbar/Snackbar.js";
 import Fade from '@material-ui/core/Fade';
 
 const styles = () => ({
-    root: {},
+    root: {
+        overflow: 'hidden'
+    },
 
     dialogActions: {
         justifyContent: 'flex-start'
+    },
+    dialogContent: {
+        overflow: 'hidden'
     },
 
     avatar: {
@@ -189,15 +194,18 @@ Project:{
 
         return (
             <Dialog
+                className={classes.root}
                 open={this.state.open}
                 onClose={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
-                <div className="dialog__carousel">
+                <div className={classNames("dialog__carousel")}>
 
-                    <StepperCarousel handleClose = {this.handleClose}project={project}/>
+                    <StepperCarousel handleClose={this.handleClose} project={project}/>
                 </div>
-                <DialogContent className={"dialog__container"}>
+
+                <DialogContent
+                    className={classNames(classes.dialogContent, "dialog__container")}>
 
                     <div className="dialog__container--text">
                         <h2 className="dialog__container--text--header">{project.name}</h2>
@@ -207,13 +215,14 @@ Project:{
                         <DialogContentText className="dialog__container--text--p">
                             {project.description}</DialogContentText>
                     </div>
+                    
                 </DialogContent>
 
                 <DialogActions
                     className={classNames("dialog__container--action", classes.dialogActions)}>
 
                     <Tooltip
-                    placement="top"
+                        placement="top"
                         className={classes.buttonVisit}
                         title={project.inProgress
                         ? "Site still in progress!"
@@ -241,7 +250,7 @@ Project:{
                     </Tooltip>
 
                     <Tooltip
-                    placement="top"
+                        placement="top"
                         className={classes.buttonGithub}
                         title={project.isPrivate
                         ? "Project is private"
