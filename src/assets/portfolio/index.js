@@ -8,7 +8,8 @@ import {
     REACT,
     REDUX,
     NODEJS,
-    MONGODB
+    MONGODB,
+    POSTGRESQL
 } from "./constants";
 import {robofriends} from "./images";
 
@@ -17,7 +18,7 @@ export default
 [
     {
         name: "Robo Friends",
-       // website: "https://wingchhun.github.io/RickandMorty/",
+        // website: "https://wingchhun.github.io/RickandMorty/",
 
         github: "https://github.com/WingChhun/RickandMorty",
         img: robofriends,
@@ -136,9 +137,7 @@ export default
                 imgPath: robofriends
             }
         ],
-        tags: [
-            JAVASCRIPT, REACT, REDUX
-        ],
+        tags: [POSTGRESQL],
 
         isPrivate: false,
         inProgress: false,
