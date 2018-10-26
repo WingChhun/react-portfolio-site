@@ -229,7 +229,7 @@ Project:{
                             <Button
                                 variant="contained"
                                 className={classNames(classes.button, classes.buttonVisit, 'dialog__container--action--btn')}
-                                disabled={!project.website && !project.inProgress
+                                disabled={!project.website
                                 ? true
                                 : false}>
 

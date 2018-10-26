@@ -9,7 +9,8 @@ import {
     REDUX,
     NODEJS,
     MONGODB,
-    POSTGRESQL
+    POSTGRESQL,
+    MERN
 } from "./constants";
 
 import CHERRY from "./images/cherry";
@@ -23,7 +24,7 @@ import ORANGE_RABBIT from "./images/orange_rabbit";
 import PIXABAY from "./images/pixabay";
 import RICK_MORTY from "./images/rick_morty";
 import REDUX_LUMDB from "./images/redux_lumdb";
-
+import GLAMOURBYCHERRY from "./images/glamourByCherry";
 const mapCarousel = (objectData) => {
     const carouselArr = Object
         .keys(objectData)
@@ -37,9 +38,27 @@ const mapCarousel = (objectData) => {
 export default
 [
     {
+        name: "Glamour By Cherry ",
+        sub: "Full Stack Web Application | MERN",
+        website: "",
+        github: "",
+
+        img: GLAMOURBYCHERRY[Object.keys(GLAMOURBYCHERRY)[0]],
+        imgRel: 'GLAMOURBYCHERRY',
+        carouselArr: mapCarousel(GLAMOURBYCHERRY),
+        tags: [
+            MERN, REDUX,  MATERIALUI,SASS
+        ],
+
+        isPrivate: true,
+        inProgress: true,
+
+        description: "A full stack web application being built for Cherry Estrella; incorporating modern web security practices, and using techniques and tools I learned during my internship over the summer."
+
+    }, {
         name: "Glamour By Cherry (old)",
         sub: "Full Stack Web Application",
-        website: "https://wingchhun.github.io/natour.github.io/",
+        website: "http://glamourbycherry.herokuapp.com/",
         github: "https://github.com/WingChhun/natour.github.io",
 
         img: CHERRY[Object.keys(CHERRY)[0]],
@@ -224,8 +243,7 @@ export default
 
         description: "A basic PSD to HTML conversion."
 
-    },
-    {
+    }, {
         name: "Redux LUMDB",
         sub: "Web Application",
         website: "https://wingchhun.github.io/redux-lumdb/",
@@ -235,13 +253,14 @@ export default
         imgRel: 'REDUX_LUMDB',
         carouselArr: mapCarousel(REDUX_LUMDB),
         tags: [
-           REACT, REDUX, JAVASCRIPT
+            REACT, REDUX, JAVASCRIPT
         ],
 
         isPrivate: false,
         inProgress: false,
 
-        description: "A application built in React / Redux "
+        description: "A application built in React / Redux following along Scott Tolinsky's React / Re" +
+                "dux for Everyone course."
 
     }
 ];
