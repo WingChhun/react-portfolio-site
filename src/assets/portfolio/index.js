@@ -22,6 +22,7 @@ import NATOUR from "./images/natour";
 import ORANGE_RABBIT from "./images/orange_rabbit";
 import PIXABAY from "./images/pixabay";
 import RICK_MORTY from "./images/rick_morty";
+import REDUX_LUMDB from "./images/redux_lumdb";
 
 const mapCarousel = (objectData) => {
     const carouselArr = Object
@@ -222,6 +223,25 @@ export default
         inProgress: false,
 
         description: "A basic PSD to HTML conversion."
+
+    },
+    {
+        name: "Redux LUMDB",
+        sub: "Web Application",
+        website: "https://wingchhun.github.io/redux-lumdb/",
+        github: "https://github.com/WingChhun/redux-lumdb",
+
+        img: REDUX_LUMDB[Object.keys(REDUX_LUMDB)[0]],
+        imgRel: 'REDUX_LUMDB',
+        carouselArr: mapCarousel(REDUX_LUMDB),
+        tags: [
+           REACT, REDUX, JAVASCRIPT
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A application built in React / Redux "
 
     }
 ];
