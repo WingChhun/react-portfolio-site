@@ -191,8 +191,6 @@ Project:{
             <Dialog
                 open={this.state.open}
                 onClose={this.handleClose}
-               // onBlur={this.handleClose}
-               // onExit={this.handleClose}
                 aria-labelledby="form-dialog-title">
 
                 <div className="dialog__carousel">
@@ -202,14 +200,12 @@ Project:{
                 <DialogContent className={"dialog__container"}>
 
                     <div className="dialog__container--text">
-                        <h2 className="dialog__container--text--header">React Robofriends</h2>
-                        <h3 className="dialog__container--text--sub">Personal Project</h3>
+                        <h2 className="dialog__container--text--header">{project.name}</h2>
+                        <h3 className="dialog__container--text--sub">{project.sub}</h3>
 
                         <Divider className={classes.divider}/>
                         <DialogContentText className="dialog__container--text--p">
-                            To subscribe to this website, please enter your email address here. We will send
-                            updates occasionally.
-                        </DialogContentText>
+                            {project.description}</DialogContentText>
                     </div>
                 </DialogContent>
 

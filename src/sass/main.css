@@ -375,6 +375,7 @@ MEDIA QUERIES MIXINS
   .project__parent {
     position: relative; }
   .project__overlay {
+    min-height: 400px;
     transition: 0.2s all ease;
     height: 100%;
     max-height: 400px; }
