@@ -6,19 +6,21 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Button from '@material-ui/core/Button';
-import Fade from '@material-ui/core/Fade';
-import Chip from '@material-ui/core/Chip';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import {Animated} from "react-animated-css";
 import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
 
 const styles = () => ({
     root: {},
+
     parentRelative: {
         position: 'relative',
 
         '&:hover': {}
     }
+
 })
 
 class Project extends Component
@@ -33,7 +35,9 @@ class Project extends Component
             openDialog: false,
             hoverTrue: false,
             indexSelected: -1,
-            fadeIn: false
+            fadeIn: false,
+
+            filterValue: 'All'
         };
     }
 
@@ -63,21 +67,34 @@ class Project extends Component
         this.setState({openDialog: false, indexSelected: -1});
     }
 
-    handleChange = field => event => {
+    //$ handleChange function for the filter tabs
+    handleChange = (event, filterValue) => {
 
-        const value = event
-            .target
-            .value
-            .trim();
+        const value = event.target.value
 
-        //TODO: Filter contents for projects to be displayed
+        this.setState({
+            filterValue
+        }, () => this.filterProjects());
 
-        switch (field) {
+    };
 
-            default:
-                break;
+    //$ filter the projects displayed based on filtervalue in state
+    filterProjects = () => {
+
+        const {filterValue, projects} = this.state;
+
+        let filteredProjects = projects;
+
+        //! If all: return all projects
+        if (filterValue === "All") {
+            this.setState({filteredProjects});
+            return;
         }
 
+        //Note: Filter array based off element.tags(array[])
+        filteredProjects = filteredProjects.filter(element => element.tags.includes(filterValue));
+
+        this.setState({filteredProjects})
     }
 
     renderOverlay = (project) => {
@@ -90,7 +107,25 @@ class Project extends Component
     renderContent = () => {
 
         const {classes} = this.props;
-        const {projects, filteredProjects, indexSelected, openDialog, fadeIn} = this.state;
+        const {filteredProjects, fadeIn, indexSelected, openDialog, filterValue} = this.state;
+
+        const projects = filteredProjects;
+
+        if (projects.length === 0) {
+
+            const empty = (
+
+                <Grid justify={'center'} xs = {12}>
+
+                    <h2>
+                        No Projects with <span className = "color-primary">{filterValue}</span>
+                        used!</h2>
+                </Grid>
+
+            );
+
+            return empty;
+        }
 
         //$ Create an array of grids based on projects
         const content = projects.map((project, index) => (
@@ -100,13 +135,12 @@ class Project extends Component
                 className={classnames(classes.parentRelative, "project__overlay")}
                 xs={12}
                 sm={12}
-                
                 md={4}
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>
 
-                <img src={project.img} rel ={project.imageRel}/>
+                <img src={project.img} alt ={project.imageRel}/>
 
                 <Animated
                     animationIn="fadeIn"
@@ -118,7 +152,7 @@ class Project extends Component
 
                         <h3>{project.name}</h3>
 
-                        <Grid className="project__overlay--caption-tags" container spacing ={4}>
+                        <Grid className="project__overlay--caption-tags" container spacing ={0}>
 
                             {project.tags && project
                                 .tags
@@ -140,9 +174,11 @@ class Project extends Component
                     </div>
                 </Animated>
             </Grid>
+
         )); //! End Map
 
         //!Return rendered content
+
         return content;
 
     }
@@ -150,6 +186,7 @@ class Project extends Component
     render()
     {
         const {classes} = this.props;
+        const {filterValue} = this.state;
 
         return (
 
@@ -169,14 +206,68 @@ class Project extends Component
                         </em>
                     </a>
                 </p>
+                <Paper className={classnames(classes.paper, "project__tabs")}>
+                    <Grid container spacing={0} xs={12} justify={'center'}>
 
-                <Grid container spacing={4} xs ={12}>
+                        <Tabs
+                            value={filterValue}
+                            onChange={this.handleChange}
+                            indicatorColor="secondary"
+                            textColor="secondary"
+                            centered
+                            fullWidth>
 
-                    {this.renderContent()}
+                            <Tab label="All" value="All"/>
 
-                    <a className="project__btn" href="https://github.com/WingChhun">Visit my Github
-                        <i className="fa fa-2x fa-github"/></a>
-                </Grid>
+                            <Tab label="Javascript" value="Javascript"/>
+                            <Tab label="React" value="React"/>
+
+                            <Tab label="Material UI" value="Material UI"/>
+                        </Tabs>
+
+                    </Grid>
+                </Paper>
+
+                <Paper className={classnames(classes.paper, "project__tabs")}>
+                    <Grid container spacing={0} xs={12} justify={'center'}>
+
+                        <Tabs
+                            value={filterValue}
+                            onChange={this.handleChange}
+                            indicatorColor="secondary"
+                            textColor="secondary"
+                            centered
+                            fullWidth>
+
+                            <Tab label="NodeJS" value="NodeJS"/>
+                            <Tab label="MongoDB" value="MongoDB"/>
+                            <Tab label="PostgreSQL" value="PostgreSQL" disabled/>
+                            <Tab label="Bootstrap" value="Bootstrap"/>
+
+                        </Tabs>
+
+                    </Grid>
+                </Paper>
+
+                <br/>
+
+                <Animated
+                    animationIn={'fadeIn'}
+                    animationOut
+                    ={'fadeOut'}
+                    animationOutDelay={200}
+                    animationInDelay={200}>
+
+                    <Grid container className={"project__container"} spacing={0} xs ={12}>
+
+                        {this.renderContent()}
+
+                    </Grid>
+                    <Grid xs={12}>
+                        <a className="project__btn" href="https://github.com/WingChhun">Visit my Github
+                            <i className="fa fa-2x fa-github"/></a>
+                    </Grid>
+                </Animated>
             </div>
 
         )

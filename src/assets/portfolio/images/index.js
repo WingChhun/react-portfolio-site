@@ -2,5 +2,7 @@ import robofriends from "./robofriends.PNG";
 
 export
 {
-    robofriends
+    robofriends,
+    portfolio_1,
+    portfolio_2
 };

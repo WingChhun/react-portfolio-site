@@ -332,6 +332,9 @@ MEDIA QUERIES MIXINS
   .project:hover {
     box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
     transition: 0.2s all ease; }
+  .project__container {
+    height: 100%;
+    min-height: 525px; }
   .project h2 {
     font-size: 2.4rem; }
   .project--header {
@@ -356,14 +359,32 @@ MEDIA QUERIES MIXINS
     max-height: 400px;
     position: relative;
     z-index: -50; }
+    @media only screen and (min-width: 100em) {
+      .project img {
+        max-height: 500px; } }
+    @media only screen and (max-width: 75em) {
+      .project img {
+        max-height: 450px; } }
+    @media only screen and (max-width: 30em) {
+      .project img {
+        margin: 0.4rem auto;
+        height: 350px; } }
+    @media only screen and (min-width: 20em) and (max-width: 29em) {
+      .project img {
+        margin: 1rem auto; } }
   .project__parent {
     position: relative; }
   .project__overlay {
+    min-height: 400px;
     transition: 0.2s all ease;
-    height: 400px; }
-    @media only screen and (max-width: 49em) {
+    height: 100%;
+    max-height: 400px; }
+    @media only screen and (min-width: 100em) {
       .project__overlay {
-        margin: 1rem auto; } }
+        max-height: 500px; } }
+    @media only screen and (max-width: 75em) {
+      .project__overlay {
+        max-height: 450px; } }
     @media only screen and (max-width: 30em) {
       .project__overlay {
         margin: 0.4rem auto;
