@@ -6,15 +6,12 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Button from '@material-ui/core/Button';
-import Fade from '@material-ui/core/Fade';
-import Grow from '@material-ui/core/Grow';
-import Chip from '@material-ui/core/Chip';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import {Animated} from "react-animated-css";
 import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
-import Zoom from '@material-ui/core/Zoom';
+
 const styles = () => ({
     root: {},
 
@@ -39,7 +36,7 @@ class Project extends Component
             hoverTrue: false,
             indexSelected: -1,
             fadeIn: false,
-            grow:true,
+
             filterValue: 'All'
         };
     }
@@ -110,14 +107,29 @@ class Project extends Component
     renderContent = () => {
 
         const {classes} = this.props;
-        const {filteredProjects, indexSelected, openDialog, fadeIn , grow} = this.state;
+        const {filteredProjects, fadeIn, indexSelected, openDialog, filterValue} = this.state;
 
         const projects = filteredProjects;
+
+        if (projects.length === 0) {
+
+            const empty = (
+
+                <Grid justify={'center'} xs = {12}>
+
+                    <h2>
+                        No Projects with <span className = "color-primary">{filterValue}</span>
+                        used!</h2>
+                </Grid>
+
+            );
+
+            return empty;
+        }
 
         //$ Create an array of grids based on projects
         const content = projects.map((project, index) => (
 
-         
             <Grid
                 key={`${project.name}_${index}`}
                 className={classnames(classes.parentRelative, "project__overlay")}
@@ -127,9 +139,9 @@ class Project extends Component
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>
- 
-                   <img src={project.img} rel ={project.imageRel}/>
-    
+
+                <img src={project.img} rel ={project.imageRel}/>
+
                 <Animated
                     animationIn="fadeIn"
                     animationOutDelay={200}
@@ -162,11 +174,11 @@ class Project extends Component
                     </div>
                 </Animated>
             </Grid>
-          
-           
+
         )); //! End Map
 
         //!Return rendered content
+
         return content;
 
     }
@@ -202,11 +214,14 @@ class Project extends Component
                             onChange={this.handleChange}
                             indicatorColor="secondary"
                             textColor="secondary"
-                            centered>
+                            centered
+                            fullWidth>
+
                             <Tab label="All" value="All"/>
+
                             <Tab label="Javascript" value="Javascript"/>
                             <Tab label="React" value="React"/>
-                            <Tab label="Redux" value="Redux"/>
+
                             <Tab label="Material UI" value="Material UI"/>
                         </Tabs>
 
@@ -221,13 +236,13 @@ class Project extends Component
                             onChange={this.handleChange}
                             indicatorColor="secondary"
                             textColor="secondary"
-                            centered>
+                            centered
+                            fullWidth>
 
                             <Tab label="NodeJS" value="NodeJS"/>
                             <Tab label="MongoDB" value="MongoDB"/>
-                            <Tab label="PostgreSQL" value="PostgreSQL"/>
+                            <Tab label="PostgreSQL" value="PostgreSQL" disabled/>
                             <Tab label="Bootstrap" value="Bootstrap"/>
-                            <Tab label="SASS" value="SASS"/>
 
                         </Tabs>
 
@@ -236,18 +251,22 @@ class Project extends Component
 
                 <br/>
 
-                <Animated animationIn = {'fadeIn'} animationOut ={'fadeOut'}        animationOutDelay={200}   animationInDelay={200}> 
+                <Animated
+                    animationIn={'fadeIn'}
+                    animationOut
+                    ={'fadeOut'}
+                    animationOutDelay={200}
+                    animationInDelay={200}>
 
-                <Grid container spacing={0} xs ={12}>
-              
-{this.renderContent()}
+                    <Grid container className={"project__container"} spacing={0} xs ={12}>
 
+                        {this.renderContent()}
+
+                    </Grid>
                     <Grid xs={12}>
                         <a className="project__btn" href="https://github.com/WingChhun">Visit my Github
                             <i className="fa fa-2x fa-github"/></a>
                     </Grid>
-                </Grid>
-                
                 </Animated>
             </div>
 
