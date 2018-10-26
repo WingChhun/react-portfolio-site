@@ -387,6 +387,7 @@ MEDIA QUERIES MIXINS
       .project__overlay--caption h3 {
         font-size: 2.4rem; }
       .project__overlay--caption a {
+        cursor: pointer;
         margin: 0 auto;
         width: 50%;
         padding: 0.8rem 0.3rem;
