@@ -8,6 +8,8 @@ import Divider from "@material-ui/core/Divider";
 import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
 import Chip from '@material-ui/core/Chip';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import {Animated} from "react-animated-css";
 import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
@@ -33,7 +35,8 @@ class Project extends Component
             openDialog: false,
             hoverTrue: false,
             indexSelected: -1,
-            fadeIn: false
+            fadeIn: false,
+            filterValue: 'All'
         };
     }
 
@@ -63,22 +66,12 @@ class Project extends Component
         this.setState({openDialog: false, indexSelected: -1});
     }
 
-    handleChange = field => event => {
+    handleChange = (event, filterValue) => {
 
-        const value = event
-            .target
-            .value
-            .trim();
+        const value = event.target.value
+        this.setState({filterValue});
 
-        //TODO: Filter contents for projects to be displayed
-
-        switch (field) {
-
-            default:
-                break;
-        }
-
-    }
+    };
 
     renderOverlay = (project) => {
 
@@ -100,7 +93,6 @@ class Project extends Component
                 className={classnames(classes.parentRelative, "project__overlay")}
                 xs={12}
                 sm={12}
-                
                 md={4}
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
@@ -150,6 +142,7 @@ class Project extends Component
     render()
     {
         const {classes} = this.props;
+        const {filterValue} = this.state;
 
         return (
 
@@ -169,6 +162,47 @@ class Project extends Component
                         </em>
                     </a>
                 </p>
+                <Paper className={classnames(classes.paper, "project__tabs")}>
+                    <Grid container spacing={0} xs={12} justify={'center'}>
+
+                        <Tabs
+                            value={filterValue}
+                            onChange={this.handleChange}
+                            indicatorColor="secondary"
+                            textColor="secondary"
+                            centered>
+                            <Tab label="All" value="All"/>
+                            <Tab label="Javascript" value="Javascript"/>
+                            <Tab label="React" value="React"/>
+                            <Tab label="Redux" value="Redux"/>
+                            <Tab label="Material UI" value="Material UI"/>
+                        </Tabs>
+
+                    </Grid>
+                </Paper>
+
+                <Paper className={classnames(classes.paper, "project__tabs")}>
+                    <Grid container spacing={0} xs={12} justify={'center'}>
+
+                        <Tabs
+                            value={filterValue}
+                            onChange={this.handleChange}
+                            indicatorColor="secondary"
+                            textColor="secondary"
+                            centered>
+
+                            <Tab label="NodeJS" value="NodeJS"/>
+                            <Tab label="MongoDB" value="MongoDB"/>
+                            <Tab label="PostgreSQL" value="PostgreSQL"/>
+                            <Tab label="Bootstrap" value="Bootstrap"/>
+                            <Tab label="SASS" value="SASS"/>
+
+                        </Tabs>
+
+                    </Grid>
+                </Paper>
+
+                <br/>
 
                 <Grid container spacing={0} xs ={12}>
 
