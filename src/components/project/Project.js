@@ -100,7 +100,8 @@ class Project extends Component
                 className={classnames(classes.parentRelative, "project__overlay")}
                 xs={12}
                 sm={12}
-                md={6}
+                
+                md={4}
                 data-index={index}
                 onMouseOver={this.handleMouseOver(index)}
                 onMouseLeave={this.handleMouseLeave(index)}>

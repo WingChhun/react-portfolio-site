@@ -26,6 +26,9 @@ MEDIA QUERIES MIXINS
     text-align: center;
     min-height: 400px;
     position: relative; }
+    @media only screen and (max-width: 30em) {
+      .about__container {
+        width: 92.5vw; } }
     .about__container h2 {
       font-weight: 700;
       text-align: center;
@@ -38,7 +41,7 @@ MEDIA QUERIES MIXINS
       width: 90%;
       margin: 0 auto;
       font-size: 1.5rem;
-      font-weight: 450; }
+      font-weight: 500; }
   .about__btn--resume {
     display: flex;
     justify-content: center;
@@ -122,6 +125,7 @@ MEDIA QUERIES MIXINS
     color: #834bff; }
 
 .footer {
+  position: relative;
   -webkit-animation-duration: 0.8s; }
   .footer__container {
     margin: 0 auto;
@@ -138,6 +142,8 @@ MEDIA QUERIES MIXINS
     text-align: center;
     background-color: #1B242F; }
   .footer__arrow {
+    border: 5px solid red;
+    z-index: 1000;
     font-size: 4rem;
     font-weight: 700;
     color: white;
@@ -156,10 +162,13 @@ MEDIA QUERIES MIXINS
         transform: translate(-50%, -270%); } }
     @media only screen and (max-width: 55em) {
       .footer__arrow {
-        transform: translate(-50%, -300%); } }
+        transform: translate(-50%, -250%); } }
+    @media only screen and (max-width: 49em) {
+      .footer__arrow {
+        transform: translate(-50%, -275%); } }
     @media only screen and (max-width: 30em) {
       .footer__arrow {
-        transform: translate(-50%, -325%); } }
+        transform: translate(-50%, -295%); } }
   .footer__copyright {
     display: block;
     color: white;
@@ -236,11 +245,24 @@ MEDIA QUERIES MIXINS
   align-items: center;
   text-align: center;
   height: 40vh; }
+  @media only screen and (max-width: 49em) {
+    .hero__content {
+      width: 90vw; } }
+  @media only screen and (max-width: 49em) {
+    .hero__content {
+      height: 45vh;
+      width: 92.5vw; } }
   .hero__content h1 {
     letter-spacing: 0.1rem;
     font-size: 5rem;
     font-family: "Raleway Bold", sans-serif;
     font-weight: 700; }
+    @media only screen and (max-width: 55em) {
+      .hero__content h1 {
+        font-size: 4.5rem; } }
+    @media only screen and (max-width: 49em) {
+      .hero__content h1 {
+        font-size: 3.75rem; } }
     .hero__content h1 span {
       color: red;
       padding-left: 1.2rem; }
@@ -248,6 +270,14 @@ MEDIA QUERIES MIXINS
     margin-top: -3rem;
     font-size: 4.25rem;
     letter-spacing: 0.1rem; }
+    @media only screen and (max-width: 55em) {
+      .hero__content h2 {
+        font-size: 3.75rem; } }
+    @media only screen and (max-width: 49em) {
+      .hero__content h2 {
+        font-size: 3.25rem;
+        margin-top: -1.25rem;
+        margin-bottom: 3rem; } }
   .hero__content h1,
   .hero__content h2 {
     color: white; }
@@ -264,6 +294,14 @@ MEDIA QUERIES MIXINS
     font-size: 2.4rem;
     font-weight: 500;
     transition: 0.2s all ease-out; }
+    @media only screen and (max-width: 49em) {
+      .hero__content button {
+        width: 50%; } }
+    @media only screen and (max-width: 30em) {
+      .hero__content button {
+        width: 75%;
+        min-height: 80px;
+        padding: 1.6rem 1.4rem; } }
     .hero__content button:hover {
       transition: 0.2s all ease-in;
       background-color: #1B242F;
@@ -277,13 +315,20 @@ MEDIA QUERIES MIXINS
   min-height: 1100px;
   height: 100%;
   max-height: 2500px;
-  padding: 2rem;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 7rem;
   box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
   border-radius: 15px;
+  padding: 2rem;
   transition: 0.2s all ease; }
+  @media only screen and (max-width: 49em) {
+    .project {
+      max-height: 4000px; } }
+  @media only screen and (max-width: 49em) {
+    .project {
+      padding: 1rem;
+      width: 92.5vw; } }
   .project:hover {
     box-shadow: 0.1rem 2rem 4rem rgba(0, 0, 0, 0.4);
     transition: 0.2s all ease; }
@@ -302,18 +347,30 @@ MEDIA QUERIES MIXINS
     font-size: 1.6rem; }
     .project--sub a {
       padding-left: 0.8rem; }
+    @media only screen and (max-width: 49em) {
+      .project--sub {
+        width: 85%; } }
   .project img {
     width: 100%;
     height: 100%;
     max-height: 400px;
     position: relative;
-    border: 2px solid black;
     z-index: -50; }
   .project__parent {
     position: relative; }
   .project__overlay {
     transition: 0.2s all ease;
     height: 400px; }
+    @media only screen and (max-width: 49em) {
+      .project__overlay {
+        margin: 1rem auto; } }
+    @media only screen and (max-width: 30em) {
+      .project__overlay {
+        margin: 0.4rem auto;
+        height: 350px; } }
+    @media only screen and (min-width: 20em) and (max-width: 29em) {
+      .project__overlay {
+        margin: 1rem auto; } }
     .project__overlay--caption {
       position: absolute;
       top: 50%;
@@ -344,7 +401,9 @@ MEDIA QUERIES MIXINS
           transition: 0.1s all ease-in; }
       .project__overlay--caption-tags {
         opacity: 0;
-        visibility: hidden; }
+        visibility: hidden;
+        display: flex;
+        justify-content: space-around; }
         .project__overlay--caption-tags p {
           font-size: 1.6rem;
           letter-spacing: 0.01rem;
@@ -352,6 +411,10 @@ MEDIA QUERIES MIXINS
           color: #EE4266;
           font-weight: 400;
           color: #EE4266; }
+          @media only screen and (max-width: 49em) {
+            .project__overlay--caption-tags p {
+              font-size: 1.5rem;
+              font-weight: 500; } }
     .project__overlay:hover div {
       background-color: white;
       visibility: visible;
@@ -367,9 +430,9 @@ MEDIA QUERIES MIXINS
   .project__btn {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-    width: 32.5%;
+    width: 28.5%;
     padding: 0.9rem 1.2rem;
     color: #00BFB2;
     font-size: 2.1rem;
@@ -380,24 +443,41 @@ MEDIA QUERIES MIXINS
     border-radius: 25px;
     transition: 0.3s all ease;
     box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.6); }
+    @media only screen and (max-width: 49em) {
+      .project__btn {
+        width: 55.5%; } }
+    @media only screen and (max-width: 30em) {
+      .project__btn {
+        width: 75%; } }
     .project__btn:hover {
       transition: 0.3s all ease;
       color: #fff;
-      width: 33.75%;
+      width: 31.5%;
       background-color: rgba(0, 191, 178, 0.3);
       border-color: #00BFB2; }
+      @media only screen and (max-width: 49em) {
+        .project__btn:hover {
+          width: 62%; } }
+    .project__btn i {
+      padding: 0 2.5%; }
     .project__btn--2 {
+      justify-content: center;
       width: 20%;
       border: 2px solid #00BFB2;
       color: white;
-      background-color: rgba(0, 191, 178, 0.2);
-      justify-content: space-around; }
+      background-color: rgba(0, 191, 178, 0.2); }
+      @media only screen and (max-width: 49em) {
+        .project__btn--2 {
+          width: 50%; } }
       .project__btn--2:hover {
         transition: 0.3s all ease;
         color: #fff;
-        width: 25%;
+        width: 23.25%;
         background-color: rgba(0, 191, 178, 0.3);
         border-color: #fff; }
+        @media only screen and (max-width: 49em) {
+          .project__btn--2:hover {
+            width: 55%; } }
 
 .dialog {
   overflow: hidden; }
@@ -423,8 +503,15 @@ MEDIA QUERIES MIXINS
       padding: 1rem 1rem 1.5rem;
       justify-content: flex-start;
       flex-wrap: wrap; }
+      @media only screen and (max-width: 30em) {
+        .dialog__container--action {
+          justify-content: center; } }
       .dialog__container--action--btn {
         background-color: #00BFB2; }
+        @media only screen and (max-width: 30em) {
+          .dialog__container--action--btn {
+            width: 100%;
+            margin: 0.4rem auto; } }
         .dialog__container--action--btn:hover {
           background-color: rgba(0, 191, 178, 0.6); }
   .dialog__link {
