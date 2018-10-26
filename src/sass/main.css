@@ -314,7 +314,7 @@ MEDIA QUERIES MIXINS
   width: 85vw;
   min-height: 1100px;
   height: 100%;
-  max-height: 2500px;
+  max-height: 6000px;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 7rem;
@@ -324,7 +324,7 @@ MEDIA QUERIES MIXINS
   transition: 0.2s all ease; }
   @media only screen and (max-width: 49em) {
     .project {
-      max-height: 4000px; } }
+      max-height: 5000px; } }
   @media only screen and (max-width: 49em) {
     .project {
       padding: 1rem;
