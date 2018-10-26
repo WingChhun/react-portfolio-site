@@ -118,7 +118,7 @@ class Project extends Component
 
                         <h3>{project.name}</h3>
 
-                        <Grid className="project__overlay--caption-tags" container spacing ={4}>
+                        <Grid className="project__overlay--caption-tags" container spacing ={0}>
 
                             {project.tags && project
                                 .tags
@@ -170,7 +170,7 @@ class Project extends Component
                     </a>
                 </p>
 
-                <Grid container spacing={4} xs ={12}>
+                <Grid container spacing={0} xs ={12}>
 
                     {this.renderContent()}
 
