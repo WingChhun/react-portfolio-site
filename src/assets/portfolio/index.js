@@ -12,6 +12,14 @@ import {
     POSTGRESQL
 } from "./constants";
 import {robofriends, portfolio_1, portfolio_2} from "./images";
+import CHERRY from "./images/cherry";
+import CARD from "./images/card";
+import PORTFOLIO from "./images/portfolio";
+import OLD_PORTFOLIO from "./images/old_portfolio";
+import MODERN_PORTFOLIO from "./images/modern_portfolio";
+import NATOUR from "./images/natour";
+import REACT_CARD from "./images/react_card";
+import ORANGE_RABBIT from "./images/orange_rabbit";
 
 //TODO: Only use Javascript Tags
 export default
