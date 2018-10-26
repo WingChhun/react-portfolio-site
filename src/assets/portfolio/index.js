@@ -11,7 +11,7 @@ import {
     MONGODB,
     POSTGRESQL
 } from "./constants";
-import {robofriends} from "./images";
+import {robofriends, portfolio_1, portfolio_2} from "./images";
 
 //TODO: Only use Javascript Tags
 export default
