@@ -25,6 +25,8 @@ import PIXABAY from "./images/pixabay";
 import RICK_MORTY from "./images/rick_morty";
 import REDUX_LUMDB from "./images/redux_lumdb";
 import GLAMOURBYCHERRY from "./images/glamourByCherry";
+import NAVISMART from './images/navismart'
+
 const mapCarousel = (objectData) => {
     const carouselArr = Object
         .keys(objectData)
@@ -55,6 +57,24 @@ export default
 
         description: "A full stack web application being built for Cherry Estrella; incorporating modern web security practices, and using techniques and tools I learned during my internship over the summer."
 
+    },{
+        name: "NaviSmart ",
+        sub: "Full Stack Web Application | MERN",
+        website: "",
+        github: "",
+
+        img: NAVISMART[Object.keys(NAVISMART)[0]],
+        imgRel: 'NAVISMART',
+        carouselArr: mapCarousel(NAVISMART),
+        tags: [
+            MERN, REDUX,  MATERIALUI,SASS
+        ],
+
+        isPrivate: true,
+        inProgress: true,
+
+        description: "A full stack web application being built for my Software Engineering course. Will use Google Maps's Distance Matrix API, Twilio, Nexmo in combination to allow a user to have a SMS notification at a desired time that will query to Google Maps."
+
     }, {
         name: "Glamour By Cherry (old)",
         sub: "Full Stack Web Application",
@@ -74,7 +94,26 @@ export default
         description: "A full stack web app built for Cherry Estrella using Node, Express, MongoDB. Thi" +
                 "s site is currently being rebuilt using the MERN stack and better practices."
 
-    }, {
+    }, 
+    {
+        name: "Personal Portfolio Site",
+        sub: "Single-Page Web Application",
+        website: "www.jameschhun.com",
+        github: "https://github.com/WingChhun/react-portfolio-site",
+
+        img: PORTFOLIO[Object.keys(PORTFOLIO)[0]],
+        imgRel: 'PORTFOLIO',
+        carouselArr: mapCarousel(PORTFOLIO),
+        tags: [
+            REACT, MATERIALUI, SASS
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "My personal portfolio site. Click below to take a peek under the hood."
+
+    },{
         name: "Natour",
         sub: "Single-Page Web Application",
         website: "https://wingchhun.github.io/natour.github.io/",
@@ -93,25 +132,7 @@ export default
         description: "A project built using HTML, CSS, SASS to showcase intemediate SASS practices and" +
                 " naming conventions."
 
-    }, {
-        name: "Personal Portfolio Site",
-        sub: "Single-Page Web Application",
-        website: "www.jameschhun.com",
-        github: "https://github.com/WingChhun/react-portfolio-site",
-
-        img: PORTFOLIO[Object.keys(PORTFOLIO)[0]],
-        imgRel: 'PORTFOLIO',
-        carouselArr: mapCarousel(PORTFOLIO),
-        tags: [
-            REACT, MATERIALUI, SASS
-        ],
-
-        isPrivate: false,
-        inProgress: false,
-
-        description: "My personal portfolio site. Click below to take a peek under the hood."
-
-    }, {
+    },  {
         name: "Older Portfolio Site",
         sub: "Single-Page Web Application",
         website: "https://wingchhun.github.io/natour.github.io/",
