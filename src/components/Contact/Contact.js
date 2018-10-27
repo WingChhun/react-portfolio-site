@@ -7,7 +7,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = () => ({root: {}});
+const styles = () => ({
+    root: {},
+
+    textField: {
+        borderColor: "white"
+    }
+});
 const NAME = 'name';
 const EMAIL = 'email';
 const MESSAGE = 'message';
@@ -89,7 +95,7 @@ class Contact extends Component
             .catch(err => {
             console.log(err);
             this.setState({loading: false})
-            debugger;
+           
         })
     }
 
@@ -120,11 +126,12 @@ class Contact extends Component
 
                             <Grid xs={12} md={6}>
                                 <TextField
+                                    className={classes.textField}
                                     value={name}
                                     name={NAME}
                                     label='Name'
                                     onChange={this.handleChange(NAME)}
-                                    fullWidth
+                                    fullWidth                                    required
                                     color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}/>
@@ -132,11 +139,14 @@ class Contact extends Component
 
                             <Grid xs={12} md={6}>
                                 <TextField
+                                type = "email"
+                                    className={classes.textField}
                                     value={email}
                                     name={EMAIL}
                                     label='Email'
                                     onChange={this.handleChange(EMAIL)}
                                     fullWidth
+                                    required
                                     color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}/>
@@ -144,6 +154,7 @@ class Contact extends Component
 
                             <Grid xs={12}>
                                 <TextField
+                                    className={classes.textField}
                                     value={message}
                                     name={MESSAGE}
                                     label='Message'
@@ -158,8 +169,13 @@ class Contact extends Component
                             </Grid>
 
                         </Grid>
-                        <Button onClick={this.submitForm}>
-                            Submit</Button>
+                        <Grid className="contact__action" container justify='flex-end'>
+                            <Button onClick={this.submitForm}>
+                                Submit</Button>
+                        </Grid>
+                        
+                    
+
                     </div>
                 </div>
             </div>

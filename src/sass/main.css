@@ -565,10 +565,10 @@ MEDIA QUERIES MIXINS
 
 .contact {
   position: relative;
-  padding: 5rem auto;
+  padding: 2rem auto;
   width: 100%;
-  background-color: #834bff;
-  color: white;
+  background-color: #fff;
+  color: #00BFB2;
   min-height: 600px;
   height: 100%;
   max-height: 800px;
@@ -579,13 +579,17 @@ MEDIA QUERIES MIXINS
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 85vw;
+    padding: 1.5rem 3rem;
+    width: 85vw;
+    border-radius: 25px;
     height: 100%;
     min-height: 500px;
     max-height: 700px;
     border: 3px dashed #1B242F;
-    margin: 0 auto; }
+    margin: 0 auto;
+    box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4); }
+  .contact__action {
+    width: 90%; }
   .contact h2 {
     font-size: 2.8rem;
     font-weight: 500;
@@ -596,6 +600,8 @@ MEDIA QUERIES MIXINS
   .contact__form {
     border: 2px solid black;
     height: 100%;
+    width: 80%;
+    margin: 0 auto;
     min-height: 250px;
     max-height: 350px; }
 
