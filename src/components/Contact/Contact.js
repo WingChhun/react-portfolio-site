@@ -74,15 +74,21 @@ class Contact extends Component
             data: formData
         };
 
+        //$ Start Loader
+        this.setState({loading: true});
+
         axios(configurations)
         //! Working
             .then(res => {
             console.log(res);
+            this.setState({loading: false})
             debugger;
+
         })
         //! Fail
             .catch(err => {
             console.log(err);
+            this.setState({loading: false})
             debugger;
         })
     }
@@ -119,6 +125,7 @@ class Contact extends Component
                                     label='Name'
                                     onChange={this.handleChange(NAME)}
                                     fullWidth
+                                    color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}/>
                             </Grid>
@@ -130,6 +137,7 @@ class Contact extends Component
                                     label='Email'
                                     onChange={this.handleChange(EMAIL)}
                                     fullWidth
+                                    color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}/>
                             </Grid>
@@ -141,13 +149,17 @@ class Contact extends Component
                                     label='Message'
                                     onChange={this.handleChange(MESSAGE)}
                                     fullWidth
+                                    color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}
                                     multiline
                                     rowsMax="4"
                                     rows='4'/>
                             </Grid>
+
                         </Grid>
+                        <Button onClick={this.submitForm}>
+                            Submit</Button>
                     </div>
                 </div>
             </div>
