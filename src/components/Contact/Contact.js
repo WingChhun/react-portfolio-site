@@ -6,7 +6,7 @@ import axios from "axios";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import validator from 'validator';
 const styles = () => ({
     root: {},
 
@@ -28,7 +28,8 @@ class Contact extends Component
             email: "",
             message: "",
             loading: false,
-            errors: {}
+            errors: {},
+            valid: false
         };
     }
 
@@ -57,10 +58,38 @@ class Contact extends Component
             default:
                 return;
         }
-        this.validateInput();
+
+        //! Clear errors
+        const errors = {};
+
+        this.setState(errors);
     }
 
-    validateInput = () => {}
+    validateInput = () => {
+        const {name, email, message, errors} = this.state;
+
+        const Errors = errors;
+
+        if (name && name.length < 4) {
+            Errors.name = "Name must be at least 4 characters"
+
+        }
+
+        if (email && !validator.isEmail(email)) {
+            Errors.email = "Email is invalid";
+
+        }
+
+        if (message && message.length < 6) {
+            Errors.message = "Message must be at least 6 characters!";
+        }
+
+        if (Errors) {
+            this.setState(errors : Errors);
+        } else {
+            this.submitForm();
+        }
+    }
 
     submitForm = () => {
 
@@ -95,7 +124,7 @@ class Contact extends Component
             .catch(err => {
             console.log(err);
             this.setState({loading: false})
-           
+
         })
     }
 
@@ -105,6 +134,21 @@ class Contact extends Component
         const {classes} = this.props;
         const {name, email, message, loading, errors} = this.state;
 
+        const Spinner = (<CircularProgress
+            className={classes.circularProgress}
+            color
+            ={'secondary'}
+            size={50}
+            thickness={4.5}/>);
+
+        const Submit = (
+            <Button
+                onClick={this.validateInput}
+                disabled={(!name && !message && !email)
+                ? true
+                : false}>
+                Submit</Button>
+        );
         return (
 
             <div className={classNames(classes.root, "contact")}>
@@ -129,9 +173,16 @@ class Contact extends Component
                                     className={classes.textField}
                                     value={name}
                                     name={NAME}
+                                    error={errors.name
+                                    ? true
+                                    : false}
+                                    helperText={errors.name
+                                    ? errors.name
+                                    : null}
                                     label='Name'
                                     onChange={this.handleChange(NAME)}
-                                    fullWidth                                    required
+                                    fullWidth
+                                    required
                                     color={'secondary'}
                                     margin="normal"
                                     variant={'outlined'}/>
@@ -139,11 +190,18 @@ class Contact extends Component
 
                             <Grid xs={12} md={6}>
                                 <TextField
-                                type = "email"
+                                    type="email"
+                                    placeholder={"Enter a message"}
                                     className={classes.textField}
                                     value={email}
                                     name={EMAIL}
                                     label='Email'
+                                    error={errors.email
+                                    ? true
+                                    : false}
+                                    helperText={errors.email
+                                    ? errors.email
+                                    : null}
                                     onChange={this.handleChange(EMAIL)}
                                     fullWidth
                                     required
@@ -156,6 +214,12 @@ class Contact extends Component
                                 <TextField
                                     className={classes.textField}
                                     value={message}
+                                    error={errors.message
+                                    ? true
+                                    : false}
+                                    helperText={errors.message
+                                    ? errors.message
+                                    : null}
                                     name={MESSAGE}
                                     label='Message'
                                     onChange={this.handleChange(MESSAGE)}
@@ -170,11 +234,11 @@ class Contact extends Component
 
                         </Grid>
                         <Grid className="contact__action" container justify='flex-end'>
-                            <Button onClick={this.submitForm}>
-                                Submit</Button>
+                            {loading
+                                ? Spinner
+                                : Submit}
+
                         </Grid>
-                        
-                    
 
                     </div>
                 </div>
