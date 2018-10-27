@@ -5,10 +5,10 @@
     background-color: $palette-codepen;
 
     color: black;
-    min-height: 400px;
+    min-height: 600px;
     height: 100%;
 
-    max-height: 500px;
+    max-height: 800px;
     margin: 0 auto;
     text-align: center;
 
@@ -17,8 +17,8 @@
         width: 100%;
         max-width: $grid-width;
         height: 100%;
-        min-height: 200px;
-        max-height: 300px;
+        min-height: 500px;
+        max-height: 700px;
         border: $border-test-2;
         margin: 0 auto;
 
@@ -34,5 +34,12 @@
 
         color: $palette-tertiary;
         padding-left: 0.5rem;
+    }
+
+    &__form {
+        border: $border-test;
+        height: 100%;
+        min-height: 250px;
+        max-height: 350px;
     }
 }
