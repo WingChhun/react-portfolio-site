@@ -106,17 +106,37 @@ class Project extends Component
 
         let filteredProjects = projects;
 
-        //! If all: return all projects
-        if (filterValue === ALL) {
-            this.setState({filteredProjects});
-            return;
+        switch (filterValue) {
+
+            case ALL:
+                //! If all: return all projects
+                this.setState({filteredProjects});
+                return;
+
+            default:
+                //Note: Filter array based off element.tags(array[])
+                filteredProjects = filteredProjects.filter(element => {
+
+                    if (filterValue === MONGODB || filterValue === NODEJS || filterValue === REACT || filterValue === JAVASCRIPT) {
+
+                        return element
+                            .tags
+                            .includes(filterValue) || element
+                            .tags
+                            .includes(MERN);
+
+                    } else {
+                        return element
+                            .tags
+                            .includes(filterValue);
+                    }
+
+                });
+
+                this.setState({filteredProjects});
+                return;
         }
 
-       
-        //Note: Filter array based off element.tags(array[])
-        filteredProjects = filteredProjects.filter(element => element.tags.includes(filterValue));
-
-        this.setState({filteredProjects})
     }
 
     renderOverlay = (project) => {

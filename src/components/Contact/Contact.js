@@ -247,8 +247,8 @@ class Contact extends Component
                                     margin="normal"
                                     variant={'outlined'}
                                     multiline
-                                    rowsMax="4"
-                                    rows='4'/>
+                                    rowsMax="8"
+                                    rows='7'/>
                             </Grid>
 
                         </Grid>
