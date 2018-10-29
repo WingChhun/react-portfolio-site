@@ -12,6 +12,11 @@ const styles = () => ({
 
     textField: {
         borderColor: "white"
+    },
+
+    button: {
+        marginTop: '.8rem',
+        padding: "1rem 2.25rem"
     }
 });
 const NAME = 'name';
@@ -28,7 +33,10 @@ class Contact extends Component
             email: "",
             message: "",
             loading: false,
-            errors: {},
+            showSuccessMessage: false,
+            errorName: "",
+            errorEmail: "",
+            errorMessage: "",
             valid: false
         };
     }
@@ -44,48 +52,47 @@ class Contact extends Component
 
         switch (field) {
             case NAME:
-                this.setState({name: value});
-                break;
+                this.setState({name: value, errorName: ""});
+                return;
 
             case EMAIL:
-                this.setState({email: value});
-                break;
+                this.setState({email: value, errorEmail: ""});
+                return;
 
             case MESSAGE:
-                this.setState({message: messageValue});
-                break;
+                this.setState({message: messageValue, errorMessage: ""});
+                return;
 
             default:
                 return;
         }
 
-        //! Clear errors
-        const errors = {};
-
-        this.setState(errors);
     }
 
     validateInput = () => {
-        const {name, email, message, errors} = this.state;
+        const {name, email, message} = this.state;
 
-        const Errors = errors;
+        const Errors = {};
 
         if (name && name.length < 4) {
-            Errors.name = "Name must be at least 4 characters"
+            Errors.errorName = "Name must be at least 4 characters"
 
         }
 
         if (email && !validator.isEmail(email)) {
-            Errors.email = "Email is invalid";
+            Errors.errorEmail = "Email is invalid";
 
         }
 
         if (message && message.length < 6) {
-            Errors.message = "Message must be at least 6 characters!";
+            Errors.errorMessage = "Message must be at least 6 characters!";
         }
 
-        if (Errors) {
-            this.setState(errors : Errors);
+        const {errorName, errorEmail, errorMessage} = Errors;
+        console.log(Errors);
+
+        if (Object.keys(Errors).length > 0) {
+            this.setState(Errors)
         } else {
             this.submitForm();
         }
@@ -115,9 +122,10 @@ class Contact extends Component
         axios(configurations)
         //! Working
             .then(res => {
+
+            console.log("SENT")
             console.log(res);
             this.setState({loading: false})
-            debugger;
 
         })
         //! Fail
@@ -132,7 +140,15 @@ class Contact extends Component
     {
 
         const {classes} = this.props;
-        const {name, email, message, loading, errors} = this.state;
+        const {
+            name,
+            email,
+            message,
+            loading,
+            errorMessage,
+            errorName,
+            errorEmail
+        } = this.state;
 
         const Spinner = (<CircularProgress
             className={classes.circularProgress}
@@ -143,8 +159,11 @@ class Contact extends Component
 
         const Submit = (
             <Button
+                variant="outlined"
+                color="secondary"
+                className={classes.button}
                 onClick={this.validateInput}
-                disabled={(!name && !message && !email)
+                disabled={(!name || !message || !email)
                 ? true
                 : false}>
                 Submit</Button>
@@ -173,11 +192,11 @@ class Contact extends Component
                                     className={classes.textField}
                                     value={name}
                                     name={NAME}
-                                    error={errors.name
+                                    error={errorName
                                     ? true
                                     : false}
-                                    helperText={errors.name
-                                    ? errors.name
+                                    helperText={errorName
+                                    ? errorName
                                     : null}
                                     label='Name'
                                     onChange={this.handleChange(NAME)}
@@ -196,11 +215,11 @@ class Contact extends Component
                                     value={email}
                                     name={EMAIL}
                                     label='Email'
-                                    error={errors.email
+                                    error={errorEmail
                                     ? true
                                     : false}
-                                    helperText={errors.email
-                                    ? errors.email
+                                    helperText={errorEmail
+                                    ? errorEmail
                                     : null}
                                     onChange={this.handleChange(EMAIL)}
                                     fullWidth
@@ -214,11 +233,11 @@ class Contact extends Component
                                 <TextField
                                     className={classes.textField}
                                     value={message}
-                                    error={errors.message
+                                    error={errorMessage
                                     ? true
                                     : false}
-                                    helperText={errors.message
-                                    ? errors.message
+                                    helperText={errorMessage
+                                    ? errorMessage
                                     : null}
                                     name={MESSAGE}
                                     label='Message'

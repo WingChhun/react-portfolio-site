@@ -5,9 +5,9 @@
 
     min-height: 1100px;
     height: 100%;
-    max-height: 8000px;
+    max-height: auto;
     @include respond(phone-large) {
-        max-height: 8000px;
+        max-height: auto;
     }
 
     text-align: center;

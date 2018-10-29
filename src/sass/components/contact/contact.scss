@@ -15,15 +15,23 @@
     &__container {
         @include absCenter;
         padding: 1.5rem 3rem;
-        width: $grid-width;
+
         border-radius: 25px;
         height: 100%;
         min-height: 500px;
-        max-height: 700px;
-        border: $border-test-2;
+        max-height: 1200px;
+
         margin: 0 auto;
         box-shadow: $box-shadow-secondary;
+        width: $grid-width;
+        @include respond(phone-large) {
+            width: 100vw;
 
+            padding: 1.5rem 0;
+        }
+        @include respond(phone) {
+            padding: 1.5rem 0;
+        }
     }
     &__action {
         width: 90%;
@@ -41,11 +49,12 @@
     }
 
     &__form {
-        border: $border-test;
+
         height: 100%;
         width: 80%;
-        margin: 0 auto;
-        min-height: 250px;
-        max-height: 350px;
+        margin: 0 auto 5rem;
+        min-height: 300px;
+        max-height: 500px;
+        text-align: center;
     }
 }
