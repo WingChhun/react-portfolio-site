@@ -1,26 +1,41 @@
 .contact {
-
-    padding: 5rem 2rem;
+    position: relative;
+    padding: 2rem auto;
     width: 100%;
-    background-color: $palette-codepen;
-    max-width: $grid-width;
+    background-color: $palette-white;
 
-    color: black;
-    min-height: 400px;
+    color: $palette-primary;
+    min-height: 600px;
     height: 100%;
 
-    max-height: 500px;
+    max-height: 800px;
     margin: 0 auto;
     text-align: center;
 
     &__container {
-        width: $grid-width;
+        @include absCenter;
+        padding: 1.5rem 3rem;
+
+        border-radius: 25px;
         height: 100%;
+        min-height: 500px;
+        max-height: 1200px;
 
         margin: 0 auto;
-        padding: 1.5rem;
-    }
+        box-shadow: $box-shadow-secondary;
+        width: $grid-width;
+        @include respond(phone-large) {
+            width: 100vw;
 
+            padding: 1.5rem 0;
+        }
+        @include respond(phone) {
+            padding: 1.5rem 0;
+        }
+    }
+    &__action {
+        width: 90%;
+    }
     h2 {
         font-size: 2.8rem;
         font-weight: 500;
@@ -31,5 +46,15 @@
 
         color: $palette-tertiary;
         padding-left: 0.5rem;
+    }
+
+    &__form {
+
+        height: 100%;
+        width: 80%;
+        margin: 0 auto 5rem;
+        min-height: 300px;
+        max-height: 500px;
+        text-align: center;
     }
 }

@@ -11,6 +11,29 @@ import Tab from '@material-ui/core/Tab';
 import {Animated} from "react-animated-css";
 import PROJECTS from "../../assets/portfolio";
 import ProjectDialog from '../../components/Dialog/ProjectDialog';
+import {
+    MERN,
+    JAVASCRIPT,
+    REACT,
+    MATERIALUI,
+    NODEJS,
+    MONGODB,
+    POSTGRESQL,
+    BOOTSTRAP
+} from "../../assets/portfolio/constants";
+
+const ALL = 'All';
+const tabValues = [
+    ALL,
+    MERN,
+    JAVASCRIPT,
+    REACT,
+    MATERIALUI,
+    NODEJS,
+    MONGODB,
+    POSTGRESQL,
+    BOOTSTRAP
+];
 
 const styles = () => ({
     root: {},
@@ -70,8 +93,6 @@ class Project extends Component
     //$ handleChange function for the filter tabs
     handleChange = (event, filterValue) => {
 
-        const value = event.target.value
-
         this.setState({
             filterValue
         }, () => this.filterProjects());
@@ -85,16 +106,37 @@ class Project extends Component
 
         let filteredProjects = projects;
 
-        //! If all: return all projects
-        if (filterValue === "All") {
-            this.setState({filteredProjects});
-            return;
+        switch (filterValue) {
+
+            case ALL:
+                //! If all: return all projects
+                this.setState({filteredProjects});
+                return;
+
+            default:
+                //Note: Filter array based off element.tags(array[])
+                filteredProjects = filteredProjects.filter(element => {
+
+                    if (filterValue === MONGODB || filterValue === NODEJS || filterValue === REACT || filterValue === JAVASCRIPT) {
+
+                        return element
+                            .tags
+                            .includes(filterValue) || element
+                            .tags
+                            .includes(MERN);
+
+                    } else {
+                        return element
+                            .tags
+                            .includes(filterValue);
+                    }
+
+                });
+
+                this.setState({filteredProjects});
+                return;
         }
 
-        //Note: Filter array based off element.tags(array[])
-        filteredProjects = filteredProjects.filter(element => element.tags.includes(filterValue));
-
-        this.setState({filteredProjects})
     }
 
     renderOverlay = (project) => {
@@ -115,10 +157,11 @@ class Project extends Component
 
             const empty = (
 
-                <Grid justify={'center'} xs = {12}>
+                <Grid justify={'center'} xs={12}>
 
                     <h2>
-                        No Projects with <span className = "color-primary">{filterValue}</span>
+                        No Projects with
+                        <span className="color-primary">{filterValue}</span>
                         used!</h2>
                 </Grid>
 
@@ -219,12 +262,23 @@ class Project extends Component
 
                             <Tab label="All" value="All"/>
 
+                        </Tabs>
+
+                        <Tabs
+                            value={filterValue}
+                            onChange={this.handleChange}
+                            indicatorColor="secondary"
+                            textColor="secondary"
+                            centered
+                            fullWidth>
+
+                            <Tab label="MERN" value="MERN"/>
+
                             <Tab label="Javascript" value="Javascript"/>
                             <Tab label="React" value="React"/>
 
                             <Tab label="Material UI" value="Material UI"/>
                         </Tabs>
-
                     </Grid>
                 </Paper>
 

@@ -314,7 +314,7 @@ MEDIA QUERIES MIXINS
   width: 85vw;
   min-height: 1100px;
   height: 100%;
-  max-height: 2500px;
+  max-height: 8000px;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 7rem;
@@ -324,7 +324,7 @@ MEDIA QUERIES MIXINS
   transition: 0.2s all ease; }
   @media only screen and (max-width: 49em) {
     .project {
-      max-height: 4000px; } }
+      max-height: 8000px; } }
   @media only screen and (max-width: 49em) {
     .project {
       padding: 1rem;
@@ -564,21 +564,32 @@ MEDIA QUERIES MIXINS
     padding: 0; }
 
 .contact {
-  padding: 5rem 2rem;
+  position: relative;
+  padding: 2rem auto;
   width: 100%;
-  background-color: #ff3c41;
-  max-width: 85vw;
-  color: black;
-  min-height: 400px;
+  background-color: #fff;
+  color: #00BFB2;
+  min-height: 600px;
   height: 100%;
-  max-height: 500px;
+  max-height: 800px;
   margin: 0 auto;
   text-align: center; }
   .contact__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem 3rem;
     width: 85vw;
+    border-radius: 25px;
     height: 100%;
+    min-height: 500px;
+    max-height: 700px;
+    border: 3px dashed #1B242F;
     margin: 0 auto;
-    padding: 1.5rem; }
+    box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4); }
+  .contact__action {
+    width: 90%; }
   .contact h2 {
     font-size: 2.8rem;
     font-weight: 500;
@@ -586,6 +597,13 @@ MEDIA QUERIES MIXINS
   .contact a {
     color: #834bff;
     padding-left: 0.5rem; }
+  .contact__form {
+    border: 2px solid black;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 250px;
+    max-height: 350px; }
 
 body,
 html {
