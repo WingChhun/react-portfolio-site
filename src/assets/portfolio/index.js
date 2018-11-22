@@ -98,7 +98,7 @@ export default
     {
         name: "Personal Portfolio Site",
         sub: "Single-Page Web Application",
-        website: "www.jameschhun.com",
+        website: "https://wingchhun.github.io/react-portfolio-site/",
         github: "https://github.com/WingChhun/react-portfolio-site",
 
         img: PORTFOLIO[Object.keys(PORTFOLIO)[0]],
@@ -112,44 +112,6 @@ export default
         inProgress: false,
 
         description: "My personal portfolio site. Click below to take a peek under the hood."
-
-    },{
-        name: "Natour",
-        sub: "Single-Page Web Application",
-        website: "https://wingchhun.github.io/natour.github.io/",
-        github: "https://github.com/WingChhun/natour.github.io",
-
-        img: NATOUR[Object.keys(NATOUR)[0]],
-        imgRel: 'NATOUR',
-        carouselArr: mapCarousel(NATOUR),
-        tags: [
-            HTML, CSS, SASS
-        ],
-
-        isPrivate: false,
-        inProgress: false,
-
-        description: "A project built using HTML, CSS, SASS to showcase intemediate SASS practices and" +
-                " naming conventions."
-
-    },  {
-        name: "Older Portfolio Site",
-        sub: "Single-Page Web Application",
-        website: "https://wingchhun.github.io/natour.github.io/",
-        github: "https://github.com/WingChhun/natour.github.io",
-
-        img: MODERN_PORTFOLIO[Object.keys(MODERN_PORTFOLIO)[0]],
-        imgRel: 'MODERN_PORTFOLIO',
-        carouselArr: mapCarousel(MODERN_PORTFOLIO),
-        tags: [
-            HTML, CSS, SASS
-        ],
-
-        isPrivate: false,
-        inProgress: false,
-
-        description: "A project built using HTML, CSS, SASS to showcase intemediate SASS practices and" +
-                " naming conventions."
 
     }, {
         name: "Old Portfolio Site",
@@ -170,11 +132,31 @@ export default
         description: "Previous version of my portfolio site built usin HTML, CSS, SASS, and GULP. Fair" +
                 "ly buggy now and has been dropped and depracated."
 
-    }, {
+    },
+     {
+        name: "Older Portfolio Site",
+        sub: "Single-Page Web Application",
+        website: "https://jameschhun.herokuapp.com/",
+        github: "https://github.com/WingChhun/natour.github.io",
+
+        img: MODERN_PORTFOLIO[Object.keys(MODERN_PORTFOLIO)[0]],
+        imgRel: 'MODERN_PORTFOLIO',
+        carouselArr: mapCarousel(MODERN_PORTFOLIO),
+        tags: [
+            HTML, CSS, SASS
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project built using HTML, CSS, SASS to showcase intemediate SASS practices and" +
+                " naming conventions."
+
+    },  {
         name: "Concentration Card Game",
         sub: "Single-Page Web Application",
-        website: "https://wingchhun.github.io/natour.github.io/",
-        github: "https://github.com/WingChhun/natour.github.io",
+        website: "https://wingchhun.github.io/React-ConcentrationCardgame/",
+        github: "https://github.com/WingChhun/React-ConcentrationCardgame",
 
         img: REACT_CARD[Object.keys(REACT_CARD)[0]],
         imgRel: 'REACT_CARD',
@@ -192,8 +174,8 @@ export default
     }, {
         name: "Vanilla Card Game",
         sub: "Single-Page Web Application",
-        website: "https://wingchhun.github.io/natour.github.io/",
-        github: "https://github.com/WingChhun/natour.github.io",
+        website: "https://wingchhun.github.io/Concentration_Card_Game/",
+        github: "https://github.com/WingChhun/Concentration_Card_Game",
 
         img: CARD[Object.keys(CARD)[0]],
         imgRel: 'CARD',
@@ -282,6 +264,26 @@ export default
 
         description: "A application built in React / Redux following along Scott Tolinsky's React / Re" +
                 "dux for Everyone course."
+
+    },
+    {
+        name: "Natour",
+        sub: "Single-Page Web Application",
+        website: "https://wingchhun.github.io/natour.github.io/",
+        github: "https://github.com/WingChhun/natour.github.io",
+
+        img: NATOUR[Object.keys(NATOUR)[0]],
+        imgRel: 'NATOUR',
+        carouselArr: mapCarousel(NATOUR),
+        tags: [
+            HTML, CSS, SASS
+        ],
+
+        isPrivate: false,
+        inProgress: false,
+
+        description: "A project built using HTML, CSS, SASS to showcase intemediate SASS practices and" +
+                " naming conventions."
 
     }
 ];

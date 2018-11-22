@@ -168,7 +168,7 @@ MEDIA QUERIES MIXINS
         transform: translate(-50%, -275%); } }
     @media only screen and (max-width: 30em) {
       .footer__arrow {
-        transform: translate(-50%, -295%); } }
+        transform: translate(-50%, -265%); } }
   .footer__copyright {
     display: block;
     color: white;
@@ -314,7 +314,7 @@ MEDIA QUERIES MIXINS
   width: 85vw;
   min-height: 1100px;
   height: 100%;
-  max-height: 8000px;
+  max-height: auto;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 7rem;
@@ -324,7 +324,7 @@ MEDIA QUERIES MIXINS
   transition: 0.2s all ease; }
   @media only screen and (max-width: 49em) {
     .project {
-      max-height: 8000px; } }
+      max-height: auto; } }
   @media only screen and (max-width: 49em) {
     .project {
       padding: 1rem;
@@ -580,14 +580,20 @@ MEDIA QUERIES MIXINS
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 1.5rem 3rem;
-    width: 85vw;
     border-radius: 25px;
     height: 100%;
     min-height: 500px;
-    max-height: 700px;
-    border: 3px dashed #1B242F;
+    max-height: 1200px;
     margin: 0 auto;
-    box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0.05rem 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+    width: 85vw; }
+    @media only screen and (max-width: 49em) {
+      .contact__container {
+        width: 100vw;
+        padding: 1.5rem 0; } }
+    @media only screen and (max-width: 30em) {
+      .contact__container {
+        padding: 1.5rem 0; } }
   .contact__action {
     width: 90%; }
   .contact h2 {
@@ -598,12 +604,12 @@ MEDIA QUERIES MIXINS
     color: #834bff;
     padding-left: 0.5rem; }
   .contact__form {
-    border: 2px solid black;
     height: 100%;
     width: 80%;
-    margin: 0 auto;
-    min-height: 250px;
-    max-height: 350px; }
+    margin: 0 auto 5rem;
+    min-height: 300px;
+    max-height: 500px;
+    text-align: center; }
 
 body,
 html {
