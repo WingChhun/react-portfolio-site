@@ -12,19 +12,23 @@ import Product__page from "./photos/Product__page.png";
 import product__phone from "./photos/product__phone.png";
 import Product_hero from "./photos/Product_hero.png";
 import Product_signu0p from "./photos/Product_signu0p.png";
-import system from "./photos/system";
-import Sequence from "./photos/Sequence";
+import system from "./photos/system.png";
+import Sequence from "./photos/Sequence.png";
 export default {
 
-    About,
-    system,
-    contact,
     Landing_Hero,
+    Product_hero,
+    About,
+   
+
+
     Product__create,
     Product__page,
     product__phone,
-    Product_hero,
+ 
     Product_signu0p,
+    contact,
+    system,
     Sequence,
     navismart_1,
     navismart_2,
