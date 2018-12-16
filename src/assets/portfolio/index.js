@@ -60,7 +60,7 @@ export default
     },{
         name: "NaviSmart ",
         sub: "Full Stack Web Application | MERN",
-        website: "",
+        website: "https://navismart.herokuapp.com/",
         github: "",
 
         img: NAVISMART[Object.keys(NAVISMART)[0]],
@@ -73,7 +73,7 @@ export default
         isPrivate: true,
         inProgress: true,
 
-        description: "A full stack web application being built for my Software Engineering course. Will use Google Maps's Distance Matrix API, Twilio, Nexmo in combination to allow a user to have a SMS notification at a desired time that will query to Google Maps."
+        description: "A full stack web application being built for my Software Engineering course. Will use Google Maps's Distance Matrix API, Google Maps places,  Twilio, Nexmo in combination to allow a user to have a SMS notification at a desired time that will query to Google Maps."
 
     }, {
         name: "Glamour By Cherry (old)",
