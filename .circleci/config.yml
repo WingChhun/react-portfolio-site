@@ -11,3 +11,13 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+      - checkout
+      - run:
+          name: Install node_modules
+          command: 'npm install'
+      - run:
+          name: Jest Tests
+          command: npm test:jest
+      - run:
+          name: Cypress Tests
+          command: npm run cypress

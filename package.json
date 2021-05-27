@@ -32,7 +32,8 @@
     "start-js": "craco start",
     "deploy": "gh-pages  -d build",
     "predeploy": "npm run build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress":"cypress"
   },
   "eslintConfig": {
     "extends": "react-app"
