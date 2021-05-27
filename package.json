@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio-site",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://wingchhun.github.io/react-portfolio-site",
   "dependencies": {
@@ -45,6 +45,8 @@
   ],
   "devDependencies": {
     "cypress": "^7.4.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-react": "^7.23.2",
     "gh-pages": "^3.2.0",
     "husky": "^6.0.0",
     "node-sass-chokidar": "^1.5.0",
