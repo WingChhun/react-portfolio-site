@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { withStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import logos from '../../assets/skills';
+import logos from 'Assets/skills';
 import Divider from '@material-ui/core/Divider';
 const styles = () => ({
   root: {},
   divider: {
     margin: '1rem  auto 6rem',
-    width: '80%'
-  }
+    width: '80%',
+  },
 });
 
 class AboutCard extends Component {
@@ -18,7 +18,7 @@ class AboutCard extends Component {
     super(props);
 
     this.state = {
-      assets: {}
+      assets: {},
     };
   }
 
@@ -28,7 +28,7 @@ class AboutCard extends Component {
     */
   componentDidMount = () => {
     this.setState({
-      ...logos
+      ...logos,
     });
   };
 
@@ -148,7 +148,7 @@ class AboutCard extends Component {
   }
 }
 AboutCard.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(AboutCard);

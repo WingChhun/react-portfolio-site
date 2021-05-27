@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import { withStyles } from '@material-ui/core';
 
-import Video from '../../assets/video/video/video-2.mp4';
-import NavbarComponent from '../../components/navbar/Navbar.js';
+import Video from 'Assets/video/video/video-2.mp4';
+import NavbarComponent from 'Components/navbar/Navbar.js';
 import HeroContent from './HeroContent';
 const styles = () => ({ root: {} });
 
@@ -33,7 +32,7 @@ class Hero extends Component {
 
 Hero.propTypes = {
   classes: PropTypes.object.isRequired,
-  aboutScroll: PropTypes.any.isRequired
+  aboutScroll: PropTypes.any.isRequired,
 };
 
 export default withStyles(styles)(Hero);

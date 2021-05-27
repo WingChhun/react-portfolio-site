@@ -4,19 +4,19 @@ import classnames from 'classnames';
 import { withStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import RESUME from '../../assets/portfolio/JamesChhun_Resume_updated_4.pdf';
+import RESUME from 'Assets/portfolio/JamesChhun_Resume_updated_4.pdf';
 import Snackbar from '@material-ui/core/Snackbar';
 import AboutCard from './AboutCard';
 const styles = () => ({
   root: {},
 
   grid: {
-    margin: '0 auto'
+    margin: '0 auto',
   },
 
   button: {
-    padding: '.3rem .5rem'
-  }
+    padding: '.3rem .5rem',
+  },
 });
 
 class About extends Component {
@@ -26,7 +26,7 @@ class About extends Component {
     this.state = {
       openSnackbar: false,
       vertical: 'bottom',
-      horizontal: 'center'
+      horizontal: 'center',
     };
   }
 
@@ -55,7 +55,7 @@ class About extends Component {
         <div
           id='section-about'
           className='about'
-          ref={about => {
+          ref={(about) => {
             this.about = about;
           }}
         >
@@ -88,7 +88,7 @@ class About extends Component {
               className={classes.snackbar}
               anchorOrigin={{
                 vertical,
-                horizontal
+                horizontal,
               }}
               open={openSnackbar}
               autoHideDuration={4000}
@@ -106,7 +106,7 @@ class About extends Component {
 
 About.propTypes = {
   classes: PropTypes.object.isRequired,
-  setAboutRef: PropTypes.func.isRequired
+  setAboutRef: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(About);
