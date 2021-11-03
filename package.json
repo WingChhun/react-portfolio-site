@@ -21,7 +21,7 @@
     "react-scroll-to-component": "^1.0.2",
     "react-swipeable-views": "^0.13.0",
     "react-swipeable-views-utils": "^0.13.0",
-    "validator": "^10.8.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "npm-run-all -p watch-css start-js",
